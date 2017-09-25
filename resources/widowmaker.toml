@@ -62,4 +62,5 @@ tag = "widowmaker_(overwatch)"
 [[skins]]
   name = "Noire"
   rarity = "legendary"
+  event = "Pre-order"
   tag = "noire_widowmaker_(overwatch)"
