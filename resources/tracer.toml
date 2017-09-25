@@ -1,0 +1,79 @@
+name = "Symmetra"
+realName = "Lena Oxton"
+age = 26
+location = "London, England"
+role = "offense"
+sex = "female"
+
+tag = "tracer_(overwatch)"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Electric Purple"
+  rarity = "rare"
+[[skins]]
+  name = "Hot Pink"
+  rarity = "rare"
+[[skins]]
+  name = "Neon Green"
+  rarity = "rare"
+[[skins]]
+  name = "Royal Blue"
+  rarity = "rare"
+[[skins]]
+  name = "Posh"
+  rarity = "epic"
+[[skins]]
+  name = "Sporty"
+  rarity = "epic"
+[[skins]]
+  name = "Rose"
+  rarity = "epic"
+[[skins]]
+  name = "Punk"
+  rarity = "legendary"
+  tag = "punk_tracer_(overwatch)"
+[[skins]]
+  name = "Ultraviolet"
+  rarity = "legendary"
+  tag = "ultraviolet_tracer_(overwatch)"
+[[skins]]
+  name = "Mach T"
+  rarity = "legendary"
+  tag = "mach_t_(overwatch)"
+[[skins]]
+  name = "T.Racer"
+  rarity = "legendary"
+  tag = "t.racer_(overwatch)"
+[[skins]]
+  name = "Cadet Oxton"
+  rarity = "legendary"
+  event = "Uprising"
+  tag = "cadet_oxton_(overwatch)"
+[[skins]]
+  name = "Graffiti"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+  tag = "graffiti_tracer_(overwatch)"
+[[skins]]
+  name = "Sprinter"
+  rarity = "legendary"
+  event = "Summer Games"
+  tag = "sprinter_tracer_(overwatch)"
+[[skins]]
+  name = "Track and Field"
+  rarity = "legendary"
+  event = "Summer Games"
+  tag = "track_and_field_tracer_(overwatch)"
+[[skins]]
+  name = "Jingle"
+  rarity = "legendary"
+  event = "Winter Wonderland"
+  tag = "jingle_tracer_(overwatch)"
+[[skins]]
+  name = "Slipstream"
+  rarity = "legendary"
+  event = "Origins Edition"
+  tag = "slipstream_tracer_(overwatch)"
