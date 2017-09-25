@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Mercy",
+    "tag": "mercy_(overwatch)",
+    "count": 4335,
+    "skins": [
+      {
+        "name": "witch mercy",
+        "tag": "witch_mercy_(overwatch)",
+        "count": 416
+      },
+      {
+        "name": "devil mercy",
+        "tag": "devil_mercy_(overwatch)",
+        "count": 169
+      },
+      {
+        "name": "winged victory mercy",
+        "tag": "winged_victory_mercy_(overwatch)",
+        "count": 69
+      },
+      {
+        "name": "valkyrie mercy",
+        "tag": "valkyrie_mercy_(overwatch)",
+        "count": 11
+      },
+      {
+        "name": "cobalt mercy",
+        "tag": "cobalt_mercy_(overwatch)",
+        "count": 8
+      },
+      {
+        "name": "sigrun mercy",
+        "tag": "sigrun_mercy_(overwatch)",
+        "count": 6
+      },
+      {
+        "name": "golden mercy",
+        "tag": "golden_mercy_(overwatch)",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "d.va",
+    "tag": "d.va_(overwatch)",
+    "count": 5235,
+    "skins": [
+      {
+        "name": "junebug d.va",
+        "tag": "junebug_d.va_(overwatch)",
+        "count": 16
+      },
+      {
+        "name": "junker d.va",
+        "tag": "junker_d.va_(overwatch)",
+        "count": 9
+      },
+      {
+        "name": "scavenger d.va",
+        "tag": "scavenger_d.va_(overwatch)",
+        "count": 5
+      },
+      {
+        "name": "taegeukgi d.va",
+        "tag": "taegeukgi_d.va_(overwatch)",
+        "count": 1
+      },
+    ]
+  },
+  {
+    "name": "widowmaker",
+    "tag": "widowmaker_(overwatch)",
+    "count": 3326,
+    "skins": [
+      {
+        "name": "talon widowmaker",
+        "tag": "talon_widowmaker_(overwatch)",
+        "count": 0
+      },
+      {
+        "name": "noire widowmaker",
+        "tag": "noire_widowmaker_(overwatch)",
+        "count": 0
+      },
+      {
+        "name": "huntress widowmaker",
+        "tag": "huntress_widowmaker_(overwatch)",
+        "count": 0
+      },
+      {
+        "name": "odette widowmaker",
+        "tag": "odette_widowmaker_(overwatch)",
+        "count": 0
+      },
+      {
+        "name": "tricolore widowmaker",
+        "tag": "tricolore_widowmaker_(overwatch)",
+        "count": 0
+      },
+      {
+        "name": "comtesse widowmaker",
+        "tag": "comtesse_widowmaker_(overwatch)",
+        "count": 0
+      },
+      {
+        "name": "odile widowmaker",
+        "tag": "odile_widowmaker_(overwatch)",
+        "count": 0
+      },
+    ]
+  },
+  {
+    "name": "tracer",
+    "tag": "tracer_(overwatch)",
+    "count": 3240,
+    "skins": []
+  },
+  {
+    "name": "pharah",
+    "tag": "pharah_(overwatch)",
+    "count": 1972,
+    "skins": []
+  },
+  {
+    "name": "sombra",
+    "tag": "sombra_(overwatch)",
+    "count": 862,
+    "skins": []
+  },
+  {
+    "name": "soldier: 76",
+    "tag": "soldier:_76_(overwatch)",
+    "count": 860,
+    "skins": []
+  },
+  {
+    "name": "reaper",
+    "tag": "reaper_(overwatch)",
+    "count": 712,
+    "skins": []
+  },
+  {
+    "name": "symmetra",
+    "tag": "symmetra_(overwatch)",
+    "count": 690,
+    "skins": []
+  },
+  {
+    "name": "mei",
+    "tag": "mei_(overwatch)",
+    "count": 39,
+    "skins": []
+  }
+]
