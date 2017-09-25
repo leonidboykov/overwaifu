@@ -24,13 +24,13 @@ const (
 
 // Character contains all main data about character
 type Character struct {
-	Name       string `json:"name" toml:"name"`
-	RealName   string `json:"real_name" toml:"realName"`
-	Age        int    `json:"age" toml:"age"`
-	Occupation string `json:"occupation" toml:"occupation"`
-	Role       `json:"role" toml:"role"`
-	Sex        `json:"sex" toml:"sex"`
-	Skins      []Skin `json:"skins" toml:"skins"`
-	Score      `json:"score"`
-	Tag        string `json:"tag" toml:"tag"` // sankaku tag
+	Name     string `json:"name" toml:"name"`
+	RealName string `json:"real_name" toml:"realName"`
+	Age      int    `json:"age" toml:"age"`
+	Location string `json:"location" toml:"location"`
+	Role     `json:"role" toml:"role"`
+	Sex      `json:"sex" toml:"sex"`
+	Skins    []Skin `json:"skins" toml:"skins"`
+	Score    `json:"score"`
+	Tag      string `json:"tag" toml:"tag"` // sankaku tag
 }

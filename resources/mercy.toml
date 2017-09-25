@@ -1,7 +1,7 @@
 name = "Mercy"
 realName = "Angela Ziegler"
 age = 37
-occupation = "Zürich, Switzerland"
+location = "Zürich, Switzerland"
 role = "support"
 sex = "female"
 

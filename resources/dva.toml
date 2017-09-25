@@ -1,7 +1,7 @@
 name = "D.Va"
 realName = "Hana Song"
 age = 19
-occupation = "Busan, South Korea"
+location = "Busan, South Korea"
 role = "tank"
 sex = "female"
 

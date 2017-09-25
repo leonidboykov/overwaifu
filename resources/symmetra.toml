@@ -1,0 +1,59 @@
+name = "Symmetra"
+realName = "Satya Vaswani"
+age = 28
+location = "Utopaea, India"
+role = "support"
+sex = "female"
+
+tag = "symmetra_(overwatch)"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Cardamom"
+  rarity = "rare"
+[[skins]]
+  name = "Hyacinth"
+  rarity = "rare"
+[[skins]]
+  name = "Saffron"
+  rarity = "rare"
+[[skins]]
+  name = "Technomancer"
+  rarity = "rare"
+[[skins]]
+  name = "Regal"
+  rarity = "epic"
+[[skins]]
+  name = "Utopaea"
+  rarity = "epic"
+[[skins]]
+  name = "Qipao"
+  rarity = "epic"
+  event = "Year of the Rooster"
+[[skins]]
+  name = "Vampire"
+  rarity = "epic"
+  event = "Halloween Terror"
+  tag = "vampire_symmetra_(overwatch)"
+[[skins]]
+  name = "Architech"
+  rarity = "legendary"
+[[skins]]
+  name = "Vishkar"
+  rarity = "legendary"
+  tag = "vishkar_symmetra_(overwatch)"
+[[skins]]
+  name = "Devi"
+  rarity = "legendary"
+  tag = "devi_symmetra_(overwatch)"
+[[skins]]
+  name = "Goddess"
+  rarity = "legendary"
+  tag = "goddess_symmetra"
+[[skins]]
+  name = "Oasis"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+  tag = "oasis_symmetra_(overwatch)"
