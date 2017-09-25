@@ -1,0 +1,47 @@
+name = "Orisa" # Yep, robocow
+realName = "Orisa"
+age = 1 # Month
+location = "Numbani"
+role = "tank"
+sex = "female"
+
+tag = "orisa_(overwatch)"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Dawn"
+  rarity = "rare"
+[[skins]]
+  name = "Plains"
+  rarity = "rare"
+[[skins]]
+  name = "Sunrise"
+  rarity = "rare"
+[[skins]]
+  name = "Twilight"
+  rarity = "rare"
+[[skins]]
+  name = "Camouflage"
+  rarity = "epic"
+[[skins]]
+  name = "OR15"
+  rarity = "epic"
+[[skins]]
+  name = "Dynastinae"
+  rarity = "legendary"
+[[skins]]
+  name = "Megasoma"
+  rarity = "legendary"
+  tag = "megasoma_orisa"
+[[skins]]
+  name = "Carbon Fiber"
+  rarity = "legendary"
+[[skins]]
+  name = "Protector"
+  rarity = "legendary"
+[[skins]]
+  name = "Null Sector"
+  rarity = "legendary"
+  event = "Uprising"
