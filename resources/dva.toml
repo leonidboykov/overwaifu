@@ -1,0 +1,66 @@
+name = "D.Va"
+realName = "Hana Song"
+age = 19
+occupation = "Busan, South Korea"
+role = "tank"
+sex = "female"
+
+tag = "d.va_(overwatch)"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Blueberry"
+  rarity = "rare"
+[[skins]]
+  name = "Lemon-Lime"
+  rarity = "rare"
+[[skins]]
+  name = "Tangerine"
+  rarity = "rare"
+[[skins]]
+  name = "Watermelon"
+  rarity = "rare"
+[[skins]]
+  name = "Carbon Fiber"
+  rarity = "epic"
+[[skins]]
+  name = "White Rabbit"
+  rarity = "epic"
+[[skins]]
+  name = "Taegeukgi"
+  rarity = "epic"
+  event = "Summer Games"
+  tag = "taegeukgi_d.va_(overwatch)"
+[[skins]]
+  name = "Junker"
+  rarity = "legendary"
+  tag = "junker_d.va_(overwatch)"
+[[skins]]
+  name = "Scavenger"
+  rarity = "legendary"
+  tag = "scavenger_d.va_(overwatch)"
+[[skins]]
+  name = "B.Va"
+  rarity = "legendary"
+  tag = "b.va_(overwatch)"
+[[skins]]
+  name = "Junebug"
+  rarity = "legendary"
+  tag = "junebug_d.va_(overwatch)"
+[[skins]]
+  name = "Palanquin"
+  rarity = "legendary"
+  event = "Year of the Rooster"
+  tag = "palanquin_d.va"
+[[skins]]
+  name = "Cruiser"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+  tag = "cruiser_d.va"
+[[skins]]
+  name = "Police Officer"
+  rarity = "legendary"
+  event = "Heroes of the Storm"
+  tag = "officer_d.va"

@@ -1,4 +1,4 @@
-name = "Mercy"
+name = "Widowmaker"
 realName = "Amélie Lacroix"
 age = 33
 occupation = "Annecy France"
@@ -32,22 +32,28 @@ tag = "widowmaker_(overwatch)"
   name = "Tricolore"
   rarity = "epic"
   event = "Summer Games"
+  tag = "tricolore_widowmaker_(overwatch)"
 [[skins]]
   name = "Odette"
   rarity = "legendary"
+  tag = "odette_widowmaker_(overwatch)"
 [[skins]]
   name = "Odile"
   rarity = "legendary"
+  tag = "odile_widowmaker_(overwatch)"
 [[skins]]
   name = "Comtesse"
   rarity = "legendary"
+  tag = "comtesse_widowmaker_(overwatch)"
 [[skins]]
   name = "Huntress"
   rarity = "legendary"
+  tag = "huntress_widowmaker_(overwatch)"
 [[skins]]
   name = "Talon"
   rarity = "legendary"
   event = "Uprising"
+  tag = "talon_widowmaker_(overwatch)"
 [[skins]]
   name = "Côte d'Azur"
   rarity = "legendary"
