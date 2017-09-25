@@ -1,10 +1,10 @@
 # OverWaifu
 
-Everybody can visir overbuff.com/heroes and check the most popular character
-according to pick rate, win rate etc. However, OW represents 25 different
-characters with the different looks, nature and spirit. I started this project
-to determine the most popular/unpopular characters according their off-gaming
-stats, i.e. popularity between artists (as first step).
+Everybody can visit https://overbuff.com/heroes and check the most popular
+character according to pick rate, win rate etc. However, OW represents 25
+different characters with the different looks, nature and spirit. I started this
+project to determine the most popular/unpopular characters according their
+off-gaming stats, i.e. popularity between artists (as first step).
 
 ## Sources
 
