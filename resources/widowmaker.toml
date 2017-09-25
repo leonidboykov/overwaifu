@@ -1,0 +1,59 @@
+name = "Mercy"
+realName = "Amélie Lacroix"
+age = 33
+occupation = "Annecy France"
+role = "defense"
+sex = "female"
+
+tag = "widowmaker_(overwatch)"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Ciel"
+  rarity = "rare"
+[[skins]]
+  name = "Nuit"
+  rarity = "rare"
+[[skins]]
+  name = "Rose"
+  rarity = "rare"
+[[skins]]
+  name = "Vert"
+  rarity = "rare"
+[[skins]]
+  name = "Patina"
+  rarity = "epic"
+[[skins]]
+  name = "Winter"
+  rarity = "epic"
+[[skins]]
+  name = "Tricolore"
+  rarity = "epic"
+  event = "Summer Games"
+[[skins]]
+  name = "Odette"
+  rarity = "legendary"
+[[skins]]
+  name = "Odile"
+  rarity = "legendary"
+[[skins]]
+  name = "Comtesse"
+  rarity = "legendary"
+[[skins]]
+  name = "Huntress"
+  rarity = "legendary"
+[[skins]]
+  name = "Talon"
+  rarity = "legendary"
+  event = "Uprising"
+[[skins]]
+  name = "Côte d'Azur"
+  rarity = "legendary"
+  event = "Summer Games"
+  tag = "cote_d'azur_widowmaker"
+[[skins]]
+  name = "Noire"
+  rarity = "legendary"
+  tag = "noire_widowmaker_(overwatch)"

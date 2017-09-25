@@ -1,0 +1,86 @@
+name = "Mercy"
+realName = "Angela Ziegler"
+age = 37
+occupation = "Zürich, Switzerland"
+role = "support"
+sex = "female"
+
+tag = "mercy_(overwatch)"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+
+[[skins]]
+	name = "Celestial"
+	rarity = "rare"
+
+[[skins]]
+	name = "Mist"
+	rarity = "rare"
+
+[[skins]]
+	name = "Orchid"
+	rarity = "rare"
+
+[[skins]]
+	name = "Verdant"
+	rarity = "rare"
+
+[[skins]]
+	name = "Amber"
+	rarity = "Epic"
+
+[[skins]]
+	name = "Cobalt"
+	rarity = "Epic"
+	tag = "cobalt_mercy_(overwatch)"
+
+[[skins]]
+	name = "Fortune"
+	rarity = "Epic"
+	tag = "fortune_mercy_(overwatch)"
+
+[[skins]]
+	name = "Eidgenossin"
+	rarity = "Epic"
+	event = "Summer Games"
+	tag = "eidgenossin_mercy_(overwatch)"
+
+[[skins]]
+	name = "Sigrún"
+	rarity = "legendary"
+	tag = "sigrun_mercy_(overwatch)"
+
+[[skins]]
+	name = "Valkyrie"
+	rarity = "legendary"
+	tag = "valkyrie_mercy_(overwatch)"
+
+[[skins]]
+	name = "Devil"
+	rarity = "legendary"
+	tag = "devil_mercy_(overwatch)"
+
+[[skins]]
+	name = "Imp"
+	rarity = "legendary"
+	tag = "imp_mercy"
+
+[[skins]]
+	name = "Witch"
+	rarity = "legendary"
+	event = "Helloween Terror"
+	tag = "witch_mercy_(overwatch)"
+
+[[skins]]
+	name = "Combat Medic Ziegler"
+	rarity = "legendary"
+	event = "Uprising"
+	tag = "combat_medic_ziegler_(overwatch)"
+
+[[skins]]
+	name = "Winged Victory"
+	rarity = "legendary"
+	event = "Summer Games"
+	tag = "winged_victory_mercy_(overwatch)"

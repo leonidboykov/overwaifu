@@ -11,26 +11,26 @@ const (
 	NA     Sex = "not_applicable"
 )
 
-// Class ...
-type Class string
+// Role ...
+type Role string
 
 // Class enums
 const (
-	Support Class = "support"
-	Tank    Class = "tank"
-	Defense Class = "defense"
-	Offense Class = "offense"
+	Support Role = "support"
+	Tank    Role = "tank"
+	Defense Role = "defense"
+	Offense Role = "offense"
 )
 
 // Character contains all main data about character
 type Character struct {
-	Name        string `json:"name"`
-	RealName    string `json:"real_name"`
-	Age         int    `json:"age"`
-	Nationality string `json:"nationality"`
-	Class       `json:"class"`
-	Sex         `json:"sex"`
-	Skins       []Skin `json:"skins"`
-	Score       `json:"score"`
-	Tag         string `json:"tag"` // Sankaku's tag
+	Name       string `json:"name"`
+	RealName   string `json:"real_name"`
+	Age        int    `json:"age"`
+	Occupation string `json:"nationality"`
+	Role       `json:"role"`
+	Sex        `json:"sex"`
+	Skins      []Skin `json:"skins"`
+	Score      `json:"score"`
+	Tag        string `json:"tag"` // sankaku tag
 }
