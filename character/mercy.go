@@ -51,14 +51,17 @@ var Mercy = model.Character{
 		{
 			Name:  "Sigrún",
 			Class: model.Legendary,
+			Tag:   "sigrun_mercy_(overwatch)",
 		},
 		{
 			Name:  "Valkyrie",
 			Class: model.Legendary,
+			Tag:   "valkyrie_mercy_(overwatch)",
 		},
 		{
 			Name:  "Devil",
 			Class: model.Legendary,
+			Tag:   "devil_mercy_(overwatch)",
 		},
 		{
 			Name:  "Imp",
@@ -75,6 +78,7 @@ var Mercy = model.Character{
 			Name:  "Combat Medic Ziegler",
 			Class: model.Legendary,
 			Event: model.Uprising,
+			Tag:   "combat_medic_ziegler_(overwatch)",
 		},
 		{
 			Name:  "Winged Victory",
