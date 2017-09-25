@@ -1,0 +1,55 @@
+name = "Sombra"
+realName = "░░░░░░"
+age = 30
+occupation = "Dorado, Mexico"
+role = "offense"
+sex = "female"
+
+tag = "sombra_(overwatch)"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Cidro"
+  rarity = "rare"
+[[skins]]
+  name = "Incendio"
+  rarity = "rare"
+[[skins]]
+  name = "Mar"
+  rarity = "rare"
+[[skins]]
+  name = "Noche"
+  rarity = "rare"
+[[skins]]
+  name = "Glitch"
+  rarity = "epic"
+[[skins]]
+  name = "Virus"
+  rarity = "epic"
+[[skins]]
+  name = "Peppermint"
+  rarity = "epic"
+  event = "Winter Wonderland"
+  tag = "peppermint_sombra_(overwatch)"
+[[skins]]
+  name = "Azúcar"
+  rarity = "legendary"
+[[skins]]
+  name = "Los Muertos"
+  rarity = "legendary"
+  tag = "los_muertos_sombra_(overwatch)"
+[[skins]]
+  name = "Augmented"
+  rarity = "legendary"
+  tag = "augmented_sombra_(overwatch)"
+[[skins]]
+  name = "Cyberspace"
+  rarity = "legendary"
+  tag = "cyberspace_sombra_(overwatch)"
+[[skins]]
+  name = "Tulum"
+  rarity = "legendary"
+  event = "Summer Games"
+  tag = "tulum_sombra_(overwatch)"
