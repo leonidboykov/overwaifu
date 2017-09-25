@@ -1,0 +1,63 @@
+name = "Zarya"
+realName = "Aleksandra Zaryanova"
+age = 28
+location = "Krasnoyarsk Front, Russia"
+role = "tank"
+sex = "female"
+
+tag = "zarya_(overwatch)"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Brick"
+  rarity = "rare"
+[[skins]]
+  name = "Goldenrod"
+  rarity = "rare"
+[[skins]]
+  name = "Taiga"
+  rarity = "rare"
+[[skins]]
+  name = "Violet"
+  rarity = "rare"
+[[skins]]
+  name = "Dawn"
+  rarity = "epic"
+[[skins]]
+  name = "Midnight"
+  rarity = "epic"
+[[skins]]
+  name = "Frosted"
+  rarity = "epic"
+  event = "Winter Wonderland"
+[[skins]]
+  name = "Arctic"
+  rarity = "legendary"
+  tag = "arctic_zarya_(overwatch)"
+[[skins]]
+  name = "Siberian Front"
+  rarity = "legendary"
+  tag = "siberian_front_zarya_(overwatch)"
+[[skins]]
+  name = "Cybergoth"
+  rarity = "legendary"
+  tag = "cybergoth_zarya_(overwatch)"
+[[skins]]
+  name = "Industrial"
+  rarity = "legendary"
+  tag = "industrial_zarya_(overwatch)"
+[[skins]]
+  name = "Cyberian"
+  rarity = "legendary"
+  event = "Summer Games"
+[[skins]]
+  name = "Champion"
+  rarity = "legendary"
+  event = "Summer Games"
+  tag = "champion_zarya_(overwatch)"
+[[skins]]
+  name = "Weightlifter"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
