@@ -1,0 +1,55 @@
+name = "Ana"
+realName = "Ana Amari"
+age = 60
+location = "Cairo, Egypt"
+role = "support"
+sex = "female"
+
+# there are no `ana_(overwatch)` tag on sankaku
+tag = "ana_amari"
+
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Citrine"
+  rarity = "rare"
+[[skins]]
+  name = "Garnet"
+  rarity = "rare"
+[[skins]]
+  name = "Peridot"
+  rarity = "rare"
+[[skins]]
+  name = "Turquoise"
+  rarity = "rare"
+[[skins]]
+  name = "Merciful"
+  rarity = "epic"
+[[skins]]
+  name = "Shrike"
+  rarity = "epic"
+  tag = "shrike_ana"
+[[skins]]
+  name = "Tal"
+  rarity = "epic"
+  event = "Year of the Rooster"
+[[skins]]
+  name = "Ghoul"
+  rarity = "epic"
+  event = "Halloween Terror"
+  tag = "ghoul_ana_(overwatch)"
+[[skins]]
+  name = "Wadjet"
+  rarity = "legendary"
+[[skins]]
+  name = "Wasteland"
+  rarity = "legendary"
+[[skins]]
+  name = "Captain Amari"
+  rarity = "legendary"
+  tag = "captain_amari_(overwatch)"
+[[skins]]
+  name = "Horus"
+  rarity = "legendary"
+  tag = "horus_ana_(overwatch)"
