@@ -1,21 +1,21 @@
 package model
 
-// Class ...
-type Class string
+// Rarity ...
+type Rarity string
 
-// Class enums
+// Rarity enums
 const (
-	Common    Class = "common"
-	Rare      Class = "rare"
-	Epic      Class = "epic"
-	Legendary Class = "legendary"
+	Common    Rarity = "common"
+	Rare      Rarity = "rare"
+	Epic      Rarity = "epic"
+	Legendary Rarity = "legendary"
 )
 
 // Skin contains data about skin
 type Skin struct {
-	Name  string `json:"name"`
-	Class `json:"class"`
-	Event `json:"event"`
-	Tag   string `json:"tag"`
-	Score `json:"score"`
+	Name   string `json:"name"`
+	Rarity `json:"rarity"`
+	Event  `json:"event"`
+	Tag    string `json:"tag"`
+	Score  `json:"score"`
 }
