@@ -7,9 +7,15 @@
   revision = "b26d9c308763d68093482582cea63d69be07a0f0"
   version = "v0.3.0"
 
+[[projects]]
+  branch = "master"
+  name = "github.com/leonidboykov/getmoe"
+  packages = [".","utils"]
+  revision = "c05ac161965e5f9a75ab52ef6fe0db2a93f56ffb"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a8c4e8c53820bfbbeb17362c6ff6e9986dff0496086694b77dd1b3560317d100"
+  inputs-digest = "6e55e05d5befdbd2ec25d379716b06fd58963c240e39ee0d5c1239d9f0b59cfd"
   solver-name = "gps-cdcl"
   solver-version = 1
