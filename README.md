@@ -10,7 +10,7 @@ off-gaming stats, i.e. popularity between artists (as first step).
 
 * Sankaku Channel
 
-Score calculates only by tag count, tranding calculations cooming soon:
+Score calculates only by tag count, tranding calculations coming soon:
 
 > i.e. 100 per 5days > 200 per 20days
 
