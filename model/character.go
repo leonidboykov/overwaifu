@@ -4,9 +4,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"sort"
 	"strconv"
+
+	"github.com/leonidboykov/getmoe"
+	"github.com/leonidboykov/getmoe/board/sankaku"
 )
 
 // Character contains all main data about character
@@ -26,8 +30,8 @@ const (
 	sankakuURL = "https://ias.sankakucomplex.com/tag/autosuggest?tag=%s"
 )
 
-// FetchScore from Sankaku Channel
-func (c *Character) FetchScore() error {
+// FetchScoreByTags from Sankaku Channel
+func (c *Character) FetchScoreByTags() error {
 	url := fmt.Sprintf(sankakuURL, c.Tag)
 
 	resp, err := http.Get(url)
@@ -54,7 +58,65 @@ func (c *Character) FetchScore() error {
 	return nil
 }
 
-// By is the type of a "less" function that defines the ordering of its Planet arguments.
+// FetchScore from Sankaku Channel
+func (c *Character) FetchScore() error {
+	board := sankaku.ChanSankakuConfig
+	board.BuildAuth("xxx", "xxx")
+
+	board.Query = getmoe.Query{
+		Tags: []string{c.Tag},
+		Page: 1,
+	}
+
+	posts, err := board.RequestAll()
+	if err != nil {
+		return err
+	}
+
+	// Score.All is how much pictures with this character on Sankaku Channel
+	c.Score.All = len(posts)
+
+	for _, p := range posts {
+		switch p.Rating {
+		case "s":
+			c.Score.Safe++
+		case "q":
+			c.Score.Questionable++
+		case "e":
+			c.Score.Explicit++
+		default:
+			log.Printf("Got %s rating", p.Rating)
+		}
+	}
+
+	// TODO: rewrite this
+	for i := range c.Skins {
+		for _, p := range posts {
+			tags := p.Tags.([]interface{})
+			for _, tag := range tags {
+				tagInfo := tag.(map[string]interface{})
+				tag := tagInfo["name"].(string)
+				if c.Skins[i].Tag == tag {
+					c.Skins[i].Score.All++
+					switch p.Rating {
+					case "s":
+						c.Skins[i].Score.Safe++
+					case "q":
+						c.Skins[i].Score.Questionable++
+					case "e":
+						c.Skins[i].Score.Explicit++
+					default:
+						log.Printf("Got %s rating", p.Rating)
+					}
+				}
+			}
+		}
+	}
+
+	return nil
+}
+
+// By is the type of a "less" function that defines the ordering of its Characters arguments.
 type By func(c1, c2 *Character) bool
 
 // Sort is a method on the function type, By, that sorts the argument slice according to the function.

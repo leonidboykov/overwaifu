@@ -1,7 +1,9 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 
 	"github.com/BurntSushi/toml"
@@ -33,6 +35,15 @@ func main() {
 		}
 
 		if err := char.FetchScore(); err != nil {
+			log.Panicln(err)
+		}
+
+		data, err := json.MarshalIndent(char, "", "  ")
+		if err != nil {
+			log.Panicln(err)
+		}
+
+		if err := ioutil.WriteFile("results/"+c+".json", data, 0644); err != nil {
 			log.Panicln(err)
 		}
 
