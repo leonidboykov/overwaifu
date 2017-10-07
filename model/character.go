@@ -16,6 +16,7 @@ import (
 // Character contains all main data about character
 type Character struct {
 	Name     string `json:"name" toml:"name"`
+	Slug     string `json:"slug" toml:"slug"`
 	RealName string `json:"real_name" toml:"realName"`
 	Age      int    `json:"age" toml:"age"`
 	Location string `json:"location" toml:"location"`

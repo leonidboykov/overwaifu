@@ -1,4 +1,5 @@
 name = "Zarya"
+slug = "zarya"
 realName = "Aleksandra Zaryanova"
 age = 28
 location = "Krasnoyarsk Front, Russia"
