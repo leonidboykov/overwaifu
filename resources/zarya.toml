@@ -62,3 +62,7 @@ tag = "zarya_(overwatch)"
   name = "Weightlifter"
   rarity = "legendary"
   event = "Overwatch Anniversary"
+[[skins]]
+  name = "Totally 80's" # should be "Totally '80"
+  rarity = "legendary"
+  event = "Halloween Terror"

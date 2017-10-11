@@ -58,3 +58,8 @@ tag = "symmetra_(overwatch)"
   rarity = "legendary"
   event = "Overwatch Anniversary"
   tag = "oasis_symmetra_(overwatch)"
+[[skins]]
+  name = "Dragon"
+  rarity = "legendary"
+  event = "Halloween Terror"
+  tag = "dragon_symmetra_(overwatch)"

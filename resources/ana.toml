@@ -54,3 +54,8 @@ tag = "ana_amari"
   name = "Horus"
   rarity = "legendary"
   tag = "horus_ana_(overwatch)"
+[[skins]]
+  name = "Corsair"
+  rarity = "legendary"
+  event = "Halloween Terror"
+  tag = "dragon_symmetra_(overwatch)"
