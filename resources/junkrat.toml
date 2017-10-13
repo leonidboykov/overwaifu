@@ -1,0 +1,10 @@
+name = "Junkrat"
+slug = "junkrat"
+realName = "Jamison Fawkes"
+age = 25
+role = "defense"
+sex = "male"
+
+tag = "junkrat_(overwatch)"
+
+## no male skins for now

@@ -1,0 +1,10 @@
+name = "Winston" # Yep, monkey
+slug = "winston"
+realName = "Winston"
+age = 29
+role = "tank"
+sex = "male"
+
+tag = "winston_(overwatch)"
+
+## no male skins for now

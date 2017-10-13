@@ -1,0 +1,10 @@
+name = "Soldier: 76"
+slug = "soldier76"
+realName = "Jack Morrison"
+age = 0 # unknown
+role = "offense"
+sex = "male"
+
+tag = "soldier:_76_(overwatch)"
+
+## no male skins for now

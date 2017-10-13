@@ -1,0 +1,10 @@
+name = "Bastion"
+slug = "bastion"
+realName = "SST Laboratories Siege Automaton E54"
+age = 30
+role = "defense"
+sex = "male" # According to his "penetration" role
+
+tag = "bastion_(overwatch)"
+
+## no male skins for now

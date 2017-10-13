@@ -1,0 +1,10 @@
+name = "Zenyatta"
+slug = "zenyatta"
+realName = "Tekhartha Zenyatta"
+age = 20
+role = "support"
+sex = "male"
+
+tag = "zenyatta_(overwatch)"
+
+## no male skins for now

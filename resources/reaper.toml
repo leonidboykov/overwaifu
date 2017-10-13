@@ -1,0 +1,10 @@
+name = "Reaper"
+slug = "reaper"
+realName = "Gabriel Reyes"
+age = 0 # unknown
+role = "offense"
+sex = "male"
+
+tag = "reaper_(overwatch)"
+
+## no male skins for now

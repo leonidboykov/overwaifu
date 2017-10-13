@@ -1,0 +1,11 @@
+name = "McCree"
+slug = "mccree"
+realName = "Jesse McCree"
+age = 37
+role = "offense"
+sex = "male"
+
+# there are no `mccree_(overwatch)` tag on sankaku
+tag = "jesse_mccree"
+
+## no male skins for now

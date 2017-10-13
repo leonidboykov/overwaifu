@@ -1,0 +1,10 @@
+name = "Reinhardt"
+slug = "Reinhardt"
+realName = "Reinhardt Wilhelm"
+age = 61
+role = "tank"
+sex = "male"
+
+tag = "reinhardt_(overwatch)"
+
+## no male skins for now

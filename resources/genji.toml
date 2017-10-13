@@ -1,0 +1,11 @@
+name = "Genji"
+slug = "genji"
+realName = "Genji Shimada"
+age = 35
+role = "offense"
+sex = "male"
+
+# there are no `genji_(overwatch)` tag on sankaku
+tag = "shimada_genji"
+
+## no male skins for now

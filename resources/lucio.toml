@@ -1,0 +1,11 @@
+name = "Lúcio"
+slug = "lucio"
+realName = "Lúcio Correia dos Santos"
+age = 26
+role = "support"
+sex = "male"
+
+# there are no `lucio_(overwatch)` tag on sankaku
+tag = "lucio_correia_dos_santos"
+
+## no male skins for now

@@ -1,0 +1,10 @@
+name = "Doomfist"
+slug = "doomfist"
+realName = "Akande Ogundimu"
+age = 45
+role = "offense"
+sex = "male"
+
+tag = "doomfist_(overwatch)"
+
+## no male skins for now

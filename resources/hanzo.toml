@@ -1,0 +1,11 @@
+name = "Hanzo"
+slug = "hanzo"
+realName = "Hanzo Shimada"
+age = 38
+role = "defense"
+sex = "male"
+
+# there are no `hanzo_(overwatch)` tag on sankaku
+tag = "shimada_hanzo"
+
+## no male skins for now

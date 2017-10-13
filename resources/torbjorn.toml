@@ -1,0 +1,10 @@
+name = "Torbjörn"
+slug = "torbjorn"
+realName = "Torbjörn Lindholm"
+age = 57
+role = "defense"
+sex = "male"
+
+tag = "torbjorn_(overwatch)"
+
+## no male skins for now

@@ -1,0 +1,10 @@
+name = "Roadhog"
+slug = "roadhog"
+realName = "Mako Rutledge"
+age = 48
+role = "tank"
+sex = "male"
+
+tag = "roadhog_(overwatch)"
+
+## no male skins for now
