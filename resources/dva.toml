@@ -2,7 +2,6 @@ name = "D.Va"
 slug = "dva"
 realName = "Hana Song"
 age = 19
-location = "Busan, South Korea"
 role = "tank"
 sex = "female"
 

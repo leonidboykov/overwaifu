@@ -1,4 +1,4 @@
-package model
+package overwaifu
 
 // Rarity ...
 type Rarity string

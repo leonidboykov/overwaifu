@@ -2,7 +2,6 @@ name = "Orisa" # Yep, robocow
 slug = "orisa"
 realName = "Orisa"
 age = 1 # Month
-location = "Numbani"
 role = "tank"
 sex = "female"
 

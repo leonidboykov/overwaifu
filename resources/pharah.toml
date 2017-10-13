@@ -2,7 +2,6 @@ name = "Pharah"
 slug = "pharah"
 realName = "Fareeha Amari"
 age = 32
-location = "Giza, Egypt"
 role = "offense"
 sex = "female"
 

@@ -1,17 +1,14 @@
-package model
+package overwaifu
 
 import (
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
 	"log"
-	"net/http"
 	"sort"
-	"strconv"
 
 	"github.com/leonidboykov/getmoe"
 	"github.com/leonidboykov/getmoe/board/sankaku"
 )
+
+const genderswapTag = "genderswap"
 
 // Character contains all main data about character
 type Character struct {
@@ -19,7 +16,6 @@ type Character struct {
 	Slug     string `json:"slug" toml:"slug"`
 	RealName string `json:"real_name" toml:"realName"`
 	Age      int    `json:"age" toml:"age"`
-	Location string `json:"location" toml:"location"`
 	Role     string `json:"role" toml:"role"`
 	Sex      string `json:"sex" toml:"sex"`
 	Skins    []Skin `json:"skins" toml:"skins"`
@@ -30,34 +26,6 @@ type Character struct {
 const (
 	sankakuURL = "https://ias.sankakucomplex.com/tag/autosuggest?tag=%s"
 )
-
-// FetchScoreByTags from Sankaku Channel
-func (c *Character) FetchScoreByTags() error {
-	url := fmt.Sprintf(sankakuURL, c.Tag)
-
-	resp, err := http.Get(url)
-	if err != nil {
-		return err
-	}
-	defer resp.Body.Close()
-
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		return err
-	}
-
-	var obj []interface{}
-	if err = json.Unmarshal(body, &obj); err != nil {
-		return err
-	}
-
-	c.Score.All, err = strconv.Atoi(obj[2].(string))
-	if err != nil {
-		return err
-	}
-
-	return nil
-}
 
 // FetchScore from Sankaku Channel
 func (c *Character) FetchScore() error {
@@ -86,7 +54,18 @@ func (c *Character) FetchScore() error {
 		case "e":
 			c.Score.Explicit++
 		default:
-			log.Printf("Got %s rating", p.Rating)
+			log.Printf("overwaifu: got unknown rating %s", p.Rating)
+		}
+	}
+
+	for _, p := range posts {
+		tags := p.Tags.([]interface{})
+		for _, tag := range tags {
+			tagInfo := tag.(map[string]interface{})
+			tag := tagInfo["name"].(string)
+			if tag == genderswapTag {
+				c.Score.Genderswaps++
+			}
 		}
 	}
 
@@ -107,7 +86,7 @@ func (c *Character) FetchScore() error {
 					case "e":
 						c.Skins[i].Score.Explicit++
 					default:
-						log.Printf("Got %s rating", p.Rating)
+						log.Printf("overwaifu: got unknown rating %s", p.Rating)
 					}
 				}
 			}

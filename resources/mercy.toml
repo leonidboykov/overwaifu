@@ -2,7 +2,6 @@ name = "Mercy"
 slug = "mercy"
 realName = "Angela Ziegler"
 age = 37
-location = "Zürich, Switzerland"
 role = "support"
 sex = "female"
 
@@ -25,18 +24,18 @@ tag = "mercy_(overwatch)"
 	rarity = "rare"
 [[skins]]
 	name = "Amber"
-	rarity = "Epic"
+	rarity = "epic"
 [[skins]]
 	name = "Cobalt"
-	rarity = "Epic"
+	rarity = "epic"
 	tag = "cobalt_mercy_(overwatch)"
 [[skins]]
 	name = "Fortune"
-	rarity = "Epic"
+	rarity = "epic"
 	tag = "fortune_mercy_(overwatch)"
 [[skins]]
 	name = "Eidgenossin"
-	rarity = "Epic"
+	rarity = "epic"
 	event = "Summer Games"
 	tag = "eidgenossin_mercy_(overwatch)"
 [[skins]]

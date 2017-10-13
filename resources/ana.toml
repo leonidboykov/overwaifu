@@ -2,7 +2,6 @@ name = "Ana"
 slug = "ana"
 realName = "Ana Amari"
 age = 60
-location = "Cairo, Egypt"
 role = "support"
 sex = "female"
 

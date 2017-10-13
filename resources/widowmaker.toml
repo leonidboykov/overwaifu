@@ -2,7 +2,6 @@ name = "Widowmaker"
 slug = "widowmaker"
 realName = "Amélie Lacroix"
 age = 33
-location = "Annecy, France"
 role = "defense"
 sex = "female"
 
