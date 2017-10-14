@@ -7,4 +7,59 @@ sex = "male"
 
 tag = "reaper_(overwatch)"
 
-## no male skins for now
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Blood"
+  rarity = "rare"
+[[skins]]
+  name = "Midnight"
+  rarity = "rare"
+[[skins]]
+  name = "Moss"
+  rarity = "rare"
+[[skins]]
+  name = "Royal"
+  rarity = "rare"
+[[skins]]
+  name = "Desert"
+  rarity = "epic"
+[[skins]]
+  name = "Wight"
+  rarity = "epic"
+[[skins]]
+  name = "Shiver"
+  rarity = "epic"
+  event = "Winter Wonderland"
+[[skins]]
+  name = "Nevermore"
+  rarity = "legendary"
+  tag = "nevermore_reaper_(overwatch)"
+[[skins]]
+  name = "Plague Doctor"
+  rarity = "legendary"
+[[skins]]
+  name = "El Blanco"
+  rarity = "legendary"
+[[skins]]
+  name = "Mariachi"
+  rarity = "legendary"
+[[skins]]
+  name = "Biker"
+  rarity = "legendary"
+  event = "Summer Games"
+[[skins]]
+  name = "Pumpkin"
+  rarity = "legendary"
+  event = "Halloween Terror"
+  tag = "pumpkin_reaper_(overwatch)"
+[[skins]]
+  name = "Blackwatch Reyes"
+  rarity = "legendary"
+  event = "Origins Edition"
+  tag = "blackwatch_reyes_(overwatch)"
+[[skins]]
+  name = "Dracula"
+  rarity = "legendary"
+  event = "Halloween Terror"

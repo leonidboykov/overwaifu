@@ -13,16 +13,30 @@ import (
 // Supported characters, comment to disable
 var characters = []string{
 	"ana",
+	"bastion",
+	"doomfist",
 	"dva",
+	"genji",
+	"hanzo",
+	"junkrat",
+	"lucio",
+	"mccree",
 	"mei",
 	"mercy",
 	"orisa",
 	"pharah",
+	"reaper",
+	"reinhardt",
+	"roadhog",
+	"soldier76",
 	"sombra",
 	"symmetra",
+	"torbjorn",
 	"tracer",
 	"widowmaker",
+	"winston",
 	"zarya",
+	"zenyatta",
 }
 
 func main() {
@@ -43,7 +57,7 @@ func main() {
 			log.Panicln(err)
 		}
 
-		if err := ioutil.WriteFile("results/"+c+".json", data, 0644); err != nil {
+		if err := ioutil.WriteFile("dest/"+c+".json", data, 0644); err != nil {
 			log.Panicln(err)
 		}
 

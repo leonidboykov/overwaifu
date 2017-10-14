@@ -30,12 +30,14 @@ const (
 // FetchScore from Sankaku Channel
 func (c *Character) FetchScore() error {
 	board := sankaku.ChanSankakuConfig
-	board.BuildAuth("xxx", "xxx")
+	board.BuildAuth("bmnuser", "123456789")
 
 	board.Query = getmoe.Query{
 		Tags: []string{c.Tag},
 		Page: 1,
 	}
+
+	print("searching " + c.Name + "'s lewd images... ")
 
 	posts, err := board.RequestAll()
 	if err != nil {
@@ -45,8 +47,11 @@ func (c *Character) FetchScore() error {
 	// Score.All is how much pictures with this character on Sankaku Channel
 	c.Score.All = len(posts)
 
-	for _, p := range posts {
-		switch p.Rating {
+	for i := range posts {
+		if posts[i].HasTag(genderswapTag) {
+			c.Score.Genderswaps++
+		}
+		switch posts[i].Rating {
 		case "s":
 			c.Score.Safe++
 		case "q":
@@ -54,44 +59,29 @@ func (c *Character) FetchScore() error {
 		case "e":
 			c.Score.Explicit++
 		default:
-			log.Printf("overwaifu: got unknown rating %s", p.Rating)
+			log.Printf("overwaifu: got unknown rating %s", posts[i].Rating)
 		}
 	}
 
-	for _, p := range posts {
-		tags := p.Tags.([]interface{})
-		for _, tag := range tags {
-			tagInfo := tag.(map[string]interface{})
-			tag := tagInfo["name"].(string)
-			if tag == genderswapTag {
-				c.Score.Genderswaps++
-			}
-		}
-	}
-
-	// TODO: rewrite this
 	for i := range c.Skins {
-		for _, p := range posts {
-			tags := p.Tags.([]interface{})
-			for _, tag := range tags {
-				tagInfo := tag.(map[string]interface{})
-				tag := tagInfo["name"].(string)
-				if c.Skins[i].Tag == tag {
-					c.Skins[i].Score.All++
-					switch p.Rating {
-					case "s":
-						c.Skins[i].Score.Safe++
-					case "q":
-						c.Skins[i].Score.Questionable++
-					case "e":
-						c.Skins[i].Score.Explicit++
-					default:
-						log.Printf("overwaifu: got unknown rating %s", p.Rating)
-					}
+		for j := range posts {
+			if posts[j].HasTag(c.Skins[i].Tag) {
+				c.Skins[i].Score.All++
+				switch posts[j].Rating {
+				case "s":
+					c.Skins[i].Score.Safe++
+				case "q":
+					c.Skins[i].Score.Questionable++
+				case "e":
+					c.Skins[i].Score.Explicit++
+				default:
+					log.Printf("overwaifu: got unknown rating %s", posts[j].Rating)
 				}
 			}
 		}
 	}
+
+	println("found", c.Score.All)
 
 	return nil
 }

@@ -8,4 +8,63 @@ sex = "male"
 # there are no `mccree_(overwatch)` tag on sankaku
 tag = "jesse_mccree"
 
-## no male skins for now
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Ebony"
+  rarity = "rare"
+[[skins]]
+  name = "Lake"
+  rarity = "rare"
+[[skins]]
+  name = "Sage"
+  rarity = "rare"
+[[skins]]
+  name = "Wheat"
+  rarity = "rare"
+[[skins]]
+  name = "On the Range"
+  rarity = "epic"
+[[skins]]
+  name = "White Hat"
+  rarity = "epic"
+[[skins]]
+  name = "American"
+  rarity = "epic"
+  event = "Summer Games"
+  tag = "american_mccree"
+[[skins]]
+  name = "Scrooge"
+  rarity = "epic"
+  event = "Winter Wonderland"
+  tag = "scrooge_mccree_(overwatch)"
+[[skins]]
+  name = "Gambler"
+  rarity = "legendary"
+  tag = "gambler_mccree_(overwatch)"
+[[skins]]
+  name = "Riverboat"
+  rarity = "legendary"
+[[skins]]
+  name = "Mystery Man"
+  rarity = "legendary"
+  tag = "mystery_man_mccree"
+[[skins]]
+  name = "Vigilante"
+  rarity = "legendary"
+  tag = "vigilante_mccree_(overwatch)"
+[[skins]]
+  name = "Blackwatch"
+  rarity = "legendary"
+  event = "Uprising"
+  tag = "blackwatch_mccree_(overwatch)"
+[[skins]]
+  name = "Lifeguard"
+  rarity = "legendary"
+  event = "Summer Games"
+  tag = "lifeguard_mccree_(overwatch)"
+[[skins]]
+  name = "Van Helsing"
+  rarity = "legendary"
+  event = "Halloween Terror"

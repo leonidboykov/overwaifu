@@ -8,4 +8,56 @@ sex = "male"
 # there are no `lucio_(overwatch)` tag on sankaku
 tag = "lucio_correia_dos_santos"
 
-## no male skins for now
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Azul"
+  rarity = "rare"
+[[skins]]
+  name = "Laranja"
+  rarity = "rare"
+[[skins]]
+  name = "Roxo"
+  rarity = "rare"
+[[skins]]
+  name = "Vermelho"
+  rarity = "rare"
+[[skins]]
+  name = "Auditiva"
+  rarity = "epic"
+[[skins]]
+  name = "Synaesthesia"
+  rarity = "epic"
+[[skins]]
+  name = "Andes"
+  rarity = "epic"
+  event = "Winter Wonderland"
+[[skins]]
+  name = "HippityHop"
+  rarity = "legendary"
+  tag = "hippityhop_lucio"
+[[skins]]
+  name = "Ribbit"
+  rarity = "legendary"
+  tag = "ribbit_lucio"
+[[skins]]
+  name = "Breakaway"
+  rarity = "legendary"
+[[skins]]
+  name = "Slapshot"
+  rarity = "legendary"
+[[skins]]
+  name = "Jazzy"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+  tag = "jazzy_lucio_(overwatch)"
+[[skins]]
+  name = "Seleção"
+  rarity = "legendary"
+  event = "Summer Games"
+  tag = "selecao_lucio_(overwatch)"
+[[skins]]
+  name = "Striker"
+  rarity = "legendary"
+  event = "Summer Games"

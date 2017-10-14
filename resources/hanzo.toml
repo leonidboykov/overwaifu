@@ -8,4 +8,49 @@ sex = "male"
 # there are no `hanzo_(overwatch)` tag on sankaku
 tag = "shimada_hanzo"
 
-## no male skins for now
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Azuki"
+  rarity = "rare"
+[[skins]]
+  name = "Kinoko"
+  rarity = "rare"
+[[skins]]
+  name = "Midori"
+  rarity = "rare"
+[[skins]]
+  name = "Sora"
+  rarity = "rare"
+[[skins]]
+  name = "Cloud"
+  rarity = "epic"
+[[skins]]
+  name = "Dragon"
+  rarity = "epic"
+[[skins]]
+  name = "Demon"
+  rarity = "epic"
+  event = "Halloween Terror"
+  tag = "demon_hanzo_(overwatch)"
+[[skins]]
+  name = "Young Hanzo"
+  rarity = "legendary"
+  tag = "young_hanzo_(overwatch)"
+[[skins]]
+  name = "Young Master"
+  rarity = "legendary"
+  tag = "young_master_hanzo_(overwatch)"
+[[skins]]
+  name = "Lone Wolf"
+  rarity = "legendary"
+  tag = "lone_wolf_hanzo"
+[[skins]]
+  name = "Okami"
+  rarity = "legendary"
+  tag = "okami_hanzo_(overwatch)"
+[[skins]]
+  name = "Cyberninja"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"

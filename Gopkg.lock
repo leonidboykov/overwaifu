@@ -10,12 +10,12 @@
 [[projects]]
   branch = "master"
   name = "github.com/leonidboykov/getmoe"
-  packages = [".","utils"]
-  revision = "c05ac161965e5f9a75ab52ef6fe0db2a93f56ffb"
+  packages = [".","board/sankaku","utils"]
+  revision = "fbcfb3ccdeb5057d3dff7ded5b9d0b79c2ea672e"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6e55e05d5befdbd2ec25d379716b06fd58963c240e39ee0d5c1239d9f0b59cfd"
+  inputs-digest = "a6130cd05b1e8bd36b1071d71059f56dfc4eecc059ae903482251f685d726afa"
   solver-name = "gps-cdcl"
   solver-version = 1

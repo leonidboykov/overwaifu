@@ -7,4 +7,57 @@ sex = "male"
 
 tag = "soldier:_76_(overwatch)"
 
-## no male skins for now
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Jet"
+  rarity = "rare"
+[[skins]]
+  name = "Olive"
+  rarity = "rare"
+[[skins]]
+  name = "Russet"
+  rarity = "rare"
+[[skins]]
+  name = "Smoke"
+  rarity = "rare"
+[[skins]]
+  name = "Bone"
+  rarity = "epic"
+[[skins]]
+  name = "Golden"
+  rarity = "epic"
+[[skins]]
+  name = "Immortal"
+  rarity = "epic"
+  event = "Halloween Terror"
+  tag = "immortal_soldier:_76_(overwatch)"
+[[skins]]
+  name = "Commando: 76"
+  rarity = "legendary"
+  tag = "commando:_76"
+[[skins]]
+  name = "Night Ops: 76"
+  rarity = "legendary"
+[[skins]]
+  name = "Daredevil: 76"
+  rarity = "legendary"
+  tag = "daredevil:_76_(overwatch)"
+[[skins]]
+  name = "Stunt Rider: 76"
+  rarity = "legendary"
+[[skins]]
+  name = "Cyborg: 76"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+[[skins]]
+  name = "Grillmaster: 76"
+  rarity = "legendary"
+  event = "Summer Games"
+  tag = "grillmaster:_76_(overwatch)"
+[[skins]]
+  name = "Strike Commander Morrison"
+  rarity = "legendary"
+  event = "Origins Edition"
+  tag = "strike_commander_morrison_(overwatch)"

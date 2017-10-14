@@ -7,4 +7,6 @@ sex = "male"
 
 tag = "doomfist_(overwatch)"
 
-## no male skins for now
+[[skins]]
+  name = "Classic"
+  rarity = "common"

@@ -7,4 +7,58 @@ sex = "male" # According to his "penetration" role
 
 tag = "bastion_(overwatch)"
 
-## no male skins for now
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Dawn"
+  rarity = "rare"
+[[skins]]
+  name = "Meadow"
+  rarity = "rare"
+[[skins]]
+  name = "Sky"
+  rarity = "rare"
+[[skins]]
+  name = "Soot"
+  rarity = "rare"
+[[skins]]
+  name = "Defense Matrix"
+  rarity = "epic"
+[[skins]]
+  name = "Omnic Crisis"
+  rarity = "epic"
+[[skins]]
+  name = "Rooster"
+  rarity = "epic"
+  event = "Year of the Rooster"
+[[skins]]
+  name = "Null Sector"
+  rarity = "epic"
+  event = "Uprising"
+[[skins]]
+  name = "Tombstone"
+  rarity = "rare"
+  event = "Halloween Terror"
+[[skins]]
+  name = "BlizzCon 2016"
+  rarity = "rare"
+  event = "BlizzCon 2016"
+[[skins]]
+  name = "Antique"
+  rarity = "legendary"
+[[skins]]
+  name = "Woodbot"
+  rarity = "legendary"
+[[skins]]
+  name = "Gearbot"
+  rarity = "legendary"
+[[skins]]
+  name = "Steambot"
+  rarity = "legendary"
+[[skins]]
+  name = "Dune Buggy"
+  rarity = "Overwatch Anniversary"
+[[skins]]
+  name = "Overgrown"
+  rarity = "Origins Edition"

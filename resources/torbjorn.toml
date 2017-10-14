@@ -7,4 +7,55 @@ sex = "male"
 
 tag = "torbjorn_(overwatch)"
 
-## no male skins for now
+[[skins]]
+  name = "Classic"
+  rarity = "common"
+[[skins]]
+  name = "Blå"
+  rarity = "rare"
+[[skins]]
+  name = "Citron"
+  rarity = "rare"
+[[skins]]
+  name = "Grön"
+  rarity = "rare"
+[[skins]]
+  name = "Plommon"
+  rarity = "rare"
+[[skins]]
+  name = "Cathode"
+  rarity = "epic"
+[[skins]]
+  name = "Woodclad"
+  rarity = "epic"
+[[skins]]
+  name = "Tre Kronor"
+  rarity = "epic"
+  event = "Summer Games"
+[[skins]]
+  name = "Chopper"
+  rarity = "legendary"
+[[skins]]
+  name = "Deadlock"
+  rarity = "legendary"
+[[skins]]
+  name = "Barbarossa"
+  rarity = "legendary"
+[[skins]]
+  name = "Blackbeard"
+  rarity = "legendary"
+[[skins]]
+  name = "Chief Engineer Lindholm"
+  rarity = "legendary"
+  event = "Uprising"
+  tag = "chief_engineer_lindholm_(overwatch)"
+[[skins]]
+  name = "Ironclad"
+  rarity = "legendary"
+  event = "Uprising"
+  tag = "ironclad_torbjorn_(overwatch)"
+[[skins]]
+  name = "Santaclad"
+  rarity = "legendary"
+  event = "Winter Wonderland"
+  tag = "santaclad_torbjorn_(overwatch)"
