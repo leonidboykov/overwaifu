@@ -59,3 +59,7 @@ tag = "torbjorn_(overwatch)"
   rarity = "legendary"
   event = "Winter Wonderland"
   tag = "santaclad_torbjorn_(overwatch)"
+[[skins]]
+  name = "Viking"
+  rarity = "legendary"
+  event = "Halloween Terror"
