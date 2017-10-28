@@ -9,71 +9,89 @@ tag = "tracer_(overwatch)"
 
 [[skins]]
   name = "Classic"
+  slug = "classic"
   rarity = "common"
 [[skins]]
   name = "Electric Purple"
+  slug = "electric-purple"
   rarity = "rare"
 [[skins]]
   name = "Hot Pink"
+  slug = "hot-pink"
   rarity = "rare"
 [[skins]]
   name = "Neon Green"
+  slug = "neon-green"
   rarity = "rare"
 [[skins]]
   name = "Royal Blue"
+  slug = "royal-blue"
   rarity = "rare"
 [[skins]]
   name = "Posh"
+  slug = "posh"
   rarity = "epic"
 [[skins]]
   name = "Sporty"
+  slug = "sporty"
   rarity = "epic"
 [[skins]]
   name = "Rose"
+  slug = "rose"
   rarity = "epic"
 [[skins]]
   name = "Punk"
+  slug = "punk"
   rarity = "legendary"
   tag = "punk_tracer_(overwatch)"
 [[skins]]
   name = "Ultraviolet"
+  slug = "ultraviolet"
   rarity = "legendary"
   tag = "ultraviolet_tracer_(overwatch)"
 [[skins]]
   name = "Mach T"
+  slug = "mach-t"
   rarity = "legendary"
   tag = "mach_t_(overwatch)"
 [[skins]]
   name = "T.Racer"
+  slug = "tracer"
   rarity = "legendary"
   tag = "t.racer_(overwatch)"
 [[skins]]
   name = "Cadet Oxton"
+  slug = "cadet-oxton"
   rarity = "legendary"
   event = "Uprising"
   tag = "cadet_oxton_(overwatch)"
 [[skins]]
   name = "Graffiti"
+  slug = "graffiti"
   rarity = "legendary"
   event = "Overwatch Anniversary"
   tag = "graffiti_tracer_(overwatch)"
 [[skins]]
   name = "Sprinter"
+  slug = "sprinter"
   rarity = "legendary"
   event = "Summer Games"
   tag = "sprinter_tracer_(overwatch)"
 [[skins]]
   name = "Track and Field"
+  slug = "track-and-field"
   rarity = "legendary"
   event = "Summer Games"
   tag = "track_and_field_tracer_(overwatch)"
 [[skins]]
   name = "Jingle"
+  slug = "jingle"
   rarity = "legendary"
   event = "Winter Wonderland"
   tag = "jingle_tracer_(overwatch)"
 [[skins]]
   name = "Slipstream"
+  slug = "slipstream"
   rarity = "legendary"
   event = "Origins Edition"
   tag = "slipstream_tracer_(overwatch)"

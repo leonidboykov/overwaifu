@@ -10,51 +10,65 @@ tag = "ana_amari"
 
 [[skins]]
   name = "Classic"
+  slug = "classic"
   rarity = "common"
 [[skins]]
   name = "Citrine"
+  slug = "citrine"
   rarity = "rare"
 [[skins]]
   name = "Garnet"
+  slug = "garnet"
   rarity = "rare"
 [[skins]]
   name = "Peridot"
+  slug = "peridot"
   rarity = "rare"
 [[skins]]
   name = "Turquoise"
+  slug = "turquoise"
   rarity = "rare"
 [[skins]]
   name = "Merciful"
+  slug = "merciful"
   rarity = "epic"
 [[skins]]
   name = "Shrike"
+  slug = "shrike"
   rarity = "epic"
   tag = "shrike_ana"
 [[skins]]
   name = "Tal"
+  slug = "tal"
   rarity = "epic"
   event = "Year of the Rooster"
 [[skins]]
   name = "Ghoul"
+  slug = "ghoul"
   rarity = "epic"
   event = "Halloween Terror"
   tag = "ghoul_ana_(overwatch)"
 [[skins]]
   name = "Wadjet"
+  slug = "wadjet"
   rarity = "legendary"
 [[skins]]
   name = "Wasteland"
+  slug = "wasteland"
   rarity = "legendary"
 [[skins]]
   name = "Captain Amari"
+  slug = "captain-amari"
   rarity = "legendary"
   tag = "captain_amari_(overwatch)"
 [[skins]]
   name = "Horus"
+  slug = "horus"
   rarity = "legendary"
   tag = "horus_ana_(overwatch)"
 [[skins]]
   name = "Corsair"
+  slug = "corsair"
   rarity = "legendary"
   event = "Halloween Terror"
   tag = "corsair_ana_(overwatch)"

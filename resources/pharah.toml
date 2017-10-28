@@ -9,60 +9,75 @@ tag = "pharah_(overwatch)"
 
 [[skins]]
   name = "Classic"
+  slug = "classic"
   rarity = "common"
 [[skins]]
   name = "Amethyst"
+  slug = "amethyst"
   rarity = "rare"
 [[skins]]
   name = "Copper"
+  slug = "copper"
   rarity = "rare"
 [[skins]]
   name = "Emerald"
+  slug = "emerald"
   rarity = "rare"
 [[skins]]
   name = "Titanium"
+  slug = "titanium"
   rarity = "rare"
 [[skins]]
   name = "Anubis"
+  slug = "anubis"
   rarity = "epic"
   tag = "anubis_pharah_(overwatch)"
 [[skins]]
   name = "Jackal"
+  slug = "jackal"
   rarity = "epic"
   tag = "jackal_pharah_(overwatch)"
 [[skins]]
   name = "Possessed"
+  slug = "possessed"
   rarity = "epic"
   event = "Halloween Terror"
   tag = "possessed_pharah_(overwatch)"
 [[skins]]
   name = "Frostbite"
+  slug = "frostbite"
   rarity = "epic"
   event = "Winter Wonderland"
   tag = "frostbite_pharah_(overwatch)"
 [[skins]]
   name = "Mechaqueen"
+  slug = "mechaqueen"
   rarity = "legendary"
   tag = "mechaqueen_pharah_(overwatch)"
 [[skins]]
   name = "Raptorion"
+  slug = "raptorion"
   rarity = "legendary"
   tag = "raptorion_pharah_(overwatch)"
 [[skins]]
   name = "Raindancer"
+  slug = "raindancer"
   rarity = "legendary"
   tag = "raindancer_pharah_(overwatch)"
 [[skins]]
   name = "Thunderbird"
+  slug = "thunderbird"
   rarity = "legendary"
   tag = "thunderbird_pharah_(overwatch)"
 [[skins]]
   name = "Bedouin"
+  slug = "bedouin"
   rarity = "legendary"
   event = "Overwatch Anniversary"
   tag = "bedouin_pharah_(overwatch)"
 [[skins]]
   name = "Security Chief"
+  slug = "security-chief"
   rarity = "legendary"
   event = "Origins Edition"
   tag = "security_chief_pharah_(overwatch)"

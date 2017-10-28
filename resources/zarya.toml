@@ -9,59 +9,75 @@ tag = "zarya_(overwatch)"
 
 [[skins]]
   name = "Classic"
+  slug = "classic"
   rarity = "common"
 [[skins]]
   name = "Brick"
+  slug = "brick"
   rarity = "rare"
 [[skins]]
   name = "Goldenrod"
+  slug = "goldenrod"
   rarity = "rare"
 [[skins]]
   name = "Taiga"
+  slug = "taiga"
   rarity = "rare"
 [[skins]]
   name = "Violet"
+  slug = "violet"
   rarity = "rare"
 [[skins]]
   name = "Dawn"
+  slug = "dawn"
   rarity = "epic"
 [[skins]]
   name = "Midnight"
+  slug = "midnight"
   rarity = "epic"
 [[skins]]
   name = "Frosted"
+  slug = "frosted"
   rarity = "epic"
   event = "Winter Wonderland"
 [[skins]]
   name = "Arctic"
+  slug = "arctic"
   rarity = "legendary"
   tag = "arctic_zarya_(overwatch)"
 [[skins]]
   name = "Siberian Front"
+  slug = "siberian-front"
   rarity = "legendary"
   tag = "siberian_front_zarya_(overwatch)"
 [[skins]]
   name = "Cybergoth"
+  slug = "cybergoth"
   rarity = "legendary"
   tag = "cybergoth_zarya_(overwatch)"
 [[skins]]
   name = "Industrial"
+  slug = "industrial"
   rarity = "legendary"
   tag = "industrial_zarya_(overwatch)"
 [[skins]]
   name = "Cyberian"
+  slug = "cyberian"
   rarity = "legendary"
   event = "Summer Games"
 [[skins]]
   name = "Champion"
+  slug = "champion"
   rarity = "legendary"
   event = "Summer Games"
   tag = "champion_zarya_(overwatch)"
 [[skins]]
   name = "Weightlifter"
+  slug = "weightlifter"
   rarity = "legendary"
   event = "Overwatch Anniversary"
 [[skins]]
   name = "Totally 80's" # should be "Totally '80"
+  slug = "totally-80s" # should be "Totally '80"
   rarity = "legendary"
   event = "Halloween Terror"

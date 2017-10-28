@@ -9,58 +9,73 @@ tag = "d.va_(overwatch)"
 
 [[skins]]
   name = "Classic"
+  slug = "classic"
   rarity = "common"
 [[skins]]
   name = "Blueberry"
+  slug = "blueberry"
   rarity = "rare"
 [[skins]]
   name = "Lemon-Lime"
+  slug = "lemon-lime"
   rarity = "rare"
 [[skins]]
   name = "Tangerine"
+  slug = "tangerine"
   rarity = "rare"
 [[skins]]
   name = "Watermelon"
+  slug = "watermelon"
   rarity = "rare"
 [[skins]]
   name = "Carbon Fiber"
+  slug = "carbon-fiber"
   rarity = "epic"
 [[skins]]
   name = "White Rabbit"
+  slug = "white-rabbit"
   rarity = "epic"
 [[skins]]
   name = "Taegeukgi"
+  slug = "taegeukgi"
   rarity = "epic"
   event = "Summer Games"
   tag = "taegeukgi_d.va_(overwatch)"
 [[skins]]
   name = "Junker"
+  slug = "junker"
   rarity = "legendary"
   tag = "junker_d.va_(overwatch)"
 [[skins]]
   name = "Scavenger"
+  slug = "scavenger"
   rarity = "legendary"
   tag = "scavenger_d.va_(overwatch)"
 [[skins]]
   name = "B.Va"
+  slug = "bva"
   rarity = "legendary"
   tag = "b.va_(overwatch)"
 [[skins]]
   name = "Junebug"
+  slug = "junebug"
   rarity = "legendary"
   tag = "junebug_d.va_(overwatch)"
 [[skins]]
   name = "Palanquin"
+  slug = "palanquin"
   rarity = "legendary"
   event = "Year of the Rooster"
   tag = "palanquin_d.va"
 [[skins]]
   name = "Cruiser"
+  slug = "cruiser"
   rarity = "legendary"
   event = "Overwatch Anniversary"
   tag = "cruiser_d.va"
 [[skins]]
   name = "Police Officer"
+  slug = "police-officer"
   rarity = "legendary"
   event = "Heroes of the Storm"
   tag = "officer_d.va"

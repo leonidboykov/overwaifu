@@ -9,39 +9,51 @@ tag = "orisa_(overwatch)"
 
 [[skins]]
   name = "Classic"
+  slug = "classic"
   rarity = "common"
 [[skins]]
   name = "Dawn"
+  slug = "dawn"
   rarity = "rare"
 [[skins]]
   name = "Plains"
+  slug = "plains"
   rarity = "rare"
 [[skins]]
   name = "Sunrise"
+  slug = "sunrise"
   rarity = "rare"
 [[skins]]
   name = "Twilight"
+  slug = "twilight"
   rarity = "rare"
 [[skins]]
   name = "Camouflage"
+  slug = "camouflage"
   rarity = "epic"
 [[skins]]
   name = "OR15"
+  slug = "or15"
   rarity = "epic"
 [[skins]]
   name = "Dynastinae"
+  slug = "dynastinae"
   rarity = "legendary"
 [[skins]]
   name = "Megasoma"
+  slug = "megasoma"
   rarity = "legendary"
   tag = "megasoma_orisa"
 [[skins]]
   name = "Carbon Fiber"
+  slug = "carbon-fiber"
   rarity = "legendary"
 [[skins]]
   name = "Protector"
+  slug = "protector"
   rarity = "legendary"
 [[skins]]
   name = "Null Sector"
+  slug = "null-sector"
   rarity = "legendary"
   event = "Uprising"

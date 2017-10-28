@@ -9,63 +9,79 @@ tag = "mercy_(overwatch)"
 
 [[skins]]
   name = "Classic"
+  slug = "classic"
   rarity = "common"
 [[skins]]
 	name = "Celestial"
+  slug = "celestial"
 	rarity = "rare"
 [[skins]]
 	name = "Mist"
+  slug = "mist"
 	rarity = "rare"
 [[skins]]
 	name = "Orchid"
+  slug = "orchid"
 	rarity = "rare"
 [[skins]]
 	name = "Verdant"
+  slug = "verdant"
 	rarity = "rare"
 [[skins]]
 	name = "Amber"
+  slug = "amber"
 	rarity = "epic"
 [[skins]]
 	name = "Cobalt"
+  slug = "cobalt"
 	rarity = "epic"
 	tag = "cobalt_mercy_(overwatch)"
 [[skins]]
 	name = "Fortune"
+  slug = "fortune"
 	rarity = "epic"
 	tag = "fortune_mercy_(overwatch)"
 [[skins]]
 	name = "Eidgenossin"
+  slug = "eidgenossin"
 	rarity = "epic"
 	event = "Summer Games"
 	tag = "eidgenossin_mercy_(overwatch)"
 [[skins]]
 	name = "Sigrún"
+  slug = "sigrun"
 	rarity = "legendary"
 	tag = "sigrun_mercy_(overwatch)"
 [[skins]]
 	name = "Valkyrie"
+  slug = "valkyrie"
 	rarity = "legendary"
 	tag = "valkyrie_mercy_(overwatch)"
 [[skins]]
 	name = "Devil"
+  slug = "devil"
 	rarity = "legendary"
 	tag = "devil_mercy_(overwatch)"
 [[skins]]
 	name = "Imp"
+  slug = "imp"
 	rarity = "legendary"
 	tag = "imp_mercy"
 [[skins]]
 	name = "Witch"
+  slug = "witch"
 	rarity = "legendary"
 	event = "Helloween Terror"
 	tag = "witch_mercy_(overwatch)"
 [[skins]]
 	name = "Combat Medic Ziegler"
+  slug = "combat-medic-ziegler"
 	rarity = "legendary"
 	event = "Uprising"
 	tag = "combat_medic_ziegler_(overwatch)"
 [[skins]]
 	name = "Winged Victory"
+  slug = "winged-victory"
 	rarity = "legendary"
 	event = "Summer Games"
 	tag = "winged_victory_mercy_(overwatch)"

@@ -1,5 +1,5 @@
 name = "Symmetra"
-slug = "symmetra"
+slug = "Symmetra"
 realName = "Satya Vaswani"
 age = 28
 role = "support"
@@ -9,56 +9,71 @@ tag = "symmetra_(overwatch)"
 
 [[skins]]
   name = "Classic"
+  slug = "classic"
   rarity = "common"
 [[skins]]
   name = "Cardamom"
+  slug = "cardamom"
   rarity = "rare"
 [[skins]]
   name = "Hyacinth"
+  slug = "hyacinth"
   rarity = "rare"
 [[skins]]
   name = "Saffron"
+  slug = "saffron"
   rarity = "rare"
 [[skins]]
   name = "Technomancer"
+  slug = "technomancer"
   rarity = "rare"
 [[skins]]
   name = "Regal"
+  slug = "regal"
   rarity = "epic"
 [[skins]]
   name = "Utopaea"
+  slug = "utopaea"
   rarity = "epic"
 [[skins]]
   name = "Qipao"
+  slug = "qipao"
   rarity = "epic"
   event = "Year of the Rooster"
 [[skins]]
   name = "Vampire"
+  slug = "vampire"
   rarity = "epic"
   event = "Halloween Terror"
   tag = "vampire_symmetra_(overwatch)"
 [[skins]]
   name = "Architech"
+  slug = "architech"
   rarity = "legendary"
 [[skins]]
   name = "Vishkar"
+  slug = "vishkar"
   rarity = "legendary"
   tag = "vishkar_symmetra_(overwatch)"
 [[skins]]
   name = "Devi"
+  slug = "devi"
   rarity = "legendary"
   tag = "devi_symmetra_(overwatch)"
 [[skins]]
   name = "Goddess"
+  slug = "goddess"
   rarity = "legendary"
   tag = "goddess_symmetra"
 [[skins]]
   name = "Oasis"
+  slug = "oasis"
   rarity = "legendary"
   event = "Overwatch Anniversary"
   tag = "oasis_symmetra_(overwatch)"
 [[skins]]
   name = "Dragon"
+  slug = "dragon"
   rarity = "legendary"
   event = "Halloween Terror"
   tag = "dragon_symmetra_(overwatch)"

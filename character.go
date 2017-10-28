@@ -5,10 +5,17 @@ import (
 	"sort"
 
 	"github.com/leonidboykov/getmoe"
-	"github.com/leonidboykov/getmoe/board/sankaku"
 )
 
-const genderswapTag = "genderswap"
+const (
+	genderswapTag          = "genderswap"
+	virginKillerSweaterTag = "virgin_killer_sweater"
+)
+
+const (
+	minScoreForChar = 500
+	minScoreForTag  = 75
+)
 
 // Character contains all main data about character
 type Character struct {
@@ -23,33 +30,17 @@ type Character struct {
 	Tag      string `json:"tag" toml:"tag"` // sankaku tag
 }
 
-const (
-	sankakuURL = "https://ias.sankakucomplex.com/tag/autosuggest?tag=%s"
-)
-
-// FetchScore from Sankaku Channel
-func (c *Character) FetchScore() error {
-	board := sankaku.ChanSankakuConfig
-	board.BuildAuth("bmnuser", "123456789")
-
-	board.Query = getmoe.Query{
-		Tags: []string{c.Tag},
-		Page: 1,
-	}
-
-	print("searching " + c.Name + "'s lewd images... ")
-
-	posts, err := board.RequestAll()
-	if err != nil {
-		return err
-	}
-
+// CalcScore ...
+func (c *Character) CalcScore(posts []getmoe.Post) {
 	// Score.All is how much pictures with this character on Sankaku Channel
 	c.Score.All = len(posts)
 
 	for i := range posts {
 		if posts[i].HasTag(genderswapTag) {
-			c.Score.Genderswaps++
+			c.Score.GenderSwaps++
+		}
+		if posts[i].HasTag(virginKillerSweaterTag) {
+			c.Score.VirginKillerSweater++
 		}
 		switch posts[i].Rating {
 		case "s":
@@ -61,36 +52,40 @@ func (c *Character) FetchScore() error {
 		default:
 			log.Printf("overwaifu: got unknown rating %s", posts[i].Rating)
 		}
-	}
 
-	for i := range c.Skins {
-		for j := range posts {
-			if posts[j].HasTag(c.Skins[i].Tag) {
-				c.Skins[i].Score.All++
-				switch posts[j].Rating {
+		for j := range c.Skins {
+			if posts[i].HasTag(c.Skins[j].Tag) {
+				c.Skins[j].Score.All++
+				switch posts[i].Rating {
 				case "s":
-					c.Skins[i].Score.Safe++
+					c.Skins[j].Score.Safe++
 				case "q":
-					c.Skins[i].Score.Questionable++
+					c.Skins[j].Score.Questionable++
 				case "e":
-					c.Skins[i].Score.Explicit++
-				default:
-					log.Printf("overwaifu: got unknown rating %s", posts[j].Rating)
+					c.Skins[j].Score.Explicit++
 				}
 			}
 		}
 	}
 
-	println("found", c.Score.All)
+	if c.Score.All > minScoreForChar {
+		c.Score.Lewd = float64(c.Score.Explicit) / float64(c.Score.All)
+		c.Score.Pure = float64(c.Score.Safe) / float64(c.Score.All)
+	}
 
-	return nil
+	for i := range c.Skins {
+		if c.Skins[i].Score.All > minScoreForTag {
+			c.Skins[i].Score.Lewd = float64(c.Skins[i].Score.Explicit) / float64(c.Skins[i].Score.All)
+			c.Skins[i].Score.Pure = float64(c.Skins[i].Score.Safe) / float64(c.Skins[i].Score.All)
+		}
+	}
 }
 
-// By is the type of a "less" function that defines the ordering of its Characters arguments.
-type By func(c1, c2 *Character) bool
+// SortCharacterBy is the type of a "less" function that defines the ordering of its Characters arguments.
+type SortCharacterBy func(c1, c2 *Character) bool
 
 // Sort is a method on the function type, By, that sorts the argument slice according to the function.
-func (by By) Sort(characters []Character) {
+func (by SortCharacterBy) Sort(characters []Character) {
 	cs := &characterSorter{
 		characters: characters,
 		by:         by, // The Sort method's receiver is the function (closure) that defines the sort order.
@@ -98,7 +93,7 @@ func (by By) Sort(characters []Character) {
 	sort.Sort(cs)
 }
 
-// planetSorter joins a By function and a slice of Characters to be sorted.
+// characterSorter joins a By function and a slice of Characters to be sorted.
 type characterSorter struct {
 	characters []Character
 	by         func(p1, p2 *Character) bool // Closure used in the Less method.

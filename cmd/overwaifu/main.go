@@ -2,77 +2,74 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
+	"time"
 
-	"github.com/BurntSushi/toml"
+	"github.com/leonidboykov/getmoe"
+	"github.com/leonidboykov/getmoe/board/sankaku"
 	"github.com/leonidboykov/overwaifu"
 )
 
-// Supported characters, comment to disable
-var characters = []string{
-	"ana",
-	"bastion",
-	"doomfist",
-	"dva",
-	"genji",
-	"hanzo",
-	"junkrat",
-	"lucio",
-	"mccree",
-	"mei",
-	"mercy",
-	"orisa",
-	"pharah",
-	"reaper",
-	"reinhardt",
-	"roadhog",
-	"soldier76",
-	"sombra",
-	"symmetra",
-	"torbjorn",
-	"tracer",
-	"widowmaker",
-	"winston",
-	"zarya",
-	"zenyatta",
+func main() {
+	getCache()
+	getData()
 }
 
-func main() {
-	var chars []overwaifu.Character
-
-	for _, c := range characters {
-		var char overwaifu.Character
-		if _, err := toml.DecodeFile("resources/"+c+".toml", &char); err != nil {
-			log.Panicln(err)
-		}
-
-		if err := char.FetchScore(); err != nil {
-			log.Panicln(err)
-		}
-
-		data, err := json.MarshalIndent(char, "", "  ")
-		if err != nil {
-			log.Panicln(err)
-		}
-
-		if err := ioutil.WriteFile("dest/"+c+".json", data, 0644); err != nil {
-			log.Panicln(err)
-		}
-
-		chars = append(chars, char)
+func getData() {
+	data, err := ioutil.ReadFile("dest/cache/cache.json")
+	if err != nil {
+		log.Panicln(err)
 	}
 
-	scoreAll := func(c1, c2 *overwaifu.Character) bool {
-		return c1.Score.All > c2.Score.All
+	var posts []getmoe.Post
+	if err = json.Unmarshal(data, &posts); err != nil {
+		log.Panicln(err)
 	}
 
-	overwaifu.By(scoreAll).Sort(chars)
-
-	for _, c := range chars {
-		fmt.Println(c.Name, "-", c.Score.All)
+	ow, err := overwaifu.New(posts)
+	if err != nil {
+		log.Panicln(err)
 	}
-	fmt.Println()
-	fmt.Println(chars[0].Name, "is the hottest", chars[0].Sex, "in the Overwatch")
+
+	ow.FetchData()
+	ow.Analyse()
+
+	data, err = json.MarshalIndent(ow, "", "  ")
+	if err != nil {
+		log.Panicln(err)
+	}
+
+	if err := ioutil.WriteFile("dest/overwaifu.json", data, 0644); err != nil {
+		log.Panicln(err)
+	}
+}
+
+func getCache() {
+	board := sankaku.ChanSankakuConfig
+	board.BuildAuth("bmnuser", "123456789")
+
+	board.Query = getmoe.Query{
+		Tags: []string{"overwatch"},
+		Page: 1,
+	}
+
+	start := time.Now()
+	println("searching for overwatch lewd images")
+	posts, err := board.RequestAll()
+	if err != nil {
+		log.Panicln(err)
+	}
+	println("found", len(posts))
+	elapsed := time.Since(start)
+	log.Printf("OverWaifu runtime %s", elapsed)
+
+	data, err := json.Marshal(posts)
+	if err != nil {
+		log.Panicln(err)
+	}
+
+	if err := ioutil.WriteFile("dest/cache/cache.json", data, 0644); err != nil {
+		log.Panicln(err)
+	}
 }
