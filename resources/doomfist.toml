@@ -1,0 +1,12 @@
+name = "Doomfist"
+realName = "Akande Ogundimu"
+age = 45
+role = "offense"
+sex = "male"
+
+tag = "doomfist_(overwatch)"
+
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"

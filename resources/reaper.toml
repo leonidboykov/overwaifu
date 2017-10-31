@@ -1,0 +1,65 @@
+name = "Reaper"
+realName = "Gabriel Reyes"
+age = 0 # unknown
+role = "offense"
+sex = "male"
+
+tag = "reaper_(overwatch)"
+
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.blood]
+    name = "Blood"
+    rarity = "rare"
+  [skins.midnight]
+    name = "Midnight"
+    rarity = "rare"
+  [skins.moss]
+    name = "Moss"
+    rarity = "rare"
+  [skins.royal]
+    name = "Royal"
+    rarity = "rare"
+  [skins.desert]
+    name = "Desert"
+    rarity = "epic"
+  [skins.wight]
+    name = "Wight"
+    rarity = "epic"
+  [skins.shiver]
+    name = "Shiver"
+    rarity = "epic"
+    event = "Winter Wonderland"
+  [skins.nevermore]
+    name = "Nevermore"
+    rarity = "legendary"
+    tag = "nevermore_reaper_(overwatch)"
+  [skins.plague-doctor]
+    name = "Plague Doctor"
+    rarity = "legendary"
+  [skins.el-blanco]
+    name = "El Blanco"
+    rarity = "legendary"
+  [skins.mariachi]
+    name = "Mariachi"
+    rarity = "legendary"
+  [skins.biker]
+    name = "Biker"
+    rarity = "legendary"
+    event = "Summer Games"
+  [skins.pumpkin]
+    name = "Pumpkin"
+    rarity = "legendary"
+    event = "Halloween Terror"
+    tag = "pumpkin_reaper_(overwatch)"
+  [skins.blackwatch-reyes]
+    name = "Blackwatch Reyes"
+    rarity = "legendary"
+    event = "Origins Edition"
+    tag = "blackwatch_reyes_(overwatch)"
+  [skins.dracula]
+    name = "Dracula"
+    rarity = "legendary"
+    event = "Halloween Terror"

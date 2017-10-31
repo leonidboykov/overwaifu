@@ -1,69 +1,68 @@
 name = "Pharah"
-slug = "pharah"
 realName = "Fareeha Amari"
 age = 32
-location = "Giza, Egypt"
 role = "offense"
 sex = "female"
 
 tag = "pharah_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Amethyst"
-  rarity = "rare"
-[[skins]]
-  name = "Copper"
-  rarity = "rare"
-[[skins]]
-  name = "Emerald"
-  rarity = "rare"
-[[skins]]
-  name = "Titanium"
-  rarity = "rare"
-[[skins]]
-  name = "Anubis"
-  rarity = "epic"
-  tag = "anubis_pharah_(overwatch)"
-[[skins]]
-  name = "Jackal"
-  rarity = "epic"
-  tag = "jackal_pharah_(overwatch)"
-[[skins]]
-  name = "Possessed"
-  rarity = "epic"
-  event = "Halloween Terror"
-  tag = "possessed_pharah_(overwatch)"
-[[skins]]
-  name = "Frostbite"
-  rarity = "epic"
-  event = "Winter Wonderland"
-  tag = "frostbite_pharah_(overwatch)"
-[[skins]]
-  name = "Mechaqueen"
-  rarity = "legendary"
-  tag = "mechaqueen_pharah_(overwatch)"
-[[skins]]
-  name = "Raptorion"
-  rarity = "legendary"
-  tag = "raptorion_pharah_(overwatch)"
-[[skins]]
-  name = "Raindancer"
-  rarity = "legendary"
-  tag = "raindancer_pharah_(overwatch)"
-[[skins]]
-  name = "Thunderbird"
-  rarity = "legendary"
-  tag = "thunderbird_pharah_(overwatch)"
-[[skins]]
-  name = "Bedouin"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-  tag = "bedouin_pharah_(overwatch)"
-[[skins]]
-  name = "Security Chief"
-  rarity = "legendary"
-  event = "Origins Edition"
-  tag = "security_chief_pharah_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.amethyst]
+    name = "Amethyst"
+    rarity = "rare"
+  [skins.copper]
+    name = "Copper"
+    rarity = "rare"
+  [skins.emerald]
+    name = "Emerald"
+    rarity = "rare"
+  [skins.titanium]
+    name = "Titanium"
+    rarity = "rare"
+  [skins.anubis]
+    name = "Anubis"
+    rarity = "epic"
+    tag = "anubis_pharah_(overwatch)"
+  [skins.jackal]
+    name = "Jackal"
+    rarity = "epic"
+    tag = "jackal_pharah_(overwatch)"
+  [skins.possessed]
+    name = "Possessed"
+    rarity = "epic"
+    event = "Halloween Terror"
+    tag = "possessed_pharah_(overwatch)"
+  [skins.frostbite]
+    name = "Frostbite"
+    rarity = "epic"
+    event = "Winter Wonderland"
+    tag = "frostbite_pharah_(overwatch)"
+  [skins.mechaqueen]
+    name = "Mechaqueen"
+    rarity = "legendary"
+    tag = "mechaqueen_pharah_(overwatch)"
+  [skins.raptorion]
+    name = "Raptorion"
+    rarity = "legendary"
+    tag = "raptorion_pharah_(overwatch)"
+  [skins.raindancer]
+    name = "Raindancer"
+    rarity = "legendary"
+    tag = "raindancer_pharah_(overwatch)"
+  [skins.thunderbird]
+    name = "Thunderbird"
+    rarity = "legendary"
+    tag = "thunderbird_pharah_(overwatch)"
+  [skins.bedouin]
+    name = "Bedouin"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+    tag = "bedouin_pharah_(overwatch)"
+  [skins.security-chief]
+    name = "Security Chief"
+    rarity = "legendary"
+    event = "Origins Edition"
+    tag = "security_chief_pharah_(overwatch)"

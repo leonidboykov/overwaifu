@@ -1,0 +1,64 @@
+name = "Reinhardt"
+realName = "Reinhardt Wilhelm"
+age = 61
+role = "tank"
+sex = "male"
+
+tag = "reinhardt_(overwatch)"
+
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.brass]
+    name = "Brass"
+    rarity = "rare"
+  [skins.cobalt]
+    name = "Cobalt"
+    rarity = "rare"
+  [skins.copper]
+    name = "Copper"
+    rarity = "rare"
+  [skins.viridian]
+    name = "Viridian"
+    rarity = "rare"
+  [skins.bundeswehr]
+    name = "Bundeswehr"
+    rarity = "epic"
+  [skins.paragon]
+    name = "Paragon"
+    rarity = "epic"
+  [skins.lieutenant-wilhelm]
+    name = "Lieutenant Wilhelm"
+    rarity = "epic"
+    event = "Uprising"
+  [skins.coldhardt]
+    name = "Coldhardt"
+    rarity = "epic"
+    event = "Halloween Terror"
+  [skins.blackhardt]
+    name = "Blackhardt"
+    rarity = "legendary"
+    tag = "blackhardt_reinhardt_(overwatch)"
+  [skins.bloodhardt]
+    name = "Bloodhardt"
+    rarity = "legendary"
+  [skins.lionhardt]
+    name = "Lionhardt"
+    rarity = "legendary"
+  [skins.stonehardt]
+    name = "Stonehardt"
+    rarity = "legendary"
+    tag = "stonehardt"
+  [skins.balderich]
+    name = "Balderich"
+    rarity = "legendary"
+    tag = "balderich_(overwatch)"
+  [skins.greifhardt]
+    name = "Greifhardt"
+    rarity = "legendary"
+  [skins.wujing]
+    name = "Wujing"
+    rarity = "legendary"
+    event = "Year of the Rooster"
+    tag = "wujing_reinhardt_(overwatch)"

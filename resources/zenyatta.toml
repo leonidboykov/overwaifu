@@ -1,0 +1,65 @@
+name = "Zenyatta"
+realName = "Tekhartha Zenyatta"
+age = 20
+role = "support"
+sex = "male"
+
+tag = "zenyatta_(overwatch)"
+
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.air]
+    name = "Air"
+    rarity = "rare"
+  [skins.earth]
+    name = "Earth"
+    rarity = "rare"
+  [skins.leaf]
+    name = "Leaf"
+    rarity = "rare"
+  [skins.water]
+    name = "Water"
+    rarity = "rare"
+  [skins.ascendant]
+    name = "Ascendant"
+    rarity = "epic"
+  [skins.harmonious]
+    name = "Harmonious"
+    rarity = "epic"
+  [skins.skullyatta]
+    name = "Skullyatta"
+    rarity = "epic"
+    event = "Halloween Terror"
+    tag = "skullyatta_(overwatch)"
+  [skins.djinnyatta]
+    name = "Djinnyatta"
+    rarity = "legendary"
+    tag = "djinnyatta_(overwatch)"
+  [skins.ifrit]
+    name = "Ifrit"
+    rarity = "legendary"
+  [skins.ra]
+    name = "Ra"
+    rarity = "legendary"
+    tag = "ra_zenyatta_(overwatch)"
+  [skins.sunyatta]
+    name = "Sunyatta"
+    rarity = "legendary"
+    tag = "Sunyatta"
+  [skins.sanzang]
+    name = "Sanzang"
+    rarity = "legendary"
+    event = "Year of the Rooster"
+    tag = "sanzang_zenyatta_(overwatch)"
+  [skins.nutcracker]
+    name = "Nutcracker"
+    rarity = "legendary"
+    event = "Winter Wonderland"
+    tag = "nutcracker_zenyatta_(overwatch)"
+  [skins.cultist]
+    name = "Cultist"
+    rarity = "legendary"
+    event = "Halloween Terror"
+    tag = "cultist_zenyatta_(overwatch)"

@@ -1,67 +1,66 @@
 name = "D.Va"
-slug = "dva"
 realName = "Hana Song"
 age = 19
-location = "Busan, South Korea"
 role = "tank"
 sex = "female"
 
 tag = "d.va_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Blueberry"
-  rarity = "rare"
-[[skins]]
-  name = "Lemon-Lime"
-  rarity = "rare"
-[[skins]]
-  name = "Tangerine"
-  rarity = "rare"
-[[skins]]
-  name = "Watermelon"
-  rarity = "rare"
-[[skins]]
-  name = "Carbon Fiber"
-  rarity = "epic"
-[[skins]]
-  name = "White Rabbit"
-  rarity = "epic"
-[[skins]]
-  name = "Taegeukgi"
-  rarity = "epic"
-  event = "Summer Games"
-  tag = "taegeukgi_d.va_(overwatch)"
-[[skins]]
-  name = "Junker"
-  rarity = "legendary"
-  tag = "junker_d.va_(overwatch)"
-[[skins]]
-  name = "Scavenger"
-  rarity = "legendary"
-  tag = "scavenger_d.va_(overwatch)"
-[[skins]]
-  name = "B.Va"
-  rarity = "legendary"
-  tag = "b.va_(overwatch)"
-[[skins]]
-  name = "Junebug"
-  rarity = "legendary"
-  tag = "junebug_d.va_(overwatch)"
-[[skins]]
-  name = "Palanquin"
-  rarity = "legendary"
-  event = "Year of the Rooster"
-  tag = "palanquin_d.va"
-[[skins]]
-  name = "Cruiser"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-  tag = "cruiser_d.va"
-[[skins]]
-  name = "Police Officer"
-  rarity = "legendary"
-  event = "Heroes of the Storm"
-  tag = "officer_d.va"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.blueberry]
+    name = "Blueberry"
+    rarity = "rare"
+  [skins.lemon-lime]
+    name = "Lemon-Lime"
+    rarity = "rare"
+  [skins.tangerine]
+    name = "Tangerine"
+    rarity = "rare"
+  [skins.watermelon]
+    name = "Watermelon"
+    rarity = "rare"
+  [skins.carbon-fiber]
+    name = "Carbon Fiber"
+    rarity = "epic"
+  [skins.white-rabbit]
+    name = "White Rabbit"
+    rarity = "epic"
+  [skins.taegeukgi]
+    name = "Taegeukgi"
+    rarity = "epic"
+    event = "Summer Games"
+    tag = "taegeukgi_d.va_(overwatch)"
+  [skins.junker]
+    name = "Junker"
+    rarity = "legendary"
+    tag = "junker_d.va_(overwatch)"
+  [skins.scavenger]
+    name = "Scavenger"
+    rarity = "legendary"
+    tag = "scavenger_d.va_(overwatch)"
+  [skins.bva]
+    name = "B.Va"
+    rarity = "legendary"
+    tag = "b.va_(overwatch)"
+  [skins.junebug]
+    name = "Junebug"
+    rarity = "legendary"
+    tag = "junebug_d.va_(overwatch)"
+  [skins.palanquin]
+    name = "Palanquin"
+    rarity = "legendary"
+    event = "Year of the Rooster"
+    tag = "palanquin_d.va"
+  [skins.cruiser]
+    name = "Cruiser"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+    tag = "cruiser_d.va"
+  [skins.police-officer]
+    name = "Police Officer"
+    rarity = "legendary"
+    event = "Heroes of the Storm"
+    tag = "officer_d.va"

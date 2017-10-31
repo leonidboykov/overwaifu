@@ -1,0 +1,66 @@
+name = "Genji"
+realName = "Genji Shimada"
+age = 35
+role = "offense"
+sex = "male"
+
+# there are no `genji_(overwatch)` tag on sankaku
+tag = "shimada_genji"
+
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.azurite]
+    name = "Azurite"
+    rarity = "rare"
+  [skins.cinnabar]
+    name = "Cinnabar"
+    rarity = "rare"
+  [skins.malachite]
+    name = "Malachite"
+    rarity = "rare"
+  [skins.ochre]
+    name = "Ochre"
+    rarity = "rare"
+  [skins.carbon-fiber]
+    name = "Carbon Fiber"
+    rarity = "epic"
+  [skins.chrome]
+    name = "Chrome"
+    rarity = "epic"
+  [skins.nihon]
+    name = "Nihon"
+    rarity = "epic"
+    event = "Summer Games"
+  [skins.sparrow]
+    name = "Sparrow"
+    rarity = "legendary"
+    tag = "sparrow_genji_(overwatch)"
+  [skins.young-genji]
+    name = "Young Genji"
+    rarity = "legendary"
+    tag = "young_genji_(overwatch)"
+  [skins.bedouin]
+    name = "Bedouin"
+    rarity = "legendary"
+    tag = "bedouin_genji_(overwatch)"
+  [skins.nomad]
+    name = "Nomad"
+    rarity = "legendary"
+    tag = "nomad_genji_(overwatch)"
+  [skins.blackwatch]
+    name = "Blackwatch"
+    rarity = "legendary"
+    event = "Uprising"
+    tag = "blackwatch_genji_(overwatch)"
+  [skins.sentai]
+    name = "Sentai"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+    tag = "sentai_genji_(overwatch)"
+  [skins.oni]
+    name = "Oni"
+    rarity = "legendary"
+    event = "Heroes of the Storm"
+    tag = "oni_genji_(overwatch)"

@@ -1,80 +1,79 @@
 name = "Tracer"
-slug = "tracer"
 realName = "Lena Oxton"
 age = 26
-location = "London, England"
 role = "offense"
 sex = "female"
 
 tag = "tracer_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Electric Purple"
-  rarity = "rare"
-[[skins]]
-  name = "Hot Pink"
-  rarity = "rare"
-[[skins]]
-  name = "Neon Green"
-  rarity = "rare"
-[[skins]]
-  name = "Royal Blue"
-  rarity = "rare"
-[[skins]]
-  name = "Posh"
-  rarity = "epic"
-[[skins]]
-  name = "Sporty"
-  rarity = "epic"
-[[skins]]
-  name = "Rose"
-  rarity = "epic"
-[[skins]]
-  name = "Punk"
-  rarity = "legendary"
-  tag = "punk_tracer_(overwatch)"
-[[skins]]
-  name = "Ultraviolet"
-  rarity = "legendary"
-  tag = "ultraviolet_tracer_(overwatch)"
-[[skins]]
-  name = "Mach T"
-  rarity = "legendary"
-  tag = "mach_t_(overwatch)"
-[[skins]]
-  name = "T.Racer"
-  rarity = "legendary"
-  tag = "t.racer_(overwatch)"
-[[skins]]
-  name = "Cadet Oxton"
-  rarity = "legendary"
-  event = "Uprising"
-  tag = "cadet_oxton_(overwatch)"
-[[skins]]
-  name = "Graffiti"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-  tag = "graffiti_tracer_(overwatch)"
-[[skins]]
-  name = "Sprinter"
-  rarity = "legendary"
-  event = "Summer Games"
-  tag = "sprinter_tracer_(overwatch)"
-[[skins]]
-  name = "Track and Field"
-  rarity = "legendary"
-  event = "Summer Games"
-  tag = "track_and_field_tracer_(overwatch)"
-[[skins]]
-  name = "Jingle"
-  rarity = "legendary"
-  event = "Winter Wonderland"
-  tag = "jingle_tracer_(overwatch)"
-[[skins]]
-  name = "Slipstream"
-  rarity = "legendary"
-  event = "Origins Edition"
-  tag = "slipstream_tracer_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.electric-purple]
+    name = "Electric Purple"
+    rarity = "rare"
+  [skins.hot-pink]
+    name = "Hot Pink"
+    rarity = "rare"
+  [skins.neon-green]
+    name = "Neon Green"
+    rarity = "rare"
+  [skins.royal-blue]
+    name = "Royal Blue"
+    rarity = "rare"
+  [skins.posh]
+    name = "Posh"
+    rarity = "epic"
+  [skins.sporty]
+    name = "Sporty"
+    rarity = "epic"
+  [skins.rose]
+    name = "Rose"
+    rarity = "epic"
+  [skins.punk]
+    name = "Punk"
+    rarity = "legendary"
+    tag = "punk_tracer_(overwatch)"
+  [skins.ultraviolet]
+    name = "Ultraviolet"
+    rarity = "legendary"
+    tag = "ultraviolet_tracer_(overwatch)"
+  [skins.mach-t]
+    name = "Mach T"
+    rarity = "legendary"
+    tag = "mach_t_(overwatch)"
+  [skins.tracer]
+    name = "T.Racer"
+    rarity = "legendary"
+    tag = "t.racer_(overwatch)"
+  [skins.cadet-oxton]
+    name = "Cadet Oxton"
+    rarity = "legendary"
+    event = "Uprising"
+    tag = "cadet_oxton_(overwatch)"
+  [skins.graffiti]
+    name = "Graffiti"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+    tag = "graffiti_tracer_(overwatch)"
+  [skins.sprinter]
+    name = "Sprinter"
+    rarity = "legendary"
+    event = "Summer Games"
+    tag = "sprinter_tracer_(overwatch)"
+  [skins.track-and-field]
+    name = "Track and Field"
+    rarity = "legendary"
+    event = "Summer Games"
+    tag = "track_and_field_tracer_(overwatch)"
+  [skins.jingle]
+    name = "Jingle"
+    rarity = "legendary"
+    event = "Winter Wonderland"
+    tag = "jingle_tracer_(overwatch)"
+  [skins.slipstream]
+    name = "Slipstream"
+    rarity = "legendary"
+    event = "Origins Edition"
+    tag = "slipstream_tracer_(overwatch)"
