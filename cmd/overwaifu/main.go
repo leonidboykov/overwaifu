@@ -47,7 +47,7 @@ func getData() {
 
 func getCache() {
 	board := sankaku.ChanSankakuConfig
-	board.BuildAuth("bmnuser", "123456789")
+	board.BuildAuth("xxx", "xxx")
 
 	board.Query = getmoe.Query{
 		Tags: []string{"overwatch"},
