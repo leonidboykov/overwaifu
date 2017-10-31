@@ -24,8 +24,16 @@ type Character struct {
 	Role     string           `json:"role" toml:"role"`
 	Sex      string           `json:"sex" toml:"sex"`
 	Skins    map[string]*Skin `json:"skins" toml:"skins"`
+	Tag      string           `json:"tag" toml:"tag"` // sankaku tag
+	Key      string           `json:"key"`
 	Score    `json:"score"`
-	Tag      string `json:"tag" toml:"tag"` // sankaku tag
+}
+
+// UpdateSkinKey ...
+func (c *Character) UpdateSkinKey() {
+	for i := range c.Skins {
+		c.Skins[i].Key = i
+	}
 }
 
 // CalcScore ...

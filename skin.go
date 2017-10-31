@@ -19,6 +19,7 @@ type Skin struct {
 	Rarity `json:"rarity" toml:"rarity"`
 	Event  string `json:"event" toml:"event"`
 	Tag    string `json:"tag" toml:"tag"`
+	Key    string `json:"key"`
 	Score  `json:"score"`
 }
 

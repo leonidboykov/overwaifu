@@ -79,8 +79,12 @@ func New(posts []getmoe.Post) (*OverWaifu, error) {
 		}
 		if c.Sex == "female" {
 			ow.Waifu[characters[i]] = &c
+			ow.Waifu[characters[i]].Key = characters[i]
+			ow.Waifu[characters[i]].UpdateSkinKey()
 		} else {
 			ow.Husbando[characters[i]] = &c
+			ow.Husbando[characters[i]].Key = characters[i]
+			ow.Husbando[characters[i]].UpdateSkinKey()
 		}
 	}
 
