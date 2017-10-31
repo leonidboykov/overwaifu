@@ -1,5 +1,4 @@
 name = "Junkrat"
-slug = "junkrat"
 realName = "Jamison Fawkes"
 age = 25
 role = "defense"
@@ -7,53 +6,54 @@ sex = "male"
 
 tag = "junkrat_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Bleached"
-  rarity = "rare"
-[[skins]]
-  name = "Drowned"
-  rarity = "rare"
-[[skins]]
-  name = "Irradiated"
-  rarity = "rare"
-[[skins]]
-  name = "Rusted"
-  rarity = "rare"
-[[skins]]
-  name = "Jailbird"
-  rarity = "epic"
-[[skins]]
-  name = "Toasted"
-  rarity = "epic"
-[[skins]]
-  name = "Firework"
-  rarity = "epic"
-  event = "Year of the Rooster"
-  tag = "firework_junkrat_(overwatch)"
-[[skins]]
-  name = "Fool"
-  rarity = "legendary"
-  tag = "fool_junkrat_(overwatch)"
-[[skins]]
-  name = "Jester"
-  rarity = "legendary"
-  tag = "jester_junkrat_(overwatch)"
-[[skins]]
-  name = "Hayseed"
-  rarity = "legendary"
-  tag = "hayseed_junkrat_(overwatch)"
-[[skins]]
-  name = "Scarecrow"
-  rarity = "legendary"
-[[skins]]
-  name = "Cricket"
-  rarity = "legendary"
-  event = "Summer Games"
-[[skins]]
-  name = "Dr. Junkenstein"
-  rarity = "legendary"
-  event = "Halloween Terror"
-  tag = "dr._junkenstein_junkrat_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.bleached]
+    name = "Bleached"
+    rarity = "rare"
+  [skins.drowned]
+    name = "Drowned"
+    rarity = "rare"
+  [skins.irradiated]
+    name = "Irradiated"
+    rarity = "rare"
+  [skins.rusted]
+    name = "Rusted"
+    rarity = "rare"
+  [skins.jailbird]
+    name = "Jailbird"
+    rarity = "epic"
+  [skins.toasted]
+    name = "Toasted"
+    rarity = "epic"
+  [skins.firework]
+    name = "Firework"
+    rarity = "epic"
+    event = "Year of the Rooster"
+    tag = "firework_junkrat_(overwatch)"
+  [skins.fool]
+    name = "Fool"
+    rarity = "legendary"
+    tag = "fool_junkrat_(overwatch)"
+  [skins.jester]
+    name = "Jester"
+    rarity = "legendary"
+    tag = "jester_junkrat_(overwatch)"
+  [skins.hayseed]
+    name = "Hayseed"
+    rarity = "legendary"
+    tag = "hayseed_junkrat_(overwatch)"
+  [skins.scarecrow]
+    name = "Scarecrow"
+    rarity = "legendary"
+  [skins.cricket]
+    name = "Cricket"
+    rarity = "legendary"
+    event = "Summer Games"
+  [skins.drjunkenstein]
+    name = "Dr. Junkenstein"
+    rarity = "legendary"
+    event = "Halloween Terror"
+    tag = "dr._junkenstein_junkrat_(overwatch)"

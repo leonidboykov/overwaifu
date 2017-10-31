@@ -16,7 +16,6 @@ const (
 // Skin contains data about skin
 type Skin struct {
 	Name   string `json:"name" toml:"name"`
-	Slug   string `json:"slug" toml:"slug"`
 	Rarity `json:"rarity" toml:"rarity"`
 	Event  string `json:"event" toml:"event"`
 	Tag    string `json:"tag" toml:"tag"`

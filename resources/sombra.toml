@@ -1,5 +1,4 @@
 name = "Sombra"
-slug = "sombra"
 realName = "Olivia Colomar"
 age = 30
 role = "offense"
@@ -7,62 +6,50 @@ sex = "female"
 
 tag = "sombra_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  slug = "classic"
-  rarity = "common"
-[[skins]]
-  name = "Cidro"
-  slug = "cidro"
-  rarity = "rare"
-[[skins]]
-  name = "Incendio"
-  slug = "incendio"
-  rarity = "rare"
-[[skins]]
-  name = "Mar"
-  slug = "mar"
-  rarity = "rare"
-[[skins]]
-  name = "Noche"
-  slug = "noche"
-  rarity = "rare"
-[[skins]]
-  name = "Glitch"
-  slug = "glitch"
-  rarity = "epic"
-[[skins]]
-  name = "Virus"
-  slug = "virus"
-  rarity = "epic"
-[[skins]]
-  name = "Peppermint"
-  slug = "peppermint"
-  rarity = "epic"
-  event = "Winter Wonderland"
-  tag = "peppermint_sombra_(overwatch)"
-[[skins]]
-  name = "Azúcar"
-  slug = "azucar"
-  rarity = "legendary"
-[[skins]]
-  name = "Los Muertos"
-  slug = "los-muertos"
-  rarity = "legendary"
-  tag = "los_muertos_sombra_(overwatch)"
-[[skins]]
-  name = "Augmented"
-  slug = "augmented"
-  rarity = "legendary"
-  tag = "augmented_sombra_(overwatch)"
-[[skins]]
-  name = "Cyberspace"
-  slug = "cyberspace"
-  rarity = "legendary"
-  tag = "cyberspace_sombra_(overwatch)"
-[[skins]]
-  name = "Tulum"
-  slug = "tulum"
-  rarity = "legendary"
-  event = "Summer Games"
-  tag = "tulum_sombra_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.cidro]
+    name = "Cidro"
+    rarity = "rare"
+  [skins.incendio]
+    name = "Incendio"
+    rarity = "rare"
+  [skins.mar]
+    name = "Mar"
+    rarity = "rare"
+  [skins.noche]
+    name = "Noche"
+    rarity = "rare"
+  [skins.glitch]
+    name = "Glitch"
+    rarity = "epic"
+  [skins.virus]
+    name = "Virus"
+    rarity = "epic"
+  [skins.peppermint]
+    name = "Peppermint"
+    rarity = "epic"
+    event = "Winter Wonderland"
+    tag = "peppermint_sombra_(overwatch)"
+  [skins.azucar]
+    name = "Azúcar"
+    rarity = "legendary"
+  [skins.los-muertos]
+    name = "Los Muertos"
+    rarity = "legendary"
+    tag = "los_muertos_sombra_(overwatch)"
+  [skins.augmented]
+    name = "Augmented"
+    rarity = "legendary"
+    tag = "augmented_sombra_(overwatch)"
+  [skins.cyberspace]
+    name = "Cyberspace"
+    rarity = "legendary"
+    tag = "cyberspace_sombra_(overwatch)"
+  [skins.tulum]
+    name = "Tulum"
+    rarity = "legendary"
+    event = "Summer Games"
+    tag = "tulum_sombra_(overwatch)"

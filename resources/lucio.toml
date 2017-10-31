@@ -1,5 +1,4 @@
 name = "Lúcio"
-slug = "lucio"
 realName = "Lúcio Correia dos Santos"
 age = 26
 role = "support"
@@ -8,56 +7,57 @@ sex = "male"
 # there are no `lucio_(overwatch)` tag on sankaku
 tag = "lucio_correia_dos_santos"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Azul"
-  rarity = "rare"
-[[skins]]
-  name = "Laranja"
-  rarity = "rare"
-[[skins]]
-  name = "Roxo"
-  rarity = "rare"
-[[skins]]
-  name = "Vermelho"
-  rarity = "rare"
-[[skins]]
-  name = "Auditiva"
-  rarity = "epic"
-[[skins]]
-  name = "Synaesthesia"
-  rarity = "epic"
-[[skins]]
-  name = "Andes"
-  rarity = "epic"
-  event = "Winter Wonderland"
-[[skins]]
-  name = "HippityHop"
-  rarity = "legendary"
-  tag = "hippityhop_lucio"
-[[skins]]
-  name = "Ribbit"
-  rarity = "legendary"
-  tag = "ribbit_lucio"
-[[skins]]
-  name = "Breakaway"
-  rarity = "legendary"
-[[skins]]
-  name = "Slapshot"
-  rarity = "legendary"
-[[skins]]
-  name = "Jazzy"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-  tag = "jazzy_lucio_(overwatch)"
-[[skins]]
-  name = "Seleção"
-  rarity = "legendary"
-  event = "Summer Games"
-  tag = "selecao_lucio_(overwatch)"
-[[skins]]
-  name = "Striker"
-  rarity = "legendary"
-  event = "Summer Games"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.azul]
+    name = "Azul"
+    rarity = "rare"
+  [skins.laranja]
+    name = "Laranja"
+    rarity = "rare"
+  [skins.roxo]
+    name = "Roxo"
+    rarity = "rare"
+  [skins.vermelho]
+    name = "Vermelho"
+    rarity = "rare"
+  [skins.auditiva]
+    name = "Auditiva"
+    rarity = "epic"
+  [skins.synaesthesia]
+    name = "Synaesthesia"
+    rarity = "epic"
+  [skins.andes]
+    name = "Andes"
+    rarity = "epic"
+    event = "Winter Wonderland"
+  [skins.hippityhop]
+    name = "HippityHop"
+    rarity = "legendary"
+    tag = "hippityhop_lucio"
+  [skins.ribbit]
+    name = "Ribbit"
+    rarity = "legendary"
+    tag = "ribbit_lucio"
+  [skins.breakaway]
+    name = "Breakaway"
+    rarity = "legendary"
+  [skins.slapshot]
+    name = "Slapshot"
+    rarity = "legendary"
+  [skins.jazzy]
+    name = "Jazzy"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+    tag = "jazzy_lucio_(overwatch)"
+  [skins.selecao]
+    name = "Seleção"
+    rarity = "legendary"
+    event = "Summer Games"
+    tag = "selecao_lucio_(overwatch)"
+  [skins.striker]
+    name = "Striker"
+    rarity = "legendary"
+    event = "Summer Games"

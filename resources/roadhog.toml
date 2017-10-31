@@ -1,5 +1,4 @@
 name = "Roadhog"
-slug = "roadhog"
 realName = "Mako Rutledge"
 age = 48
 role = "tank"
@@ -7,46 +6,47 @@ sex = "male"
 
 tag = "roadhog_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Kiwi"
-  rarity = "rare"
-[[skins]]
-  name = "Mud"
-  rarity = "rare"
-[[skins]]
-  name = "Sand"
-  rarity = "rare"
-[[skins]]
-  name = "Thistle"
-  rarity = "rare"
-[[skins]]
-  name = "Pigpen"
-  rarity = "epic"
-[[skins]]
-  name = "Stitched"
-  rarity = "epic"
-[[skins]]
-  name = "Rudolph"
-  rarity = "epic"
-  event = "Winter Wonderland"
-[[skins]]
-  name = "Islander"
-  rarity = "legendary"
-[[skins]]
-  name = "Toa"
-  rarity = "legendary"
-[[skins]]
-  name = "Mako"
-  rarity = "legendary"
-[[skins]]
-  name = "Sharkbait"
-  rarity = "legendary"
-  tag = "sharkbait_roadhog_(overwatch)"
-[[skins]]
-  name = "Junkenstein's Monster"
-  rarity = "legendary"
-  event = "Halloween Terror"
-  tag = "junkenstein's_monster_roadhog_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.kiwi]
+    name = "Kiwi"
+    rarity = "rare"
+  [skins.mud]
+    name = "Mud"
+    rarity = "rare"
+  [skins.sand]
+    name = "Sand"
+    rarity = "rare"
+  [skins.thistle]
+    name = "Thistle"
+    rarity = "rare"
+  [skins.pigpen]
+    name = "Pigpen"
+    rarity = "epic"
+  [skins.stitched]
+    name = "Stitched"
+    rarity = "epic"
+  [skins.rudolph]
+    name = "Rudolph"
+    rarity = "epic"
+    event = "Winter Wonderland"
+  [skins.islander]
+    name = "Islander"
+    rarity = "legendary"
+  [skins.toa]
+    name = "Toa"
+    rarity = "legendary"
+  [skins.mako]
+    name = "Mako"
+    rarity = "legendary"
+  [skins.sharkbait]
+    name = "Sharkbait"
+    rarity = "legendary"
+    tag = "sharkbait_roadhog_(overwatch)"
+  [skins.junkensteins-monster]
+    name = "Junkenstein's Monster"
+    rarity = "legendary"
+    event = "Halloween Terror"
+    tag = "junkenstein's_monster_roadhog_(overwatch)"

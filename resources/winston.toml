@@ -1,5 +1,4 @@
 name = "Winston" # Yep, monkey
-slug = "winston"
 realName = "Winston"
 age = 29
 role = "tank"
@@ -7,49 +6,50 @@ sex = "male"
 
 tag = "winston_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Atmosphere"
-  rarity = "rare"
-[[skins]]
-  name = "Banana"
-  rarity = "rare"
-[[skins]]
-  name = "Forest"
-  rarity = "rare"
-[[skins]]
-  name = "Red Planet"
-  rarity = "rare"
-[[skins]]
-  name = "Desert"
-  rarity = "epic"
-[[skins]]
-  name = "Horizon"
-  rarity = "epic"
-[[skins]]
-  name = "BlizzCon 2017"
-  rarity = "epic"
-  event = "BlizzCon 2017"
-[[skins]]
-  name = "Frogston"
-  rarity = "legendary"
-[[skins]]
-  name = "Undersea"
-  rarity = "legendary"
-[[skins]]
-  name = "Explorer"
-  rarity = "legendary"
-[[skins]]
-  name = "Safari"
-  rarity = "legendary"
-[[skins]]
-  name = "Wukong"
-  rarity = "legendary"
-  event = "Year of the Rooster"
-  tag = "wukong_winston_(overwatch)"
-[[skins]]
-  name = "Yeti"
-  rarity = "legendary"
-  event = "Winter Wonderland"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.atmosphere]
+    name = "Atmosphere"
+    rarity = "rare"
+  [skins.banana]
+    name = "Banana"
+    rarity = "rare"
+  [skins.forest]
+    name = "Forest"
+    rarity = "rare"
+  [skins.red-planet]
+    name = "Red Planet"
+    rarity = "rare"
+  [skins.desert]
+    name = "Desert"
+    rarity = "epic"
+  [skins.horizon]
+    name = "Horizon"
+    rarity = "epic"
+  [skins.blizzcon-2017]
+    name = "BlizzCon 2017"
+    rarity = "epic"
+    event = "BlizzCon 2017"
+  [skins.frogston]
+    name = "Frogston"
+    rarity = "legendary"
+  [skins.undersea]
+    name = "Undersea"
+    rarity = "legendary"
+  [skins.explorer]
+    name = "Explorer"
+    rarity = "legendary"
+  [skins.safari]
+    name = "Safari"
+    rarity = "legendary"
+  [skins.wukong]
+    name = "Wukong"
+    rarity = "legendary"
+    event = "Year of the Rooster"
+    tag = "wukong_winston_(overwatch)"
+  [skins.yeti]
+    name = "Yeti"
+    rarity = "legendary"
+    event = "Winter Wonderland"

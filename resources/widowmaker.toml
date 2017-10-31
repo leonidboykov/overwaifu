@@ -1,5 +1,4 @@
 name = "Widowmaker"
-slug = "widowmaker"
 realName = "Amélie Lacroix"
 age = 33
 role = "defense"
@@ -7,75 +6,61 @@ sex = "female"
 
 tag = "widowmaker_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  slug = "classic"
-  rarity = "common"
-[[skins]]
-  name = "Ciel"
-  slug = "ciel"
-  rarity = "rare"
-[[skins]]
-  name = "Nuit"
-  slug = "nuit"
-  rarity = "rare"
-[[skins]]
-  name = "Rose"
-  slug = "rose"
-  rarity = "rare"
-[[skins]]
-  name = "Vert"
-  slug = "vert"
-  rarity = "rare"
-[[skins]]
-  name = "Patina"
-  slug = "patina"
-  rarity = "epic"
-[[skins]]
-  name = "Winter"
-  slug = "winter"
-  rarity = "epic"
-[[skins]]
-  name = "Tricolore"
-  slug = "tricolore"
-  rarity = "epic"
-  event = "Summer Games"
-  tag = "tricolore_widowmaker_(overwatch)"
-[[skins]]
-  name = "Odette"
-  slug = "odette"
-  rarity = "legendary"
-  tag = "odette_widowmaker_(overwatch)"
-[[skins]]
-  name = "Odile"
-  slug = "odile"
-  rarity = "legendary"
-  tag = "odile_widowmaker_(overwatch)"
-[[skins]]
-  name = "Comtesse"
-  slug = "comtesse"
-  rarity = "legendary"
-  tag = "comtesse_widowmaker_(overwatch)"
-[[skins]]
-  name = "Huntress"
-  slug = "huntress"
-  rarity = "legendary"
-  tag = "huntress_widowmaker_(overwatch)"
-[[skins]]
-  name = "Talon"
-  slug = "talon"
-  rarity = "legendary"
-  event = "Uprising"
-  tag = "talon_widowmaker_(overwatch)"
-[[skins]]
-  name = "Côte d'Azur"
-  slug = "cote-dazur"
-  rarity = "legendary"
-  event = "Summer Games"
-  tag = "cote_d'azur_widowmaker"
-[[skins]]
-  name = "Noire"
-  slug = "noire"
-  rarity = "legendary"
-  event = "Pre-order"
-  tag = "noire_widowmaker_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.ciel]
+    name = "Ciel"
+    rarity = "rare"
+  [skins.nuit]
+    name = "Nuit"
+    rarity = "rare"
+  [skins.rose]
+    name = "Rose"
+    rarity = "rare"
+  [skins.vert]
+    name = "Vert"
+    rarity = "rare"
+  [skins.patina]
+    name = "Patina"
+    rarity = "epic"
+  [skins.winter]
+    name = "Winter"
+    rarity = "epic"
+  [skins.tricolore]
+    name = "Tricolore"
+    rarity = "epic"
+    event = "Summer Games"
+    tag = "tricolore_widowmaker_(overwatch)"
+  [skins.odette]
+    name = "Odette"
+    rarity = "legendary"
+    tag = "odette_widowmaker_(overwatch)"
+  [skins.odile]
+    name = "Odile"
+    rarity = "legendary"
+    tag = "odile_widowmaker_(overwatch)"
+  [skins.comtesse]
+    name = "Comtesse"
+    rarity = "legendary"
+    tag = "comtesse_widowmaker_(overwatch)"
+  [skins.huntress]
+    name = "Huntress"
+    rarity = "legendary"
+    tag = "huntress_widowmaker_(overwatch)"
+  [skins.talon]
+    name = "Talon"
+    rarity = "legendary"
+    event = "Uprising"
+    tag = "talon_widowmaker_(overwatch)"
+  [skins.cote-dazur]
+    name = "Côte d'Azur"
+    rarity = "legendary"
+    event = "Summer Games"
+    tag = "cote_d'azur_widowmaker"
+  [skins.noire]
+    name = "Noire"
+    rarity = "legendary"
+    event = "Pre-order"
+    tag = "noire_widowmaker_(overwatch)"

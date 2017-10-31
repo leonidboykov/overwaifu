@@ -1,5 +1,4 @@
 name = "Torbjörn"
-slug = "torbjorn"
 realName = "Torbjörn Lindholm"
 age = 57
 role = "defense"
@@ -7,59 +6,60 @@ sex = "male"
 
 tag = "torbjorn_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Blå"
-  rarity = "rare"
-[[skins]]
-  name = "Citron"
-  rarity = "rare"
-[[skins]]
-  name = "Grön"
-  rarity = "rare"
-[[skins]]
-  name = "Plommon"
-  rarity = "rare"
-[[skins]]
-  name = "Cathode"
-  rarity = "epic"
-[[skins]]
-  name = "Woodclad"
-  rarity = "epic"
-[[skins]]
-  name = "Tre Kronor"
-  rarity = "epic"
-  event = "Summer Games"
-[[skins]]
-  name = "Chopper"
-  rarity = "legendary"
-[[skins]]
-  name = "Deadlock"
-  rarity = "legendary"
-[[skins]]
-  name = "Barbarossa"
-  rarity = "legendary"
-[[skins]]
-  name = "Blackbeard"
-  rarity = "legendary"
-[[skins]]
-  name = "Chief Engineer Lindholm"
-  rarity = "legendary"
-  event = "Uprising"
-  tag = "chief_engineer_lindholm_(overwatch)"
-[[skins]]
-  name = "Ironclad"
-  rarity = "legendary"
-  event = "Uprising"
-  tag = "ironclad_torbjorn_(overwatch)"
-[[skins]]
-  name = "Santaclad"
-  rarity = "legendary"
-  event = "Winter Wonderland"
-  tag = "santaclad_torbjorn_(overwatch)"
-[[skins]]
-  name = "Viking"
-  rarity = "legendary"
-  event = "Halloween Terror"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.bla]
+    name = "Blå"
+    rarity = "rare"
+  [skins.citron]
+    name = "Citron"
+    rarity = "rare"
+  [skins.gron]
+    name = "Grön"
+    rarity = "rare"
+  [skins.plommon]
+    name = "Plommon"
+    rarity = "rare"
+  [skins.cathode]
+    name = "Cathode"
+    rarity = "epic"
+  [skins.woodclad]
+    name = "Woodclad"
+    rarity = "epic"
+  [skins.tre-kronor]
+    name = "Tre Kronor"
+    rarity = "epic"
+    event = "Summer Games"
+  [skins.chopper]
+    name = "Chopper"
+    rarity = "legendary"
+  [skins.deadlock]
+    name = "Deadlock"
+    rarity = "legendary"
+  [skins.barbarossa]
+    name = "Barbarossa"
+    rarity = "legendary"
+  [skins.blackbeard]
+    name = "Blackbeard"
+    rarity = "legendary"
+  [skins.chief-engineer-lindholm]
+    name = "Chief Engineer Lindholm"
+    rarity = "legendary"
+    event = "Uprising"
+    tag = "chief_engineer_lindholm_(overwatch)"
+  [skins.ironclad]
+    name = "Ironclad"
+    rarity = "legendary"
+    event = "Uprising"
+    tag = "ironclad_torbjorn_(overwatch)"
+  [skins.santaclad]
+    name = "Santaclad"
+    rarity = "legendary"
+    event = "Winter Wonderland"
+    tag = "santaclad_torbjorn_(overwatch)"
+  [skins.viking]
+    name = "Viking"
+    rarity = "legendary"
+    event = "Halloween Terror"

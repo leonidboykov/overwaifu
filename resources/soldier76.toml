@@ -1,5 +1,4 @@
 name = "Soldier: 76"
-slug = "soldier76"
 realName = "Jack Morrison"
 age = 0 # unknown
 role = "offense"
@@ -7,57 +6,58 @@ sex = "male"
 
 tag = "soldier:_76_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  rarity = "common"
-[[skins]]
-  name = "Jet"
-  rarity = "rare"
-[[skins]]
-  name = "Olive"
-  rarity = "rare"
-[[skins]]
-  name = "Russet"
-  rarity = "rare"
-[[skins]]
-  name = "Smoke"
-  rarity = "rare"
-[[skins]]
-  name = "Bone"
-  rarity = "epic"
-[[skins]]
-  name = "Golden"
-  rarity = "epic"
-[[skins]]
-  name = "Immortal"
-  rarity = "epic"
-  event = "Halloween Terror"
-  tag = "immortal_soldier:_76_(overwatch)"
-[[skins]]
-  name = "Commando: 76"
-  rarity = "legendary"
-  tag = "commando:_76"
-[[skins]]
-  name = "Night Ops: 76"
-  rarity = "legendary"
-[[skins]]
-  name = "Daredevil: 76"
-  rarity = "legendary"
-  tag = "daredevil:_76_(overwatch)"
-[[skins]]
-  name = "Stunt Rider: 76"
-  rarity = "legendary"
-[[skins]]
-  name = "Cyborg: 76"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-[[skins]]
-  name = "Grillmaster: 76"
-  rarity = "legendary"
-  event = "Summer Games"
-  tag = "grillmaster:_76_(overwatch)"
-[[skins]]
-  name = "Strike Commander Morrison"
-  rarity = "legendary"
-  event = "Origins Edition"
-  tag = "strike_commander_morrison_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.jet]
+    name = "Jet"
+    rarity = "rare"
+  [skins.olive]
+    name = "Olive"
+    rarity = "rare"
+  [skins.russet]
+    name = "Russet"
+    rarity = "rare"
+  [skins.smoke]
+    name = "Smoke"
+    rarity = "rare"
+  [skins.bone]
+    name = "Bone"
+    rarity = "epic"
+  [skins.golden]
+    name = "Golden"
+    rarity = "epic"
+  [skins.immortal]
+    name = "Immortal"
+    rarity = "epic"
+    event = "Halloween Terror"
+    tag = "immortal_soldier:_76_(overwatch)"
+  [skins.commando76]
+    name = "Commando: 76"
+    rarity = "legendary"
+    tag = "commando:_76"
+  [skins.night-ops76]
+    name = "Night Ops: 76"
+    rarity = "legendary"
+  [skins.daredevil76]
+    name = "Daredevil: 76"
+    rarity = "legendary"
+    tag = "daredevil:_76_(overwatch)"
+  [skins.stunt-Rider76]
+    name = "Stunt Rider: 76"
+    rarity = "legendary"
+  [skins.cyborg76]
+    name = "Cyborg: 76"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+  [skins.grillmaster76]
+    name = "Grillmaster: 76"
+    rarity = "legendary"
+    event = "Summer Games"
+    tag = "grillmaster:_76_(overwatch)"
+  [skins.strike-commander-morrison]
+    name = "Strike Commander Morrison"
+    rarity = "legendary"
+    event = "Origins Edition"
+    tag = "strike_commander_morrison_(overwatch)"

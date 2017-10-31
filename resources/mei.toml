@@ -1,5 +1,4 @@
 name = "Mei"
-slug = "mei"
 realName = "Mei-Ling Zhou"
 age = 31
 role = "defense"
@@ -8,80 +7,65 @@ sex = "female"
 # there are no `mei_(overwatch)` tag on sankaku
 tag = "mei-ling_zhou"
 
-[[skins]]
-  name = "Classic"
-  slug = "classic"
-  rarity = "common"
-[[skins]]
-  name = "Chrysanthemum"
-  slug = "chrysanthemum"
-  rarity = "rare"
-[[skins]]
-  name = "Heliotrope"
-  slug = "heliotrope"
-  rarity = "rare"
-[[skins]]
-  name = "Jade"
-  slug = "jade"
-  rarity = "rare"
-[[skins]]
-  name = "Persimmon"
-  slug = "persimmon"
-  rarity = "rare"
-[[skins]]
-  name = "Earthen"
-  slug = "earthen"
-  rarity = "epic"
-[[skins]]
-  name = "Snow Plum"
-  slug = "snow-plum"
-  rarity = "epic"
-[[skins]]
-  name = "Firefighter"
-  slug = "firefighter"
-  rarity = "legendary"
-[[skins]]
-  name = "Rescue Mei"
-  slug = "rescue-mei"
-  rarity = "legendary"
-  tag = "rescue_mei"
-[[skins]]
-  name = "Abominable"
-  slug = "abominable"
-  rarity = "legendary"
-  tag = "abominable_mei_(overwatch)"
-[[skins]]
-  name = "Yeti Hunter"
-  slug = "yeti-hunter"
-  rarity = "legendary"
-  tag = "yeti_hunter_mei_(overwatch)"
-[[skins]]
-  name = "Chang'e"
-  slug = "change"
-  rarity = "legendary"
-  event = "Year of the Rooster"
-  tag = "chang'e_mei_(overwatch)"
-[[skins]]
-  name = "Luna"
-  slug = "luna"
-  rarity = "legendary"
-  event = "Year of the Rooster"
-  tag = "luna_mei_(overwatch)"
-[[skins]]
-  name = "Beekeeper"
-  slug = "beekeeper"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-  tag = "beekeeper_mei_(overwatch)"
-[[skins]]
-  name = "Mei-rry"
-  slug = "mei-rry"
-  rarity = "legendary"
-  event = "Winter Wonderland"
-  tag = "mei-rry_mei"
-[[skins]]
-  name = "Jiangshi"
-  slug = "jiangshi"
-  rarity = "legendary"
-  event = "Halloween Terror"
-  tag = "jiangshi_mei_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.chrysanthemum]
+    name = "Chrysanthemum"
+    rarity = "rare"
+  [skins.heliotrope]
+    name = "Heliotrope"
+    rarity = "rare"
+  [skins.jade]
+    name = "Jade"
+    rarity = "rare"
+  [skins.persimmon]
+    name = "Persimmon"
+    rarity = "rare"
+  [skins.earthen]
+    name = "Earthen"
+    rarity = "epic"
+  [skins.snow-plum]
+    name = "Snow Plum"
+    rarity = "epic"
+  [skins.firefighter]
+    name = "Firefighter"
+    rarity = "legendary"
+  [skins.rescue-mei]
+    name = "Rescue Mei"
+    rarity = "legendary"
+    tag = "rescue_mei"
+  [skins.abominable]
+    name = "Abominable"
+    rarity = "legendary"
+    tag = "abominable_mei_(overwatch)"
+  [skins.yeti-hunter]
+    name = "Yeti Hunter"
+    rarity = "legendary"
+    tag = "yeti_hunter_mei_(overwatch)"
+  [skins.change]
+    name = "Chang'e"
+    rarity = "legendary"
+    event = "Year of the Rooster"
+    tag = "chang'e_mei_(overwatch)"
+  [skins.luna]
+    name = "Luna"
+    rarity = "legendary"
+    event = "Year of the Rooster"
+    tag = "luna_mei_(overwatch)"
+  [skins.beekeeper]
+    name = "Beekeeper"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+    tag = "beekeeper_mei_(overwatch)"
+  [skins.mei-rry]
+    name = "Mei-rry"
+    rarity = "legendary"
+    event = "Winter Wonderland"
+    tag = "mei-rry_mei"
+  [skins.jiangshi]
+    name = "Jiangshi"
+    rarity = "legendary"
+    event = "Halloween Terror"
+    tag = "jiangshi_mei_(overwatch)"

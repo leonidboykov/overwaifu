@@ -1,5 +1,4 @@
 name = "Symmetra"
-slug = "symmetra"
 realName = "Satya Vaswani"
 age = 28
 role = "support"
@@ -7,73 +6,59 @@ sex = "female"
 
 tag = "symmetra_(overwatch)"
 
-[[skins]]
-  name = "Classic"
-  slug = "classic"
-  rarity = "common"
-[[skins]]
-  name = "Cardamom"
-  slug = "cardamom"
-  rarity = "rare"
-[[skins]]
-  name = "Hyacinth"
-  slug = "hyacinth"
-  rarity = "rare"
-[[skins]]
-  name = "Saffron"
-  slug = "saffron"
-  rarity = "rare"
-[[skins]]
-  name = "Technomancer"
-  slug = "technomancer"
-  rarity = "rare"
-[[skins]]
-  name = "Regal"
-  slug = "regal"
-  rarity = "epic"
-[[skins]]
-  name = "Utopaea"
-  slug = "utopaea"
-  rarity = "epic"
-[[skins]]
-  name = "Qipao"
-  slug = "qipao"
-  rarity = "epic"
-  event = "Year of the Rooster"
-[[skins]]
-  name = "Vampire"
-  slug = "vampire"
-  rarity = "epic"
-  event = "Halloween Terror"
-  tag = "vampire_symmetra_(overwatch)"
-[[skins]]
-  name = "Architech"
-  slug = "architech"
-  rarity = "legendary"
-[[skins]]
-  name = "Vishkar"
-  slug = "vishkar"
-  rarity = "legendary"
-  tag = "vishkar_symmetra_(overwatch)"
-[[skins]]
-  name = "Devi"
-  slug = "devi"
-  rarity = "legendary"
-  tag = "devi_symmetra_(overwatch)"
-[[skins]]
-  name = "Goddess"
-  slug = "goddess"
-  rarity = "legendary"
-  tag = "goddess_symmetra"
-[[skins]]
-  name = "Oasis"
-  slug = "oasis"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-  tag = "oasis_symmetra_(overwatch)"
-[[skins]]
-  name = "Dragon"
-  slug = "dragon"
-  rarity = "legendary"
-  event = "Halloween Terror"
-  tag = "dragon_symmetra_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.cardamom]
+    name = "Cardamom"
+    rarity = "rare"
+  [skins.hyacinth]
+    name = "Hyacinth"
+    rarity = "rare"
+  [skins.saffron]
+    name = "Saffron"
+    rarity = "rare"
+  [skins.technomancer]
+    name = "Technomancer"
+    rarity = "rare"
+  [skins.regal]
+    name = "Regal"
+    rarity = "epic"
+  [skins.utopaea]
+    name = "Utopaea"
+    rarity = "epic"
+  [skins.qipao]
+    name = "Qipao"
+    rarity = "epic"
+    event = "Year of the Rooster"
+  [skins.vampire]
+    name = "Vampire"
+    rarity = "epic"
+    event = "Halloween Terror"
+    tag = "vampire_symmetra_(overwatch)"
+  [skins.architech]
+    name = "Architech"
+    rarity = "legendary"
+  [skins.vishkar]
+    name = "Vishkar"
+    rarity = "legendary"
+    tag = "vishkar_symmetra_(overwatch)"
+  [skins.devi]
+    name = "Devi"
+    rarity = "legendary"
+    tag = "devi_symmetra_(overwatch)"
+  [skins.goddess]
+    name = "Goddess"
+    rarity = "legendary"
+    tag = "goddess_symmetra"
+  [skins.oasis]
+    name = "Oasis"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+    tag = "oasis_symmetra_(overwatch)"
+  [skins.dragon]
+    name = "Dragon"
+    rarity = "legendary"
+    event = "Halloween Terror"
+    tag = "dragon_symmetra_(overwatch)"

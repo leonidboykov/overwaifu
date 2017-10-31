@@ -39,8 +39,8 @@ var characters = []string{
 // OverWaifu ...
 type OverWaifu struct {
 	posts        []getmoe.Post
-	Waifu        []Character `json:"waifu"`
-	Husbando     []Character `json:"husbando"`
+	Waifu        map[string]*Character `json:"waifu"`
+	Husbando     map[string]*Character `json:"husbando"`
 	Achievements `json:"achievements"`
 }
 
@@ -62,6 +62,29 @@ type Achievements struct {
 type SkinAchievement struct {
 	Owner string `json:"owner"`
 	Skin  string `json:"skin"`
+}
+
+// New ...
+func New(posts []getmoe.Post) (*OverWaifu, error) {
+	ow := OverWaifu{
+		posts:    posts,
+		Waifu:    make(map[string]*Character),
+		Husbando: make(map[string]*Character),
+	}
+	for i := range characters {
+		var c Character
+		_, err := toml.DecodeFile("resources/"+characters[i]+".toml", &c)
+		if err != nil {
+			return nil, err
+		}
+		if c.Sex == "female" {
+			ow.Waifu[characters[i]] = &c
+		} else {
+			ow.Husbando[characters[i]] = &c
+		}
+	}
+
+	return &ow, nil
 }
 
 // FetchData ...
@@ -89,130 +112,79 @@ func (ow *OverWaifu) FetchData() {
 
 // Analyse ...
 func (ow *OverWaifu) Analyse() {
-	SortCharacterBy(sortByAll).Sort(ow.Waifu)
-	ow.Achievements.FameWaifu = ow.Waifu[0].Slug
-
-	SortCharacterBy(sortByExplicit).Sort(ow.Waifu)
-	ow.Achievements.HotWaifu = ow.Waifu[0].Slug
-
-	SortCharacterBy(sortByLewd).Sort(ow.Waifu)
-	ow.Achievements.LewdWaifu = ow.Waifu[0].Slug
-
-	SortCharacterBy(sortByPure).Sort(ow.Waifu)
-	ow.Achievements.PureWaifu = ow.Waifu[0].Slug
-
-	SortCharacterBy(sortByGenderSwaps).Sort(ow.Husbando)
-	ow.Achievements.FakeWaifu = ow.Husbando[0].Slug
-
-	SortCharacterBy(sortByVirginKiller).Sort(ow.Waifu)
-	ow.Achievements.VirginKillerWaifu = ow.Waifu[0].Slug
-
-	SortCharacterBy(sortSkinsByAll).Sort(ow.Waifu)
-	ow.Achievements.FameWaifuSkin = SkinAchievement{
-		Owner: ow.Waifu[0].Slug,
-		Skin:  ow.Waifu[0].Skins[0].Slug,
-	}
-
-	SortCharacterBy(sortSkinsByExplicit).Sort(ow.Waifu)
-	ow.Achievements.HotWaifuSkin = SkinAchievement{
-		Owner: ow.Waifu[0].Slug,
-		Skin:  ow.Waifu[0].Skins[0].Slug,
-	}
-
-	SortCharacterBy(sortSkinsByLewd).Sort(ow.Waifu)
-	ow.Achievements.LewdWaifuSkin = SkinAchievement{
-		Owner: ow.Waifu[0].Slug,
-		Skin:  ow.Waifu[0].Skins[0].Slug,
-	}
-
-	SortCharacterBy(sortSkinsByPure).Sort(ow.Waifu)
-	ow.Achievements.PureWaifuSkin = SkinAchievement{
-		Owner: ow.Waifu[0].Slug,
-		Skin:  ow.Waifu[0].Skins[0].Slug,
-	}
-}
-
-// New ...
-func New(posts []getmoe.Post) (*OverWaifu, error) {
-	ow := OverWaifu{
-		posts: posts,
-	}
-	for i := range characters {
-		var c Character
-		_, err := toml.DecodeFile("resources/"+characters[i]+".toml", &c)
-		if err != nil {
-			return nil, err
+	var fame, hot, virginKiller int
+	var pure, lewd float64
+	var fameSkin, hotSkin int
+	var pureSkin, lewdSkin float64
+	for i := range ow.Waifu {
+		if ow.Waifu[i].Score.All > fame {
+			ow.Achievements.FameWaifu = i
+			fame = ow.Waifu[i].Score.All
 		}
-		if c.Sex == "female" {
-			ow.Waifu = append(ow.Waifu, c)
-		} else {
-			ow.Husbando = append(ow.Husbando, c)
+
+		if ow.Waifu[i].Score.Explicit > hot {
+			ow.Achievements.HotWaifu = i
+			hot = ow.Waifu[i].Score.Explicit
+		}
+
+		if ow.Waifu[i].Score.Pure > pure {
+			ow.Achievements.PureWaifu = i
+			pure = ow.Waifu[i].Score.Pure
+		}
+
+		if ow.Waifu[i].Score.Lewd > lewd {
+			ow.Achievements.LewdWaifu = i
+			lewd = ow.Waifu[i].Score.Lewd
+		}
+
+		if ow.Waifu[i].Score.VirginKillerSweater > virginKiller {
+			ow.Achievements.VirginKillerWaifu = i
+			virginKiller = ow.Waifu[i].Score.VirginKillerSweater
+		}
+
+		// Skins
+		f, fSkin := ow.Waifu[i].FameSkin()
+		if f > fameSkin {
+			ow.Achievements.FameWaifuSkin = SkinAchievement{
+				Owner: i,
+				Skin:  fSkin,
+			}
+			fameSkin = f
+		}
+
+		h, hSkin := ow.Waifu[i].HotSkin()
+		if h > hotSkin {
+			ow.Achievements.HotWaifuSkin = SkinAchievement{
+				Owner: i,
+				Skin:  hSkin,
+			}
+			hotSkin = h
+		}
+
+		p, pSkin := ow.Waifu[i].PureSkin()
+		if p > pureSkin {
+			ow.Achievements.PureWaifuSkin = SkinAchievement{
+				Owner: i,
+				Skin:  pSkin,
+			}
+			pureSkin = p
+		}
+
+		l, lSkin := ow.Waifu[i].LewdSkin()
+		if l > lewdSkin {
+			ow.Achievements.LewdWaifuSkin = SkinAchievement{
+				Owner: i,
+				Skin:  lSkin,
+			}
+			lewdSkin = l
 		}
 	}
 
-	return &ow, nil
-}
-
-func sortByAll(c1, c2 *Character) bool {
-	return c1.Score.All > c2.Score.All
-}
-
-func sortByExplicit(c1, c2 *Character) bool {
-	return c1.Score.Explicit > c2.Score.Explicit
-}
-
-func sortByLewd(c1, c2 *Character) bool {
-	return c1.Score.Lewd > c2.Score.Lewd
-}
-
-func sortByPure(c1, c2 *Character) bool {
-	return c1.Score.Pure > c2.Score.Pure
-}
-
-func sortByGenderSwaps(c1, c2 *Character) bool {
-	return c1.Score.GenderSwaps > c2.Score.GenderSwaps
-}
-
-func sortByVirginKiller(c1, c2 *Character) bool {
-	return c1.Score.VirginKillerSweater > c2.Score.VirginKillerSweater
-}
-
-func sortSkinsByAll(c1, c2 *Character) bool {
-	sortSkin := func(s1, s2 *Skin) bool {
-		return s1.Score.All > s2.Score.All
+	var genderSwaps int
+	for i := range ow.Husbando {
+		if ow.Husbando[i].Score.GenderSwaps > genderSwaps {
+			ow.Achievements.FakeWaifu = i
+			genderSwaps = ow.Husbando[i].Score.GenderSwaps
+		}
 	}
-	SortSkinBy(sortSkin).Sort(c1.Skins)
-	SortSkinBy(sortSkin).Sort(c2.Skins)
-
-	return c1.Skins[0].Score.All > c2.Skins[0].Score.All
-}
-
-func sortSkinsByExplicit(c1, c2 *Character) bool {
-	sortSkin := func(s1, s2 *Skin) bool {
-		return s1.Score.Explicit > s2.Score.Explicit
-	}
-	SortSkinBy(sortSkin).Sort(c1.Skins)
-	SortSkinBy(sortSkin).Sort(c2.Skins)
-
-	return c1.Skins[0].Score.Explicit > c2.Skins[0].Score.Explicit
-}
-
-func sortSkinsByLewd(c1, c2 *Character) bool {
-	sortSkin := func(s1, s2 *Skin) bool {
-		return s1.Score.Lewd > s2.Score.Lewd
-	}
-	SortSkinBy(sortSkin).Sort(c1.Skins)
-	SortSkinBy(sortSkin).Sort(c2.Skins)
-
-	return c1.Skins[0].Score.Lewd > c2.Skins[0].Score.Lewd
-}
-
-func sortSkinsByPure(c1, c2 *Character) bool {
-	sortSkin := func(s1, s2 *Skin) bool {
-		return s1.Score.Pure > s2.Score.Pure
-	}
-	SortSkinBy(sortSkin).Sort(c1.Skins)
-	SortSkinBy(sortSkin).Sort(c2.Skins)
-
-	return c1.Skins[0].Score.Pure > c2.Skins[0].Score.Pure
 }

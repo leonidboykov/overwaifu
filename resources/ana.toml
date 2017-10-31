@@ -1,5 +1,4 @@
 name = "Ana"
-slug = "ana"
 realName = "Ana Amari"
 age = 60
 role = "support"
@@ -8,67 +7,54 @@ sex = "female"
 # there are no `ana_(overwatch)` tag on sankaku
 tag = "ana_amari"
 
-[[skins]]
-  name = "Classic"
-  slug = "classic"
-  rarity = "common"
-[[skins]]
-  name = "Citrine"
-  slug = "citrine"
-  rarity = "rare"
-[[skins]]
-  name = "Garnet"
-  slug = "garnet"
-  rarity = "rare"
-[[skins]]
-  name = "Peridot"
-  slug = "peridot"
-  rarity = "rare"
-[[skins]]
-  name = "Turquoise"
-  slug = "turquoise"
-  rarity = "rare"
-[[skins]]
-  name = "Merciful"
-  slug = "merciful"
-  rarity = "epic"
-[[skins]]
-  name = "Shrike"
-  slug = "shrike"
-  rarity = "epic"
-  tag = "shrike_ana"
-[[skins]]
-  name = "Tal"
-  slug = "tal"
-  rarity = "epic"
-  event = "Year of the Rooster"
-[[skins]]
-  name = "Ghoul"
-  slug = "ghoul"
-  rarity = "epic"
-  event = "Halloween Terror"
-  tag = "ghoul_ana_(overwatch)"
-[[skins]]
-  name = "Wadjet"
-  slug = "wadjet"
-  rarity = "legendary"
-[[skins]]
-  name = "Wasteland"
-  slug = "wasteland"
-  rarity = "legendary"
-[[skins]]
-  name = "Captain Amari"
-  slug = "captain-amari"
-  rarity = "legendary"
-  tag = "captain_amari_(overwatch)"
-[[skins]]
-  name = "Horus"
-  slug = "horus"
-  rarity = "legendary"
-  tag = "horus_ana_(overwatch)"
-[[skins]]
-  name = "Corsair"
-  slug = "corsair"
-  rarity = "legendary"
-  event = "Halloween Terror"
-  tag = "corsair_ana_(overwatch)"
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
+  [skins.citrine]
+    name = "Citrine"
+    rarity = "rare"
+  [skins.garnet]
+    name = "Garnet"
+    rarity = "rare"
+  [skins.peridot]
+    name = "Peridot"
+    rarity = "rare"
+  [skins.turquoise]
+    name = "Turquoise"
+    rarity = "rare"
+  [skins.merciful]
+    name = "Merciful"
+    rarity = "epic"
+  [skins.shrike]
+    name = "Shrike"
+    rarity = "epic"
+    tag = "shrike_ana"
+  [skins.tal]
+    name = "Tal"
+    rarity = "epic"
+    event = "Year of the Rooster"
+  [skins.ghoul]
+    name = "Ghoul"
+    rarity = "epic"
+    event = "Halloween Terror"
+    tag = "ghoul_ana_(overwatch)"
+  [skins.wadjet]
+    name = "Wadjet"
+    rarity = "legendary"
+  [skins.wasteland]
+    name = "Wasteland"
+    rarity = "legendary"
+  [skins.captain-amari]
+    name = "Captain Amari"
+    rarity = "legendary"
+    tag = "captain_amari_(overwatch)"
+  [skins.horus]
+    name = "Horus"
+    rarity = "legendary"
+    tag = "horus_ana_(overwatch)"
+  [skins.corsair]
+    name = "Corsair"
+    rarity = "legendary"
+    event = "Halloween Terror"
+    tag = "corsair_ana_(overwatch)"
