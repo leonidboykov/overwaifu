@@ -1,0 +1,12 @@
+name = "Moira"
+realName = "Moira O'Deorain"
+age = 48
+role = "support"
+sex = "female"
+
+tag = "moira_(overwatch)"
+
+[skins]
+  [skins.classic]
+    name = "Classic"
+    rarity = "common"
