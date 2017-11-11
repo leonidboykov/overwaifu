@@ -20,6 +20,7 @@ var characters = []string{
 	"mccree",
 	"mei",
 	"mercy",
+	"moira",
 	"orisa",
 	"pharah",
 	"reaper",
