@@ -26,6 +26,7 @@ tag = "shimada_genji"
   [skins.carbon-fiber]
     name = "Carbon Fiber"
     rarity = "epic"
+    tag = "carbon_fiber_genji"
   [skins.chrome]
     name = "Chrome"
     rarity = "epic"

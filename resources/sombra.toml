@@ -28,6 +28,7 @@ tag = "sombra_(overwatch)"
   [skins.virus]
     name = "Virus"
     rarity = "epic"
+    tag = "virus_sombra_(overwatch)"
   [skins.peppermint]
     name = "Peppermint"
     rarity = "epic"
@@ -36,6 +37,7 @@ tag = "sombra_(overwatch)"
   [skins.azucar]
     name = "Azúcar"
     rarity = "legendary"
+    tag = "azucar_sombra_(overwatch)"
   [skins.los-muertos]
     name = "Los Muertos"
     rarity = "legendary"
