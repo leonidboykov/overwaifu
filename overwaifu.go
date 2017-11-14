@@ -53,6 +53,7 @@ type Achievements struct {
 	PureWaifu         string          `json:"pure_waifu"`
 	FakeWaifu         string          `json:"fake_waifu"`
 	VirginKillerWaifu string          `json:"virgin_killer_waifu"`
+	SelfieWaifu       string          `json:"selfie_waifu"`
 	FameWaifuSkin     SkinAchievement `json:"fame_waifu_skin"`
 	HotWaifuSkin      SkinAchievement `json:"hot_waifu_skin"`
 	LewdWaifuSkin     SkinAchievement `json:"lewd_waifu_skin"`
@@ -117,7 +118,7 @@ func (ow *OverWaifu) FetchData() {
 
 // Analyse ...
 func (ow *OverWaifu) Analyse() {
-	var fame, hot, virginKiller int
+	var fame, hot, virginKiller, selfie int
 	var pure, lewd float64
 	var fameSkin, hotSkin int
 	var pureSkin, lewdSkin float64
@@ -145,6 +146,11 @@ func (ow *OverWaifu) Analyse() {
 		if ow.Waifu[i].Score.VirginKillerSweater > virginKiller {
 			ow.Achievements.VirginKillerWaifu = i
 			virginKiller = ow.Waifu[i].Score.VirginKillerSweater
+		}
+
+		if ow.Waifu[i].Score.Selfie > selfie {
+			ow.Achievements.SelfieWaifu = i
+			selfie = ow.Waifu[i].Score.Selfie
 		}
 
 		// Skins

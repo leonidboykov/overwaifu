@@ -9,6 +9,7 @@ import (
 const (
 	genderswapTag          = "genderswap"
 	virginKillerSweaterTag = "virgin_killer_sweater"
+	selfieTag              = "selfie"
 )
 
 const (
@@ -47,6 +48,9 @@ func (c *Character) CalcScore(posts []getmoe.Post) {
 		}
 		if posts[i].HasTag(virginKillerSweaterTag) {
 			c.Score.VirginKillerSweater++
+		}
+		if posts[i].HasTag(selfieTag) {
+			c.Score.Selfie++
 		}
 		switch posts[i].Rating {
 		case "s":

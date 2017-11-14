@@ -10,4 +10,5 @@ type Score struct {
 	Lewd                float64 `json:"lewd"`
 	Pure                float64 `json:"pure"`
 	VirginKillerSweater int     `json:"virgin_killer_sweater"`
+	Selfie              int     `json:"selfie"`
 }

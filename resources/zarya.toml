@@ -65,3 +65,8 @@ tag = "zarya_(overwatch)"
   name = "Totally 80's" # should be "Totally '80"
   rarity = "legendary"
   event = "Halloween Terror"
+# [skins.barbarian]
+#   name = "Barbarian"
+#   rarity = "legendary"
+#   event = "Coomint soon"
+#   tag = "barbarian_zarya_(overwatch)"

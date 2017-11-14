@@ -32,6 +32,7 @@ tag = "mercy_(overwatch)"
   [skins.fortune]
   	name = "Fortune"
   	rarity = "epic"
+    event = "Year of the Rooster"
   	tag = "fortune_mercy_(overwatch)"
   [skins.eidgenossin]
   	name = "Eidgenossin"
