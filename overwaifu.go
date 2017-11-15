@@ -1,6 +1,8 @@
 package overwaifu
 
 import (
+	"time"
+
 	"github.com/BurntSushi/toml"
 	"github.com/leonidboykov/getmoe"
 )
@@ -40,6 +42,9 @@ var characters = []string{
 // OverWaifu ...
 type OverWaifu struct {
 	posts        []getmoe.Post
+	PostsCount   int                   `json:"posts_count"`
+	UpdatedAt    time.Time             `json:"updated_at"`
+	LastPostTime time.Time             `json:"last_post_time"`
 	Waifu        map[string]*Character `json:"waifu"`
 	Husbando     map[string]*Character `json:"husbando"`
 	Achievements `json:"achievements"`
@@ -69,9 +74,12 @@ type SkinAchievement struct {
 // New ...
 func New(posts []getmoe.Post) (*OverWaifu, error) {
 	ow := OverWaifu{
-		posts:    posts,
-		Waifu:    make(map[string]*Character),
-		Husbando: make(map[string]*Character),
+		posts:        posts,
+		PostsCount:   len(posts),
+		UpdatedAt:    time.Now(),
+		LastPostTime: posts[0].CreatedAt,
+		Waifu:        make(map[string]*Character),
+		Husbando:     make(map[string]*Character),
 	}
 	for i := range characters {
 		var c Character
