@@ -32,7 +32,8 @@ tag = "d.va_(overwatch)"
     name = "Taegeukgi"
     rarity = "epic"
     event = "Summer Games"
-    tag = "taegeukgi_d.va_(overwatch)" # taegukgi_d.va
+    tag = "taegukgi_d.va"
+    # tag = "taegeukgi_d.va_(overwatch)"
   [skins.junker]
     name = "Junker"
     rarity = "legendary"

@@ -55,3 +55,7 @@ tag = "sombra_(overwatch)"
     rarity = "legendary"
     event = "Summer Games"
     tag = "tulum_sombra_(overwatch)"
+  [skins.rime]
+    name = "Rime"
+    rarity = "legendary"
+    event = "Summer Games"
