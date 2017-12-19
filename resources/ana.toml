@@ -58,3 +58,7 @@ tag = "ana_amari"
     rarity = "legendary"
     event = "Halloween Terror"
     tag = "corsair_ana_(overwatch)"
+  [skins.snow-owl]
+    name = "Snow Owl"
+    rarity = "legendary"
+    event = "Winter Wonderland"

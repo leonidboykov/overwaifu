@@ -57,3 +57,7 @@ tag = "junkrat_(overwatch)"
     rarity = "legendary"
     event = "Halloween Terror"
     tag = "dr._junkenstein_junkrat_(overwatch)"
+  [skins.beachrat]
+    name = "Dr. Junkenstein"
+    rarity = "legendary"
+    event = "Winter Wonderland"

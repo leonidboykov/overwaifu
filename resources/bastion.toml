@@ -62,3 +62,7 @@ tag = "bastion_(overwatch)"
   [skins.overgrown]
     name = "Overgrown"
     rarity = "Origins Edition"
+  [skins.avalanche]
+    name = "Avalanche"
+    rarity = "legendary"
+    event = "Winter Wonderland"

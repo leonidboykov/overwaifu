@@ -50,3 +50,7 @@ tag = "roadhog_(overwatch)"
     rarity = "legendary"
     event = "Halloween Terror"
     tag = "junkenstein's_monster_roadhog_(overwatch)"
+  [skins.ice-fisherman]
+    name = "Ice Fisherman"
+    rarity = "legendary"
+    event = "Winter Wonderland"

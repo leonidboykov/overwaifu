@@ -54,3 +54,7 @@ tag = "shimada_hanzo"
     name = "Cyberninja"
     rarity = "legendary"
     event = "Overwatch Anniversary"
+  [skins.casual]
+    name = "Casual"
+    rarity = "legendary"
+    event = "Winter Wonderland"

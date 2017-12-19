@@ -61,3 +61,7 @@ tag = "soldier:_76_(overwatch)"
     rarity = "legendary"
     event = "Origins Edition"
     tag = "strike_commander_morrison_(overwatch)"
+  [skins.alpine76]
+    name = "Alpine: 76"
+    rarity = "legendary"
+    event = "Winter Wonderland"
