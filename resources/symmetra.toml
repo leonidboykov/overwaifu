@@ -4,7 +4,7 @@ age = 28
 role = "support"
 sex = "female"
 
-tag = "symmetra_(overwatch)"
+tags = [ "symmetra_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -36,29 +36,29 @@ tag = "symmetra_(overwatch)"
     name = "Vampire"
     rarity = "epic"
     event = "Halloween Terror"
-    tag = "vampire_symmetra_(overwatch)"
+    tags = [ "vampire_symmetra_(overwatch)" ]
   [skins.architech]
     name = "Architech"
     rarity = "legendary"
   [skins.vishkar]
     name = "Vishkar"
     rarity = "legendary"
-    tag = "vishkar_symmetra_(overwatch)"
+    tags = [ "vishkar_symmetra_(overwatch)" ]
   [skins.devi]
     name = "Devi"
     rarity = "legendary"
-    tag = "devi_symmetra_(overwatch)"
+    tags = [ "devi_symmetra_(overwatch)" ]
   [skins.goddess]
     name = "Goddess"
     rarity = "legendary"
-    tag = "goddess_symmetra"
+    tags = [ "goddess_symmetra" ]
   [skins.oasis]
     name = "Oasis"
     rarity = "legendary"
     event = "Overwatch Anniversary"
-    tag = "oasis_symmetra_(overwatch)"
+    tags = [ "oasis_symmetra_(overwatch)" ]
   [skins.dragon]
     name = "Dragon"
     rarity = "legendary"
     event = "Halloween Terror"
-    tag = "dragon_symmetra_(overwatch)"
+    tags = [ "dragon_symmetra_(overwatch)" ]

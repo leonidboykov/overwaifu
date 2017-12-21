@@ -4,7 +4,7 @@ age = 33
 role = "defense"
 sex = "female"
 
-tag = "widowmaker_(overwatch)"
+tags = [ "widowmaker_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -32,35 +32,35 @@ tag = "widowmaker_(overwatch)"
     name = "Tricolore"
     rarity = "epic"
     event = "Summer Games"
-    tag = "tricolore_widowmaker_(overwatch)"
+    tags = [ "tricolore_widowmaker_(overwatch)" ]
   [skins.odette]
     name = "Odette"
     rarity = "legendary"
-    tag = "odette_widowmaker_(overwatch)"
+    tags = [ "odette_widowmaker_(overwatch)" ]
   [skins.odile]
     name = "Odile"
     rarity = "legendary"
-    tag = "odile_widowmaker_(overwatch)"
+    tags = [ "odile_widowmaker_(overwatch)" ]
   [skins.comtesse]
     name = "Comtesse"
     rarity = "legendary"
-    tag = "comtesse_widowmaker_(overwatch)"
+    tags = [ "comtesse_widowmaker_(overwatch)" ]
   [skins.huntress]
     name = "Huntress"
     rarity = "legendary"
-    tag = "huntress_widowmaker_(overwatch)"
+    tags = [ "huntress_widowmaker_(overwatch)" ]
   [skins.talon]
     name = "Talon"
     rarity = "legendary"
     event = "Uprising"
-    tag = "talon_widowmaker_(overwatch)"
+    tags = [ "talon_widowmaker_(overwatch)" ]
   [skins.cote-dazur]
     name = "Côte d'Azur"
     rarity = "legendary"
     event = "Summer Games"
-    tag = "cote_d'azur_widowmaker"
+    tags = [ "cote_d'azur_widowmaker" ]
   [skins.noire]
     name = "Noire"
     rarity = "legendary"
     event = "Pre-order"
-    tag = "noire_widowmaker_(overwatch)"
+    tags = [ "noire_widowmaker_(overwatch)" ]

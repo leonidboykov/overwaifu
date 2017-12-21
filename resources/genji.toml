@@ -4,8 +4,7 @@ age = 35
 role = "offense"
 sex = "male"
 
-# there are no `genji_(overwatch)` tag on sankaku
-tag = "shimada_genji"
+tags = [ "shimada_genji" ]
 
 [skins]
   [skins.classic]
@@ -26,7 +25,7 @@ tag = "shimada_genji"
   [skins.carbon-fiber]
     name = "Carbon Fiber"
     rarity = "epic"
-    tag = "carbon_fiber_genji"
+    tags = [ "carbon_fiber_genji" ]
   [skins.chrome]
     name = "Chrome"
     rarity = "epic"
@@ -37,31 +36,31 @@ tag = "shimada_genji"
   [skins.sparrow]
     name = "Sparrow"
     rarity = "legendary"
-    tag = "sparrow_genji_(overwatch)"
+    tags = [ "sparrow_genji_(overwatch)" ]
   [skins.young-genji]
     name = "Young Genji"
     rarity = "legendary"
-    tag = "young_genji_(overwatch)"
+    tags = [ "young_genji_(overwatch)" ]
   [skins.bedouin]
     name = "Bedouin"
     rarity = "legendary"
-    tag = "bedouin_genji_(overwatch)"
+    tags = [ "bedouin_genji_(overwatch)" ]
   [skins.nomad]
     name = "Nomad"
     rarity = "legendary"
-    tag = "nomad_genji_(overwatch)"
+    tags = [ "nomad_genji_(overwatch)" ]
   [skins.blackwatch]
     name = "Blackwatch"
     rarity = "legendary"
     event = "Uprising"
-    tag = "blackwatch_genji_(overwatch)"
+    tags = [ "blackwatch_genji_(overwatch)" ]
   [skins.sentai]
     name = "Sentai"
     rarity = "legendary"
     event = "Overwatch Anniversary"
-    tag = "sentai_genji_(overwatch)"
+    tags = [ "sentai_genji_(overwatch)" ]
   [skins.oni]
     name = "Oni"
     rarity = "legendary"
     event = "Heroes of the Storm"
-    tag = "oni_genji_(overwatch)"
+    tags = [ "oni_genji_(overwatch)" ]

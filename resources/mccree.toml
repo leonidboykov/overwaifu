@@ -4,8 +4,8 @@ age = 37
 role = "offense"
 sex = "male"
 
-# there are no `mccree_(overwatch)` tag on sankaku
-tag = "jesse_mccree"
+# there are no `mccree_(overwatch)` tags on[  sankaku ]
+tags = [ "jesse_mccree" ]
 
 [skins]
   [skins.classic]
@@ -33,37 +33,37 @@ tag = "jesse_mccree"
     name = "American"
     rarity = "epic"
     event = "Summer Games"
-    tag = "american_mccree"
+    tags = [ "american_mccree" ]
   [skins.scrooge]
     name = "Scrooge"
     rarity = "epic"
     event = "Winter Wonderland"
-    tag = "scrooge_mccree_(overwatch)"
+    tags = [ "scrooge_mccree_(overwatch)" ]
   [skins.gambler]
     name = "Gambler"
     rarity = "legendary"
-    tag = "gambler_mccree_(overwatch)"
+    tags = [ "gambler_mccree_(overwatch)" ]
   [skins.riverboat]
     name = "Riverboat"
     rarity = "legendary"
   [skins.mystery-man]
     name = "Mystery Man"
     rarity = "legendary"
-    tag = "mystery_man_mccree"
+    tags = [ "mystery_man_mccree" ]
   [skins.vigilante]
     name = "Vigilante"
     rarity = "legendary"
-    tag = "vigilante_mccree_(overwatch)"
+    tags = [ "vigilante_mccree_(overwatch)" ]
   [skins.blackwatch]
     name = "Blackwatch"
     rarity = "legendary"
     event = "Uprising"
-    tag = "blackwatch_mccree_(overwatch)"
+    tags = [ "blackwatch_mccree_(overwatch)" ]
   [skins.lifeguard]
     name = "Lifeguard"
     rarity = "legendary"
     event = "Summer Games"
-    tag = "lifeguard_mccree_(overwatch)"
+    tags = [ "lifeguard_mccree_(overwatch)" ]
   [skins.van-helsing]
     name = "Van Helsing"
     rarity = "legendary"

@@ -106,7 +106,7 @@ func (ow *OverWaifu) FetchData() {
 	for i := range ow.Waifu {
 		var p []getmoe.Post
 		for j := range ow.posts {
-			if ow.posts[j].HasTag(ow.Waifu[i].Tag) {
+			if hasTags(ow.posts[j], ow.Waifu[i].Tags) {
 				p = append(p, ow.posts[j])
 			}
 		}
@@ -116,7 +116,7 @@ func (ow *OverWaifu) FetchData() {
 	for i := range ow.Husbando {
 		var p []getmoe.Post
 		for j := range ow.posts {
-			if ow.posts[j].HasTag(ow.Husbando[i].Tag) {
+			if hasTags(ow.posts[j], ow.Husbando[i].Tags) {
 				p = append(p, ow.posts[j])
 			}
 		}

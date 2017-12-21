@@ -4,7 +4,7 @@ age = 20
 role = "support"
 sex = "male"
 
-tag = "zenyatta_(overwatch)"
+tags = [ "zenyatta_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -32,34 +32,34 @@ tag = "zenyatta_(overwatch)"
     name = "Skullyatta"
     rarity = "epic"
     event = "Halloween Terror"
-    tag = "skullyatta_(overwatch)"
+    tags = [ "skullyatta_(overwatch)" ]
   [skins.djinnyatta]
     name = "Djinnyatta"
     rarity = "legendary"
-    tag = "djinnyatta_(overwatch)"
+    tags = [ "djinnyatta_(overwatch)" ]
   [skins.ifrit]
     name = "Ifrit"
     rarity = "legendary"
   [skins.ra]
     name = "Ra"
     rarity = "legendary"
-    tag = "ra_zenyatta_(overwatch)"
+    tags = [ "ra_zenyatta_(overwatch)" ]
   [skins.sunyatta]
     name = "Sunyatta"
     rarity = "legendary"
-    tag = "Sunyatta"
+    tags = [ "sunyatta" ]
   [skins.sanzang]
     name = "Sanzang"
     rarity = "legendary"
     event = "Year of the Rooster"
-    tag = "sanzang_zenyatta_(overwatch)"
+    tags = [ "sanzang_zenyatta_(overwatch)" ]
   [skins.nutcracker]
     name = "Nutcracker"
     rarity = "legendary"
     event = "Winter Wonderland"
-    tag = "nutcracker_zenyatta_(overwatch)"
+    tags = [ "nutcracker_zenyatta_(overwatch)" ]
   [skins.cultist]
     name = "Cultist"
     rarity = "legendary"
     event = "Halloween Terror"
-    tag = "cultist_zenyatta_(overwatch)"
+    tags = [ "cultist_zenyatta_(overwatch)" ]

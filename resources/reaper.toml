@@ -4,7 +4,7 @@ age = 0 # unknown
 role = "offense"
 sex = "male"
 
-tag = "reaper_(overwatch)"
+tags = [ "reaper_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -35,7 +35,7 @@ tag = "reaper_(overwatch)"
   [skins.nevermore]
     name = "Nevermore"
     rarity = "legendary"
-    tag = "nevermore_reaper_(overwatch)"
+    tags = [ "nevermore_reaper_(overwatch)" ]
   [skins.plague-doctor]
     name = "Plague Doctor"
     rarity = "legendary"
@@ -53,12 +53,12 @@ tag = "reaper_(overwatch)"
     name = "Pumpkin"
     rarity = "legendary"
     event = "Halloween Terror"
-    tag = "pumpkin_reaper_(overwatch)"
+    tags = [ "pumpkin_reaper_(overwatch)" ]
   [skins.blackwatch-reyes]
     name = "Blackwatch Reyes"
     rarity = "legendary"
     event = "Origins Edition"
-    tag = "blackwatch_reyes_(overwatch)"
+    tags = [ "blackwatch_reyes_(overwatch)" ]
   [skins.dracula]
     name = "Dracula"
     rarity = "legendary"

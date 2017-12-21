@@ -4,7 +4,7 @@ age = 48
 role = "tank"
 sex = "male"
 
-tag = "roadhog_(overwatch)"
+tags = [ "roadhog_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -44,12 +44,12 @@ tag = "roadhog_(overwatch)"
   [skins.sharkbait]
     name = "Sharkbait"
     rarity = "legendary"
-    tag = "sharkbait_roadhog_(overwatch)"
+    tags = [ "sharkbait_roadhog_(overwatch)" ]
   [skins.junkensteins-monster]
     name = "Junkenstein's Monster"
     rarity = "legendary"
     event = "Halloween Terror"
-    tag = "junkenstein's_monster_roadhog_(overwatch)"
+    tags = [ "junkenstein's_monster_roadhog_(overwatch)" ]
   [skins.ice-fisherman]
     name = "Ice Fisherman"
     rarity = "legendary"

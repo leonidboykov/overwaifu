@@ -4,7 +4,7 @@ age = 0 # unknown
 role = "offense"
 sex = "male"
 
-tag = "soldier:_76_(overwatch)"
+tags = [ "soldier:_76_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -32,18 +32,18 @@ tag = "soldier:_76_(overwatch)"
     name = "Immortal"
     rarity = "epic"
     event = "Halloween Terror"
-    tag = "immortal_soldier:_76_(overwatch)"
+    tags = [ "immortal_soldier:_76_(overwatch)" ]
   [skins.commando76]
     name = "Commando: 76"
     rarity = "legendary"
-    tag = "commando:_76"
+    tags = [ "commando:_76" ]
   [skins.night-ops76]
     name = "Night Ops: 76"
     rarity = "legendary"
   [skins.daredevil76]
     name = "Daredevil: 76"
     rarity = "legendary"
-    tag = "daredevil:_76_(overwatch)"
+    tags = [ "daredevil:_76_(overwatch)" ]
   [skins.stunt-Rider76]
     name = "Stunt Rider: 76"
     rarity = "legendary"
@@ -55,12 +55,12 @@ tag = "soldier:_76_(overwatch)"
     name = "Grillmaster: 76"
     rarity = "legendary"
     event = "Summer Games"
-    tag = "grillmaster:_76_(overwatch)"
+    tags = [ "grillmaster:_76_(overwatch)" ]
   [skins.strike-commander-morrison]
     name = "Strike Commander Morrison"
     rarity = "legendary"
     event = "Origins Edition"
-    tag = "strike_commander_morrison_(overwatch)"
+    tags = [ "strike_commander_morrison_(overwatch)" ]
   [skins.alpine76]
     name = "Alpine: 76"
     rarity = "legendary"

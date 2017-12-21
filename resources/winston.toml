@@ -4,7 +4,7 @@ age = 29
 role = "tank"
 sex = "male"
 
-tag = "winston_(overwatch)"
+tags = [ "winston_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -48,7 +48,7 @@ tag = "winston_(overwatch)"
     name = "Wukong"
     rarity = "legendary"
     event = "Year of the Rooster"
-    tag = "wukong_winston_(overwatch)"
+    tags = [ "wukong_winston_(overwatch)" ]
   [skins.yeti]
     name = "Yeti"
     rarity = "legendary"

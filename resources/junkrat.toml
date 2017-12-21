@@ -4,7 +4,7 @@ age = 25
 role = "defense"
 sex = "male"
 
-tag = "junkrat_(overwatch)"
+tags = [ "junkrat_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -32,19 +32,19 @@ tag = "junkrat_(overwatch)"
     name = "Firework"
     rarity = "epic"
     event = "Year of the Rooster"
-    tag = "firework_junkrat_(overwatch)"
+    tags = [ "firework_junkrat_(overwatch)" ]
   [skins.fool]
     name = "Fool"
     rarity = "legendary"
-    tag = "fool_junkrat_(overwatch)"
+    tags = [ "fool_junkrat_(overwatch)" ]
   [skins.jester]
     name = "Jester"
     rarity = "legendary"
-    tag = "jester_junkrat_(overwatch)"
+    tags = [ "jester_junkrat_(overwatch)" ]
   [skins.hayseed]
     name = "Hayseed"
     rarity = "legendary"
-    tag = "hayseed_junkrat_(overwatch)"
+    tags = [ "hayseed_junkrat_(overwatch)" ]
   [skins.scarecrow]
     name = "Scarecrow"
     rarity = "legendary"
@@ -56,7 +56,7 @@ tag = "junkrat_(overwatch)"
     name = "Dr. Junkenstein"
     rarity = "legendary"
     event = "Halloween Terror"
-    tag = "dr._junkenstein_junkrat_(overwatch)"
+    tags = [ "dr._junkenstein_junkrat_(overwatch)" ]
   [skins.beachrat]
     name = "Dr. Junkenstein"
     rarity = "legendary"

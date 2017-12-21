@@ -4,7 +4,7 @@ age = 57
 role = "defense"
 sex = "male"
 
-tag = "torbjorn_(overwatch)"
+tags = [ "torbjorn_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -48,17 +48,17 @@ tag = "torbjorn_(overwatch)"
     name = "Chief Engineer Lindholm"
     rarity = "legendary"
     event = "Uprising"
-    tag = "chief_engineer_lindholm_(overwatch)"
+    tags = [ "chief_engineer_lindholm_(overwatch)" ]
   [skins.ironclad]
     name = "Ironclad"
     rarity = "legendary"
     event = "Uprising"
-    tag = "ironclad_torbjorn_(overwatch)"
+    tags = [ "ironclad_torbjorn_(overwatch)" ]
   [skins.santaclad]
     name = "Santaclad"
     rarity = "legendary"
     event = "Winter Wonderland"
-    tag = "santaclad_torbjorn_(overwatch)"
+    tags = [ "santaclad_torbjorn_(overwatch)" ]
   [skins.viking]
     name = "Viking"
     rarity = "legendary"

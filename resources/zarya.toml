@@ -4,7 +4,7 @@ age = 28
 role = "tank"
 sex = "female"
 
-tag = "zarya_(overwatch)"
+tags = [ "zarya_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -35,38 +35,38 @@ tag = "zarya_(overwatch)"
   [skins.arctic]
     name = "Arctic"
     rarity = "legendary"
-    tag = "arctic_zarya_(overwatch)"
+    tags = [ "arctic_zarya_(overwatch)" ]
   [skins.siberian-front]
     name = "Siberian Front"
     rarity = "legendary"
-    tag = "siberian_front_zarya_(overwatch)"
+    tags = [ "siberian_front_zarya_(overwatch)" ]
   [skins.cybergoth]
     name = "Cybergoth"
     rarity = "legendary"
-    tag = "cybergoth_zarya_(overwatch)"
+    tags = [ "cybergoth_zarya_(overwatch)" ]
   [skins.industrial]
-  name = "Industrial"
-  rarity = "legendary"
-  tag = "industrial_zarya_(overwatch)"
-[skins.cyberian]
-  name = "Cyberian"
-  rarity = "legendary"
-  event = "Summer Games"
-[skins.champion]
-  name = "Champion"
-  rarity = "legendary"
-  event = "Summer Games"
-  tag = "champion_zarya_(overwatch)"
-[skins.weightlifter]
-  name = "Weightlifter"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-[skins.totally-80s]
-  name = "Totally 80's" # should be "Totally '80"
-  rarity = "legendary"
-  event = "Halloween Terror"
-# [skins.barbarian]
-#   name = "Barbarian"
-#   rarity = "legendary"
-#   event = "Coomint soon"
-#   tag = "barbarian_zarya_(overwatch)"
+    name = "Industrial"
+    rarity = "legendary"
+    tags = [ "industrial_zarya_(overwatch)" ]
+  [skins.cyberian]
+    name = "Cyberian"
+    rarity = "legendary"
+    event = "Summer Games"
+  [skins.champion]
+    name = "Champion"
+    rarity = "legendary"
+    event = "Summer Games"
+    tags = [ "champion_zarya_(overwatch)" ]
+  [skins.weightlifter]
+    name = "Weightlifter"
+    rarity = "legendary"
+    event = "Overwatch Anniversary"
+  [skins.totally-80s]
+    name = "Totally 80's" # should be "Totally '80"
+    rarity = "legendary"
+    event = "Halloween Terror"
+  # [skins.barbarian]
+  #   name = "Barbarian"
+  #   rarity = "legendary"
+  #   event = "Coming soon"
+  #   tags = [ "barbarian_zarya_(overwatch)" ]

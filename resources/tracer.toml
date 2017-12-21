@@ -4,7 +4,7 @@ age = 26
 role = "offense"
 sex = "female"
 
-tag = "tracer_(overwatch)"
+tags = [ "tracer_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -34,46 +34,46 @@ tag = "tracer_(overwatch)"
   [skins.punk]
     name = "Punk"
     rarity = "legendary"
-    tag = "punk_tracer_(overwatch)"
+    tags = [ "punk_tracer_(overwatch)" ]
   [skins.ultraviolet]
     name = "Ultraviolet"
     rarity = "legendary"
-    tag = "ultraviolet_tracer_(overwatch)"
+    tags = [ "ultraviolet_tracer_(overwatch)" ]
   [skins.mach-t]
     name = "Mach T"
     rarity = "legendary"
-    tag = "mach_t_(overwatch)"
+    tags = [ "mach_t_(overwatch)" ]
   [skins.tracer]
     name = "T.Racer"
     rarity = "legendary"
-    tag = "t.racer_(overwatch)"
+    tags = [ "t.racer_(overwatch)" ]
   [skins.cadet-oxton]
     name = "Cadet Oxton"
     rarity = "legendary"
     event = "Uprising"
-    tag = "cadet_oxton_(overwatch)"
+    tags = [ "cadet_oxton_(overwatch)" ]
   [skins.graffiti]
     name = "Graffiti"
     rarity = "legendary"
     event = "Overwatch Anniversary"
-    tag = "graffiti_tracer_(overwatch)"
+    tags = [ "graffiti_tracer_(overwatch)" ]
   [skins.sprinter]
     name = "Sprinter"
     rarity = "legendary"
     event = "Summer Games"
-    tag = "sprinter_tracer_(overwatch)"
+    tags = [ "sprinter_tracer_(overwatch)" ]
   [skins.track-and-field]
     name = "Track and Field"
     rarity = "legendary"
     event = "Summer Games"
-    tag = "track_and_field_tracer_(overwatch)"
+    tags = [ "track_and_field_tracer_(overwatch)" ]
   [skins.jingle]
     name = "Jingle"
     rarity = "legendary"
     event = "Winter Wonderland"
-    tag = "jingle_tracer_(overwatch)"
+    tags = [ "jingle_tracer_(overwatch)" ]
   [skins.slipstream]
     name = "Slipstream"
     rarity = "legendary"
     event = "Origins Edition"
-    tag = "slipstream_tracer_(overwatch)"
+    tags = [ "slipstream_tracer_(overwatch)" ]

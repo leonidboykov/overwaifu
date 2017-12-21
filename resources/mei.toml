@@ -4,8 +4,7 @@ age = 31
 role = "defense"
 sex = "female"
 
-# there are no `mei_(overwatch)` tag on sankaku
-tag = "mei-ling_zhou"
+tags = [ "mei-ling_zhou" ]
 
 [skins]
   [skins.classic]
@@ -35,37 +34,37 @@ tag = "mei-ling_zhou"
   [skins.rescue-mei]
     name = "Rescue Mei"
     rarity = "legendary"
-    tag = "rescue_mei"
+    tags = [ "rescue_mei" ]
   [skins.abominable]
     name = "Abominable"
     rarity = "legendary"
-    tag = "abominable_mei_(overwatch)"
+    tags = [ "abominable_mei_(overwatch)" ]
   [skins.yeti-hunter]
     name = "Yeti Hunter"
     rarity = "legendary"
-    tag = "yeti_hunter_mei_(overwatch)"
+    tags = [ "yeti_hunter_mei_(overwatch)" ]
   [skins.change]
     name = "Chang'e"
     rarity = "legendary"
     event = "Year of the Rooster"
-    tag = "chang'e_mei_(overwatch)"
+    tags = [ "chang'e_mei_(overwatch)" ]
   [skins.luna]
     name = "Luna"
     rarity = "legendary"
     event = "Year of the Rooster"
-    tag = "luna_mei_(overwatch)"
+    tags = [ "luna_mei_(overwatch)" ]
   [skins.beekeeper]
     name = "Beekeeper"
     rarity = "legendary"
     event = "Overwatch Anniversary"
-    tag = "beekeeper_mei_(overwatch)"
+    tags = [ "beekeeper_mei_(overwatch)" ]
   [skins.mei-rry]
     name = "Mei-rry"
     rarity = "legendary"
     event = "Winter Wonderland"
-    tag = "mei-rry_mei"
+    tags = [ "mei-rry_mei" ]
   [skins.jiangshi]
     name = "Jiangshi"
     rarity = "legendary"
     event = "Halloween Terror"
-    tag = "jiangshi_mei_(overwatch)"
+    tags = [ "jiangshi_mei_(overwatch)" ]

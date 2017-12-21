@@ -4,8 +4,7 @@ age = 26
 role = "support"
 sex = "male"
 
-# there are no `lucio_(overwatch)` tag on sankaku
-tag = "lucio_correia_dos_santos"
+tags = [ "lucio_correia_dos_santos" ]
 
 [skins]
   [skins.classic]
@@ -36,11 +35,11 @@ tag = "lucio_correia_dos_santos"
   [skins.hippityhop]
     name = "HippityHop"
     rarity = "legendary"
-    tag = "hippityhop_lucio"
+    tags = [ "hippityhop_lucio" ]
   [skins.ribbit]
     name = "Ribbit"
     rarity = "legendary"
-    tag = "ribbit_lucio"
+    tags = [ "ribbit_lucio" ]
   [skins.breakaway]
     name = "Breakaway"
     rarity = "legendary"
@@ -51,12 +50,12 @@ tag = "lucio_correia_dos_santos"
     name = "Jazzy"
     rarity = "legendary"
     event = "Overwatch Anniversary"
-    tag = "jazzy_lucio_(overwatch)"
+    tags = [ "jazzy_lucio_(overwatch)" ]
   [skins.selecao]
     name = "Seleção"
     rarity = "legendary"
     event = "Summer Games"
-    tag = "selecao_lucio_(overwatch)"
+    tags = [ "selecao_lucio_(overwatch)" ]
   [skins.striker]
     name = "Striker"
     rarity = "legendary"

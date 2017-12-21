@@ -17,9 +17,9 @@ const (
 type Skin struct {
 	Name   string `json:"name" toml:"name"`
 	Rarity `json:"rarity" toml:"rarity"`
-	Event  string `json:"event" toml:"event"`
-	Tag    string `json:"tag" toml:"tag"`
-	Key    string `json:"key"`
+	Event  string   `json:"event" toml:"event"`
+	Tags   []string `json:"tags" toml:"tags"`
+	Key    string   `json:"key"`
 	Score  `json:"score"`
 }
 

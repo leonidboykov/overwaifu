@@ -4,7 +4,7 @@ age = 1 # Month
 role = "tank"
 sex = "female"
 
-tag = "orisa_(overwatch)"
+tags = [ "orisa_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -34,7 +34,7 @@ tag = "orisa_(overwatch)"
   [skins.megasoma]
     name = "Megasoma"
     rarity = "legendary"
-    tag = "megasoma_orisa"
+    tags = [ "megasoma_orisa" ]
   [skins.carbon-fiber]
     name = "Carbon Fiber"
     rarity = "legendary"

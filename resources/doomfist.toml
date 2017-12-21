@@ -4,7 +4,7 @@ age = 45
 role = "offense"
 sex = "male"
 
-tag = "doomfist_(overwatch)"
+tags = [ "doomfist_(overwatch)", "akande ogundimu" ]
 
 [skins]
   [skins.classic]

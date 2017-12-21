@@ -25,7 +25,7 @@ type Character struct {
 	Role     string           `json:"role" toml:"role"`
 	Sex      string           `json:"sex" toml:"sex"`
 	Skins    map[string]*Skin `json:"skins" toml:"skins"`
-	Tag      string           `json:"tag" toml:"tag"` // sankaku tag
+	Tags     []string         `json:"tags" toml:"tags"` // sankaku tag
 	Key      string           `json:"key"`
 	Score    `json:"score"`
 }
@@ -64,7 +64,7 @@ func (c *Character) CalcScore(posts []getmoe.Post) {
 		}
 
 		for j := range c.Skins {
-			if posts[i].HasTag(c.Skins[j].Tag) {
+			if hasTags(posts[i], c.Skins[j].Tags) {
 				c.Skins[j].Score.All++
 				switch posts[i].Rating {
 				case "s":

@@ -4,7 +4,7 @@ age = 19
 role = "tank"
 sex = "female"
 
-tag = "d.va_(overwatch)"
+tags = [ "d.va_(overwatch)" ]
 
 [skins]
   [skins.classic]
@@ -32,36 +32,35 @@ tag = "d.va_(overwatch)"
     name = "Taegeukgi"
     rarity = "epic"
     event = "Summer Games"
-    tag = "taegukgi_d.va"
-    # tag = "taegeukgi_d.va_(overwatch)"
+    tags = [ "taegeukgi_d.va_(overwatch)", "taegukgi_d.va" ]
   [skins.junker]
     name = "Junker"
     rarity = "legendary"
-    tag = "junker_d.va_(overwatch)"
+    tags = [ "junker_d.va_(overwatch)", "junker_d.va" ]
   [skins.scavenger]
     name = "Scavenger"
     rarity = "legendary"
-    tag = "scavenger_d.va_(overwatch)"
+    tags = [ "scavenger_d.va_(overwatch)", "scavenger_d.va" ]
   [skins.bva]
     name = "B.Va"
     rarity = "legendary"
-    tag = "b.va_(overwatch)"
+    tags = [ "b.va_(overwatch)", "b.va" ]
   [skins.junebug]
     name = "Junebug"
     rarity = "legendary"
-    tag = "junebug_d.va_(overwatch)"
+    tags = [ "junebug_d.va_(overwatch)", "junebug_d.va" ]
   [skins.palanquin]
     name = "Palanquin"
     rarity = "legendary"
     event = "Year of the Rooster"
-    tag = "palanquin_d.va"
+    tags = [ "palanquin_d.va" ]
   [skins.cruiser]
     name = "Cruiser"
     rarity = "legendary"
     event = "Overwatch Anniversary"
-    tag = "cruiser_d.va"
+    tags = [ "cruiser_d.va" ]
   [skins.police-officer]
     name = "Police Officer"
     rarity = "legendary"
     event = "Heroes of the Storm"
-    tag = "officer_d.va"
+    tags = [ "officer_d.va", "police_officer_d.va" ]
