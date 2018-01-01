@@ -4,7 +4,7 @@ age = 28
 role = "tank"
 sex = "female"
 
-tags = [ "zarya_(overwatch)" ]
+tags = [ "zarya_(overwatch)", "aleksandra_zaryanova" ]
 
 [skins]
   [skins.classic]

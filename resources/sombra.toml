@@ -4,7 +4,7 @@ age = 30
 role = "offense"
 sex = "female"
 
-tag = "sombra_(overwatch)"
+tags = [ "sombra_(overwatch)", "olivia_colomar"]
 
 [skins]
   [skins.classic]
@@ -28,35 +28,35 @@ tag = "sombra_(overwatch)"
   [skins.virus]
     name = "Virus"
     rarity = "epic"
-    tag = "virus_sombra_(overwatch)"
+    tags = [ "virus_sombra_(overwatch)" ]
   [skins.peppermint]
     name = "Peppermint"
     rarity = "epic"
     event = "Winter Wonderland"
-    tag = "peppermint_sombra_(overwatch)"
+    tags = [ "peppermint_sombra_(overwatch)" ]
   [skins.azucar]
     name = "Azúcar"
     rarity = "legendary"
-    tag = "azucar_sombra_(overwatch)"
+    tags = [ "azucar_sombra_(overwatch)" ]
   [skins.los-muertos]
     name = "Los Muertos"
     rarity = "legendary"
-    tag = "los_muertos_sombra_(overwatch)"
+    tags = [ "los_muertos_sombra_(overwatch)" ]
   [skins.augmented]
     name = "Augmented"
     rarity = "legendary"
-    tag = "augmented_sombra_(overwatch)"
+    tags = [ "augmented_sombra_(overwatch)", "augmented_sombra" ]
   [skins.cyberspace]
     name = "Cyberspace"
     rarity = "legendary"
-    tag = "cyberspace_sombra_(overwatch)"
+    tags = [ "cyberspace_sombra_(overwatch)", "cyberspace_sombra" ]
   [skins.tulum]
     name = "Tulum"
     rarity = "legendary"
     event = "Summer Games"
-    tag = "tulum_sombra_(overwatch)"
+    tags = [ "tulum_sombra_(overwatch)", "tulum_sombra" ]
   [skins.rime]
     name = "Rime"
     rarity = "legendary"
     event = "Winter Wonderland"
-    tag = "rime_sombra"
+    tags = [ "rime_sombra" ]

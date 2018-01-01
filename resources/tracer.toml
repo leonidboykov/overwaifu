@@ -4,7 +4,7 @@ age = 26
 role = "offense"
 sex = "female"
 
-tags = [ "tracer_(overwatch)" ]
+tags = [ "tracer_(overwatch)", "lena_oxton" ]
 
 [skins]
   [skins.classic]
@@ -31,6 +31,7 @@ tags = [ "tracer_(overwatch)" ]
   [skins.rose]
     name = "Rose"
     rarity = "epic"
+    event = "Year of the Rooster"
   [skins.punk]
     name = "Punk"
     rarity = "legendary"
@@ -38,7 +39,7 @@ tags = [ "tracer_(overwatch)" ]
   [skins.ultraviolet]
     name = "Ultraviolet"
     rarity = "legendary"
-    tags = [ "ultraviolet_tracer_(overwatch)" ]
+    tags = [ "ultraviolet_tracer_(overwatch)", "ultraviolet_tracer" ]
   [skins.mach-t]
     name = "Mach T"
     rarity = "legendary"
@@ -51,12 +52,12 @@ tags = [ "tracer_(overwatch)" ]
     name = "Cadet Oxton"
     rarity = "legendary"
     event = "Uprising"
-    tags = [ "cadet_oxton_(overwatch)" ]
+    tags = [ "cadet_oxton_(overwatch)", "cadet_oxton" ]
   [skins.graffiti]
     name = "Graffiti"
     rarity = "legendary"
     event = "Overwatch Anniversary"
-    tags = [ "graffiti_tracer_(overwatch)" ]
+    tags = [ "graffiti_tracer_(overwatch)", "graffiti_tracer" ]
   [skins.sprinter]
     name = "Sprinter"
     rarity = "legendary"

@@ -4,7 +4,7 @@ age = 19
 role = "tank"
 sex = "female"
 
-tags = [ "d.va_(overwatch)" ]
+tags = [ "d.va_(overwatch)", "hana_song" ]
 
 [skins]
   [skins.classic]
