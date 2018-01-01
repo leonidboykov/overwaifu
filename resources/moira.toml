@@ -4,7 +4,7 @@ age = 48
 role = "support"
 sex = "female"
 
-tag = [ "moira_(overwatch)", "moira_o'deorain" ]
+tags = [ "moira_(overwatch)", "moira_o'deorain" ]
 
 [skins]
   [skins.classic]
