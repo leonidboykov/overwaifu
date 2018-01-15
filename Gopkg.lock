@@ -11,11 +11,11 @@
   branch = "master"
   name = "github.com/leonidboykov/getmoe"
   packages = [".","board/sankaku","utils"]
-  revision = "fbcfb3ccdeb5057d3dff7ded5b9d0b79c2ea672e"
+  revision = "167effd8d43f21919a82c9a56db3a6863e1d43be"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a6130cd05b1e8bd36b1071d71059f56dfc4eecc059ae903482251f685d726afa"
+  inputs-digest = "7dd0e17d499d8bc5077ee032210b353a86868b25c26783d654decff1c7dc0fd7"
   solver-name = "gps-cdcl"
   solver-version = 1
