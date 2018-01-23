@@ -64,3 +64,7 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
     rarity = "legendary"
     event = "Heroes of the Storm"
     tags = [ "officer_d.va", "police_officer_d.va" ]
+  [skins.black-cat]
+    name = "Black Cat"
+    rarity = "legendary"
+    tags = [ "black_cat_d.va" ]
