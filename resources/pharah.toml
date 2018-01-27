@@ -66,3 +66,7 @@ tags = [ "pharah_(overwatch)" ]
     rarity = "legendary"
     event = "Origins Edition"
     tags = [ "security_chief_pharah_(overwatch)", "security_chief_pharah" ]
+  [skins.asp]
+    name = "Asp"
+    rarity = "legendary"
+    tags = [ "asp_pharah" ]
