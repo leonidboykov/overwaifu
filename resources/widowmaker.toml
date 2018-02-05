@@ -49,6 +49,9 @@ tags = [ "widowmaker_(overwatch)", "amelie_lacroix" ]
     name = "Huntress"
     rarity = "legendary"
     tags = [ "huntress_widowmaker_(overwatch)" ]
+  [skins.nova]
+    name = "Nova"
+    rarity = "legendary"
   [skins.talon]
     name = "Talon"
     rarity = "legendary"

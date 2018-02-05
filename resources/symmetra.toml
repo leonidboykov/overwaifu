@@ -25,6 +25,9 @@ tags = [ "symmetra_(overwatch)", "satya_vaswani" ]
   [skins.regal]
     name = "Regal"
     rarity = "epic"
+  [skins.peacock]
+    name = "Peacock"
+    rarity = "epic"
   [skins.utopaea]
     name = "Utopaea"
     rarity = "epic"

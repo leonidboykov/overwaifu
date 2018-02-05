@@ -35,6 +35,9 @@ tags = [ "mei-ling_zhou" ]
     name = "Rescue Mei"
     rarity = "legendary"
     tags = [ "rescue_mei" ]
+  [skins.ecopoint-antarctica]
+    name = "Ecopoint: Antarctica"
+    rarity = "legendary"
   [skins.abominable]
     name = "Abominable"
     rarity = "legendary"

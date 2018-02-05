@@ -41,6 +41,9 @@ tags = [ "orisa_(overwatch)" ]
   [skins.protector]
     name = "Protector"
     rarity = "legendary"
+  [skins.immortal]
+    name = "Immortal"
+    rarity = "legendary"
   [skins.null-sector]
     name = "Null Sector"
     rarity = "legendary"
