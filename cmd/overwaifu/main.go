@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"os"
 	"time"
 
+	"github.com/caarlos0/env"
 	"github.com/joho/godotenv"
 	"github.com/leonidboykov/getmoe"
 	"github.com/leonidboykov/getmoe/board/sankaku"
@@ -22,11 +22,8 @@ func main() {
 		fmt.Println(err)
 	}
 
-	fmt.Println(os.Getenv("OVERWAIFU_LOGIN"))
-	fmt.Println(os.Getenv("OVERWAIFU_PASSWORD"))
-
-	// getCache()
-	// getData()
+	getCache()
+	getData()
 }
 
 func getData() {
@@ -59,8 +56,14 @@ func getData() {
 }
 
 func getCache() {
+	var cred overwaifu.Credentials
+	err := env.Parse(&cred)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 	board := sankaku.ChanSankakuConfig
-	board.BuildAuth("xxx", "xxx")
+	board.BuildAuth(cred.Login, cred.Password)
 
 	board.Query = getmoe.Query{
 		Tags: []string{"overwatch"},
@@ -71,7 +74,7 @@ func getCache() {
 	println("searching for overwatch lewd images")
 	posts, err := board.RequestAll()
 	if err != nil {
-		log.Panicln(err)
+		log.Fatalln(err)
 	}
 	println("found", len(posts))
 	elapsed := time.Since(start)
@@ -79,10 +82,10 @@ func getCache() {
 
 	data, err := json.Marshal(posts)
 	if err != nil {
-		log.Panicln(err)
+		log.Fatalln(err)
 	}
 
 	if err := ioutil.WriteFile("dest/cache/cache.json", data, 0644); err != nil {
-		log.Panicln(err)
+		log.Fatalln(err)
 	}
 }

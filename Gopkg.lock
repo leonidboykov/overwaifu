@@ -8,6 +8,12 @@
   version = "v0.3.0"
 
 [[projects]]
+  name = "github.com/caarlos0/env"
+  packages = ["."]
+  revision = "7cd7992b3bc86f920394f8de92c13900da1a46b7"
+  version = "v3.2.0"
+
+[[projects]]
   name = "github.com/joho/godotenv"
   packages = ["."]
   revision = "a79fa1e548e2c689c241d10173efd51e5d689d5b"
@@ -26,6 +32,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8df3ace81152b9ad726ad2ff443a5789c586f9d3dbd601fbdbf3277e1f8cc594"
+  inputs-digest = "28398ae0c378e1b6208ea3f31229fc2f25526dc36d2a0612f7e64ac720887fd9"
   solver-name = "gps-cdcl"
   solver-version = 1

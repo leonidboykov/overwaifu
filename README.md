@@ -19,27 +19,6 @@ Score calculates only by tag count, tranding calculations coming soon:
 The only source available for now is Sankaku's channel. I'll add more sources
 such as Overbuff, Google Trends and etc.
 
-Only female characters for now (to reduce typing).
-
-## Results
-
-Right now, the result looks like
-
-    D.Va - 5239
-    Mercy - 4348
-    Widowmaker - 3326
-    Tracer - 3242
-    Mei - 2568
-    Pharah - 1972
-    Sombra - 863
-    Symmetra - 692
-    Ana - 685
-    Zarya - 588
-
-    D.Va is the hottest female in the Overwatch
-
-Safe, Questionable and Explicit content are not available at the moment.
-
 ## Disclaimer
 
 overwaifu isn’t endorsed or in any way affiliated with Blizzard Entertainment
