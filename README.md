@@ -1,5 +1,7 @@
 # OverWaifu
 
+[![Build Status](https://travis-ci.org/overwaifu/overwaifu.svg?branch=master)](https://travis-ci.org/overwaifu/overwaifu)
+
 Everybody can visit https://overbuff.com/heroes and check the most popular
 character according to pick rate, win rate etc. However, OW represents 25
 different characters with the different looks, nature and spirit. I started this
