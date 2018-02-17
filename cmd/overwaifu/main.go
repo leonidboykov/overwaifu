@@ -2,10 +2,13 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 	"time"
 
+	"github.com/joho/godotenv"
 	"github.com/leonidboykov/getmoe"
 	"github.com/leonidboykov/getmoe/board/sankaku"
 
@@ -13,8 +16,17 @@ import (
 )
 
 func main() {
-	getCache()
-	getData()
+	// .env file is used for the local development
+	err := godotenv.Load()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(os.Getenv("OVERWAIFU_LOGIN"))
+	fmt.Println(os.Getenv("OVERWAIFU_PASSWORD"))
+
+	// getCache()
+	// getData()
 }
 
 func getData() {

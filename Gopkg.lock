@@ -8,6 +8,12 @@
   version = "v0.3.0"
 
 [[projects]]
+  name = "github.com/joho/godotenv"
+  packages = ["."]
+  revision = "a79fa1e548e2c689c241d10173efd51e5d689d5b"
+  version = "v1.2.0"
+
+[[projects]]
   name = "github.com/leonidboykov/getmoe"
   packages = [
     ".",
@@ -20,6 +26,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "7dd0e17d499d8bc5077ee032210b353a86868b25c26783d654decff1c7dc0fd7"
+  inputs-digest = "8df3ace81152b9ad726ad2ff443a5789c586f9d3dbd601fbdbf3277e1f8cc594"
   solver-name = "gps-cdcl"
   solver-version = 1

@@ -1,4 +1,5 @@
 /dest
+.env
 
 # Created by https://www.gitignore.io/api/go,git,code,macos,linux,windows,sublimetext
 
@@ -28,8 +29,7 @@ jsconfig.json
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
 
-# Golang project vendor packages which should be ignored
-vendor/
+/vendor
 
 ### Linux ###
 *~
@@ -125,5 +125,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
 
 # End of https://www.gitignore.io/api/go,git,code,macos,linux,windows,sublimetext
