@@ -8,10 +8,14 @@
   version = "v0.3.0"
 
 [[projects]]
-  branch = "master"
   name = "github.com/leonidboykov/getmoe"
-  packages = [".","board/sankaku","utils"]
-  revision = "167effd8d43f21919a82c9a56db3a6863e1d43be"
+  packages = [
+    ".",
+    "board/sankaku",
+    "utils"
+  ]
+  revision = "0b391fb3f6f22986eefa061f63e163eec766f6f2"
+  version = "v0.1.0"
 
 [solve-meta]
   analyzer-name = "dep"

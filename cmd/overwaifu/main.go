@@ -8,7 +8,8 @@ import (
 
 	"github.com/leonidboykov/getmoe"
 	"github.com/leonidboykov/getmoe/board/sankaku"
-	"github.com/leonidboykov/overwaifu"
+
+	"github.com/overwaifu/overwaifu"
 )
 
 func main() {
