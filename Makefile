@@ -1,6 +1,6 @@
 # A Self-Documenting Makefile: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 
-PACKAGE := github.com/leonidboykov/overwaifu
+PACKAGE := github.com/overwaifu/overwaifu/cmd/overwaifu
 
 GOEXE ?= go
 
