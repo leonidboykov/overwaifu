@@ -1,0 +1,5 @@
+[metadata.heroku]
+  root-package = "github.com/overwaifu/overwaifu"
+  go-version = "go1.10"
+  install = [ "./cmd/..." ]
+  ensure = true
