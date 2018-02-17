@@ -17,10 +17,17 @@ import (
 
 func main() {
 	// .env file is used for the local development
-	err := godotenv.Load()
-	if err != nil {
+	if err := godotenv.Load(); err != nil {
 		fmt.Println(err)
 	}
+
+	// Testing Heroku deployment
+	var cred overwaifu.Credentials
+	if err := env.Parse(&cred); err != nil {
+		log.Fatalln(err)
+	}
+	fmt.Println(cred.Login)
+	fmt.Println(cred.Password)
 
 	// getCache()
 	// getData()
