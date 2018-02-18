@@ -6,54 +6,57 @@ sex = "male"
 
 tags = [ "shimada_hanzo" ]
 
-[skins]
-  [skins.classic]
-    name = "Classic"
-    rarity = "common"
-  [skins.azuki]
-    name = "Azuki"
-    rarity = "rare"
-  [skins.kinoko]
-    name = "Kinoko"
-    rarity = "rare"
-  [skins.midori]
-    name = "Midori"
-    rarity = "rare"
-  [skins.sora]
-    name = "Sora"
-    rarity = "rare"
-  [skins.cloud]
-    name = "Cloud"
-    rarity = "epic"
-  [skins.dragon]
-    name = "Dragon"
-    rarity = "epic"
-  [skins.demon]
-    name = "Demon"
-    rarity = "epic"
-    event = "Halloween Terror"
-    tags = [ "demon_hanzo_(overwatch)" ]
-  [skins.young-hanzo]
-    name = "Young Hanzo"
-    rarity = "legendary"
-    tags = [ "young_hanzo_(overwatch)" ]
-  [skins.young-master]
-    name = "Young Master"
-    rarity = "legendary"
-    tags = [ "young_master_hanzo_(overwatch)" ]
-  [skins.lone-wolf]
-    name = "Lone Wolf"
-    rarity = "legendary"
-    tags = [ "lone_wolf_hanzo" ]
-  [skins.okami]
-    name = "Okami"
-    rarity = "legendary"
-    tags = [ "okami_hanzo_(overwatch)" ]
-  [skins.cyberninja]
-    name = "Cyberninja"
-    rarity = "legendary"
-    event = "Overwatch Anniversary"
-  [skins.casual]
-    name = "Casual"
-    rarity = "legendary"
-    event = "Winter Wonderland"
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.azuki]
+  name = "Azuki"
+  rarity = "rare"
+[skins.kinoko]
+  name = "Kinoko"
+  rarity = "rare"
+[skins.midori]
+  name = "Midori"
+  rarity = "rare"
+[skins.sora]
+  name = "Sora"
+  rarity = "rare"
+[skins.cloud]
+  name = "Cloud"
+  rarity = "epic"
+[skins.dragon]
+  name = "Dragon"
+  rarity = "epic"
+[skins.demon]
+  name = "Demon"
+  rarity = "epic"
+  event = "Halloween Terror"
+  tags = [ "demon_hanzo_(overwatch)" ]
+[skins.kabuki]
+  name = "Kabuki"
+  rarity = "legendary"
+[skins.young-hanzo]
+  name = "Young Hanzo"
+  rarity = "legendary"
+  tags = [ "young_hanzo_(overwatch)" ]
+[skins.young-master]
+  name = "Young Master"
+  rarity = "legendary"
+  tags = [ "young_master_hanzo_(overwatch)" ]
+[skins.lone-wolf]
+  name = "Lone Wolf"
+  rarity = "legendary"
+  tags = [ "lone_wolf_hanzo" ]
+[skins.okami]
+  name = "Okami"
+  rarity = "legendary"
+  tags = [ "okami_hanzo_(overwatch)" ]
+[skins.cyberninja]
+  name = "Cyberninja"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+[skins.casual]
+  name = "Casual"
+  rarity = "legendary"
+  event = "Winter Wonderland"
+  tags = [ "casual_hanzo" ]

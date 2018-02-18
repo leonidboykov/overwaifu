@@ -13,8 +13,8 @@ var repository []getmoe.Post
 var characters = []string{
 	"ana",
 	"bastion",
+	"d.va",
 	"doomfist",
-	"dva",
 	"genji",
 	"hanzo",
 	"junkrat",

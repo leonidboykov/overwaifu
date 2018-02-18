@@ -6,63 +6,64 @@ sex = "male" # According to his "penetration" role
 
 tags = [ "bastion_(overwatch)", "sst_laboratories_siege_automaton_e54" ]
 
-[skins]
-  [skins.classic]
-    name = "Classic"
-    rarity = "common"
-  [skins.dawn]
-    name = "Dawn"
-    rarity = "rare"
-  [skins.meadow]
-    name = "Meadow"
-    rarity = "rare"
-  [skins.sky]
-    name = "Sky"
-    rarity = "rare"
-  [skins.soot]
-    name = "Soot"
-    rarity = "rare"
-  [skins.defense-matrix]
-    name = "Defense Matrix"
-    rarity = "epic"
-  [skins.omnic-crisis]
-    name = "Omnic Crisis"
-    rarity = "epic"
-  [skins.rooster]
-    name = "Rooster"
-    rarity = "epic"
-    event = "Year of the Rooster"
-  [skins.null-sector]
-    name = "Null Sector"
-    rarity = "epic"
-    event = "Uprising"
-  [skins.tombstone]
-    name = "Tombstone"
-    rarity = "rare"
-    event = "Halloween Terror"
-  [skins.blizzcon-2016]
-    name = "BlizzCon 2016"
-    rarity = "rare"
-    event = "BlizzCon 2016"
-  [skins.antique]
-    name = "Antique"
-    rarity = "legendary"
-  [skins.woodbot]
-    name = "Woodbot"
-    rarity = "legendary"
-  [skins.gearbot]
-    name = "Gearbot"
-    rarity = "legendary"
-  [skins.steambot]
-    name = "Steambot"
-    rarity = "legendary"
-  [skins.dune-buggy]
-    name = "Dune Buggy"
-    rarity = "Overwatch Anniversary"
-  [skins.overgrown]
-    name = "Overgrown"
-    rarity = "Origins Edition"
-  [skins.avalanche]
-    name = "Avalanche"
-    rarity = "legendary"
-    event = "Winter Wonderland"
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.dawn]
+  name = "Dawn"
+  rarity = "rare"
+[skins.meadow]
+  name = "Meadow"
+  rarity = "rare"
+[skins.sky]
+  name = "Sky"
+  rarity = "rare"
+[skins.soot]
+  name = "Soot"
+  rarity = "rare"
+[skins.defense-matrix]
+  name = "Defense Matrix"
+  rarity = "epic"
+[skins.omnic-crisis]
+  name = "Omnic Crisis"
+  rarity = "epic"
+[skins.rooster]
+  name = "Rooster"
+  rarity = "epic"
+  event = "Year of the Rooster"
+[skins.null-sector]
+  name = "Null Sector"
+  rarity = "epic"
+  event = "Uprising"
+[skins.tombstone]
+  name = "Tombstone"
+  rarity = "rare"
+  event = "Halloween Terror"
+[skins.blizzcon-2016]
+  name = "BlizzCon 2016"
+  rarity = "rare"
+  event = "BlizzCon 2016"
+[skins.antique]
+  name = "Antique"
+  rarity = "legendary"
+[skins.woodbot]
+  name = "Woodbot"
+  rarity = "legendary"
+[skins.gearbot]
+  name = "Gearbot"
+  rarity = "legendary"
+[skins.steambot]
+  name = "Steambot"
+  rarity = "legendary"
+[skins.dune-buggy]
+  name = "Dune Buggy"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+[skins.overgrown]
+  name = "Overgrown"
+  rarity = "legendary"
+  event = "Origins Edition"
+[skins.avalanche]
+  name = "Avalanche"
+  rarity = "legendary"
+  event = "Winter Wonderland"

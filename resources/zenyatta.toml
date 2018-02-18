@@ -6,60 +6,62 @@ sex = "male"
 
 tags = [ "zenyatta_(overwatch)" ]
 
-[skins]
-  [skins.classic]
-    name = "Classic"
-    rarity = "common"
-  [skins.air]
-    name = "Air"
-    rarity = "rare"
-  [skins.earth]
-    name = "Earth"
-    rarity = "rare"
-  [skins.leaf]
-    name = "Leaf"
-    rarity = "rare"
-  [skins.water]
-    name = "Water"
-    rarity = "rare"
-  [skins.ascendant]
-    name = "Ascendant"
-    rarity = "epic"
-  [skins.harmonious]
-    name = "Harmonious"
-    rarity = "epic"
-  [skins.skullyatta]
-    name = "Skullyatta"
-    rarity = "epic"
-    event = "Halloween Terror"
-    tags = [ "skullyatta_(overwatch)" ]
-  [skins.djinnyatta]
-    name = "Djinnyatta"
-    rarity = "legendary"
-    tags = [ "djinnyatta_(overwatch)" ]
-  [skins.ifrit]
-    name = "Ifrit"
-    rarity = "legendary"
-  [skins.ra]
-    name = "Ra"
-    rarity = "legendary"
-    tags = [ "ra_zenyatta_(overwatch)" ]
-  [skins.sunyatta]
-    name = "Sunyatta"
-    rarity = "legendary"
-    tags = [ "sunyatta" ]
-  [skins.sanzang]
-    name = "Sanzang"
-    rarity = "legendary"
-    event = "Year of the Rooster"
-    tags = [ "sanzang_zenyatta_(overwatch)" ]
-  [skins.nutcracker]
-    name = "Nutcracker"
-    rarity = "legendary"
-    event = "Winter Wonderland"
-    tags = [ "nutcracker_zenyatta_(overwatch)" ]
-  [skins.cultist]
-    name = "Cultist"
-    rarity = "legendary"
-    event = "Halloween Terror"
-    tags = [ "cultist_zenyatta_(overwatch)" ]
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.air]
+  name = "Air"
+  rarity = "rare"
+[skins.earth]
+  name = "Earth"
+  rarity = "rare"
+[skins.leaf]
+  name = "Leaf"
+  rarity = "rare"
+[skins.water]
+  name = "Water"
+  rarity = "rare"
+[skins.ascendant]
+  name = "Ascendant"
+  rarity = "epic"
+[skins.carbon-fiber]
+  name = "Carbon Fiber"
+  rarity = "epic"
+[skins.harmonious]
+  name = "Harmonious"
+  rarity = "epic"
+[skins.skullyatta]
+  name = "Skullyatta"
+  rarity = "epic"
+  event = "Halloween Terror"
+  tags = [ "skullyatta_(overwatch)" ]
+[skins.djinnyatta]
+  name = "Djinnyatta"
+  rarity = "legendary"
+  tags = [ "djinnyatta_(overwatch)" ]
+[skins.ifrit]
+  name = "Ifrit"
+  rarity = "legendary"
+[skins.ra]
+  name = "Ra"
+  rarity = "legendary"
+  tags = [ "ra_zenyatta_(overwatch)" ]
+[skins.sunyatta]
+  name = "Sunyatta"
+  rarity = "legendary"
+  tags = [ "sunyatta" ]
+[skins.sanzang]
+  name = "Sanzang"
+  rarity = "legendary"
+  event = "Year of the Rooster"
+  tags = [ "sanzang_zenyatta_(overwatch)" ]
+[skins.nutcracker]
+  name = "Nutcracker"
+  rarity = "legendary"
+  event = "Winter Wonderland"
+  tags = [ "nutcracker_zenyatta_(overwatch)" ]
+[skins.cultist]
+  name = "Cultist"
+  rarity = "legendary"
+  event = "Halloween Terror"
+  tags = [ "cultist_zenyatta_(overwatch)" ]

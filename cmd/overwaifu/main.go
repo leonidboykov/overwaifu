@@ -24,6 +24,11 @@ func main() {
 		fmt.Println(err)
 	}
 
+	// getCache()
+	// getData()
+}
+
+func dbJob() {
 	var mgoConfig overwaifu.MongoDBConfig
 	err := env.Parse(&mgoConfig)
 	if err != nil {
@@ -59,15 +64,20 @@ func main() {
 		log.Println(err)
 	}
 
-	// c := session.DB("overwaifu").C("posts")
+	c := session.DB("overwaifu").C("posts")
 	// for i := range posts {
 	// 	if err := c.Insert(&posts[i]); err != nil {
 	// 		fmt.Println(err)
 	// 	}
 	// }
 
-	// getCache()
-	// getData()
+	var hashes []string
+	if err := c.Find(nil).Distinct("author", &hashes); err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(len(posts))
+	fmt.Println(len(hashes))
 }
 
 func getData() {
