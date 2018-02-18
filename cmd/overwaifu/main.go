@@ -1,13 +1,16 @@
 package main
 
 import (
+	"crypto/tls"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
+	"net"
 	"time"
 
 	"github.com/caarlos0/env"
+	"github.com/globalsign/mgo"
 	"github.com/joho/godotenv"
 	"github.com/leonidboykov/getmoe"
 	"github.com/leonidboykov/getmoe/board/sankaku"
@@ -21,13 +24,47 @@ func main() {
 		fmt.Println(err)
 	}
 
-	// Testing Heroku deployment
-	var cred overwaifu.Credentials
-	if err := env.Parse(&cred); err != nil {
+	var mgoConfig overwaifu.MongoDBConfig
+	err := env.Parse(&mgoConfig)
+	if err != nil {
 		log.Fatalln(err)
 	}
-	fmt.Println(cred.Login)
-	fmt.Println(cred.Password)
+
+	dialInfo := &mgo.DialInfo{
+		Addrs:          mgoConfig.URI,
+		ReplicaSetName: mgoConfig.ReplicaSetName,
+		Username:       mgoConfig.User,
+		Password:       mgoConfig.Password,
+		Source:         mgoConfig.Source,
+		DialServer: func(addr *mgo.ServerAddr) (net.Conn, error) {
+			conn, err := tls.Dial("tcp", addr.String(), &tls.Config{})
+			return conn, err
+		},
+		Timeout: time.Second * 10,
+	}
+
+	session, err := mgo.DialWithInfo(dialInfo)
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer session.Close()
+
+	data, err := ioutil.ReadFile("dest/cache/cache.json")
+	if err != nil {
+		log.Println(err)
+	}
+
+	var posts []getmoe.Post
+	if err = json.Unmarshal(data, &posts); err != nil {
+		log.Println(err)
+	}
+
+	// c := session.DB("overwaifu").C("posts")
+	// for i := range posts {
+	// 	if err := c.Insert(&posts[i]); err != nil {
+	// 		fmt.Println(err)
+	// 	}
+	// }
 
 	// getCache()
 	// getData()
@@ -63,14 +100,14 @@ func getData() {
 }
 
 func getCache() {
-	var cred overwaifu.Credentials
+	var cred overwaifu.SankakuCredentials
 	err := env.Parse(&cred)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
 	board := sankaku.ChanSankakuConfig
-	board.BuildAuth(cred.Login, cred.Password)
+	board.BuildAuth(cred.User, cred.Password)
 
 	board.Query = getmoe.Query{
 		Tags: []string{"overwatch"},
