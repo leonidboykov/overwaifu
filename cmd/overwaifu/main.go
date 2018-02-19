@@ -24,7 +24,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	getCache()
+	// getCache()
 	getData()
 }
 

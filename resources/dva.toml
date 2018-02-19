@@ -40,7 +40,7 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   name = "Scavenger"
   rarity = "legendary"
   tags = [ "scavenger_d.va_(overwatch)", "scavenger_d.va" ]
-[skins.bva]
+[skins."b.va"]
   name = "B.Va"
   rarity = "legendary"
   tags = [ "b.va_(overwatch)", "b.va" ]
