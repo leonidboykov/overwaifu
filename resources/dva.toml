@@ -40,7 +40,7 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   name = "Scavenger"
   rarity = "legendary"
   tags = [ "scavenger_d.va_(overwatch)", "scavenger_d.va" ]
-[skins."b.va"]
+[skins.bva]
   name = "B.Va"
   rarity = "legendary"
   tags = [ "b.va_(overwatch)", "b.va" ]
@@ -67,3 +67,12 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   rarity = "legendary"
   event = "Heroes of the Storm"
   tags = [ "officer_d.va", "police_officer_d.va" ]
+
+
+# Heroes of the Storm skins
+# [skins.the-destroyer]
+#   name = "The Destroyer"
+#   rarity = "legendary"
+#   game = "Heroes of the Storm"
+#   tags = [ "d.va_the_destroyer_(overwatch)", "d.va_the_destroyer" ]
+

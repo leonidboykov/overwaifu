@@ -24,8 +24,8 @@ func main() {
 		fmt.Println(err)
 	}
 
-	// getCache()
-	// getData()
+	getCache()
+	getData()
 }
 
 func dbJob() {
