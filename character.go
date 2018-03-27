@@ -1,20 +1,14 @@
 package overwaifu
 
 import (
-	"log"
-
-	"github.com/leonidboykov/getmoe"
+	"github.com/globalsign/mgo"
+	"github.com/globalsign/mgo/bson"
 )
 
 const (
 	genderswapTag          = "genderswap"
 	virginKillerSweaterTag = "virgin_killer_sweater"
 	selfieTag              = "selfie"
-)
-
-const (
-	minScoreForChar = 500
-	minScoreForTag  = 75
 )
 
 // Character contains all main data about character
@@ -32,105 +26,64 @@ type Character struct {
 
 // UpdateSkinKey ...
 func (c *Character) UpdateSkinKey() {
+	for k := range c.Skins {
+		c.Skins[k].Key = k
+	}
+}
+
+// QueryScore ...
+func (c *Character) QueryScore(collection *mgo.Collection) error {
+	// Build query
+	query := []bson.M{
+		{"$match": bson.M{"tags": bson.M{"$in": c.Tags}}},
+		{"$facet": bson.M{
+			"countAll": []bson.M{{"$count": "count"}},
+			"countSafe": []bson.M{
+				{"$match": bson.M{"rating": "s"}},
+				{"$count": "count"},
+			},
+			"countQuestionable": []bson.M{
+				{"$match": bson.M{"rating": "q"}},
+				{"$count": "count"},
+			},
+			"countExplicit": []bson.M{
+				{"$match": bson.M{"rating": "e"}},
+				{"$count": "count"},
+			},
+			"countGenderSwaps": []bson.M{
+				{"$match": bson.M{"tags": bson.M{"$in": []string{"genderswap"}}}},
+				{"$count": "count"},
+			},
+			"countVirginKillerSweater": []bson.M{
+				{"$match": bson.M{"tags": bson.M{"$in": []string{"virgin_killer_sweater"}}}},
+				{"$count": "count"},
+			},
+			"countSelfie": []bson.M{
+				{"$match": bson.M{"tags": bson.M{"$in": []string{"selfie"}}}},
+				{"$count": "count"},
+			},
+		}},
+		{"$project": bson.M{
+			"all":                   bson.M{"$arrayElemAt": []interface{}{"$countAll.count", 0}},
+			"safe":                  bson.M{"$arrayElemAt": []interface{}{"$countSafe.count", 0}},
+			"questionable":          bson.M{"$arrayElemAt": []interface{}{"$countQuestionable.count", 0}},
+			"explicit":              bson.M{"$arrayElemAt": []interface{}{"$countExplicit.count", 0}},
+			"gender_swaps":          bson.M{"$arrayElemAt": []interface{}{"$countGenderSwaps.count", 0}},
+			"virgin_killer_sweater": bson.M{"$arrayElemAt": []interface{}{"$countVirginKillerSweater.count", 0}},
+			"selfie":                bson.M{"$arrayElemAt": []interface{}{"$countSelfie.count", 0}},
+		}},
+		{"$addFields": bson.M{
+			"pure": bson.M{"$divide": []string{"$safe", "$all"}},
+			"lewd": bson.M{"$divide": []string{"$explicit", "$all"}},
+		}},
+	}
+
+	return collection.Pipe(query).One(&c.Score)
+}
+
+// QueryScoreSkins ...
+func (c *Character) QueryScoreSkins(collection *mgo.Collection) {
 	for i := range c.Skins {
-		c.Skins[i].Key = i
+		c.Skins[i].QueryScore(c, collection)
 	}
-}
-
-// CalcScore ...
-func (c *Character) CalcScore(posts []getmoe.Post) {
-	// Score.All is how much pictures with this character on Sankaku Channel
-	c.Score.All = len(posts)
-
-	for i := range posts {
-		if posts[i].HasTag(genderswapTag) {
-			c.Score.GenderSwaps++
-		}
-		if posts[i].HasTag(virginKillerSweaterTag) {
-			c.Score.VirginKillerSweater++
-		}
-		if posts[i].HasTag(selfieTag) {
-			c.Score.Selfie++
-		}
-		switch posts[i].Rating {
-		case "s":
-			c.Score.Safe++
-		case "q":
-			c.Score.Questionable++
-		case "e":
-			c.Score.Explicit++
-		default:
-			log.Printf("overwaifu: got unknown rating %s", posts[i].Rating)
-		}
-
-		for j := range c.Skins {
-			if hasTags(posts[i], c.Skins[j].Tags) {
-				c.Skins[j].Score.All++
-				switch posts[i].Rating {
-				case "s":
-					c.Skins[j].Score.Safe++
-				case "q":
-					c.Skins[j].Score.Questionable++
-				case "e":
-					c.Skins[j].Score.Explicit++
-				}
-			}
-		}
-	}
-
-	if c.Score.All > minScoreForChar {
-		c.Score.Lewd = float64(c.Score.Explicit) / float64(c.Score.All)
-		c.Score.Pure = float64(c.Score.Safe) / float64(c.Score.All)
-	}
-
-	for i := range c.Skins {
-		if c.Skins[i].Score.All > minScoreForTag {
-			c.Skins[i].Score.Lewd = float64(c.Skins[i].Score.Explicit) / float64(c.Skins[i].Score.All)
-			c.Skins[i].Score.Pure = float64(c.Skins[i].Score.Safe) / float64(c.Skins[i].Score.All)
-		}
-	}
-}
-
-// FameSkin ...
-func (c *Character) FameSkin() (fame int, skin string) {
-	for key := range c.Skins {
-		if c.Skins[key].Score.All > fame {
-			fame = c.Skins[key].Score.All
-			skin = key
-		}
-	}
-	return
-}
-
-// HotSkin ...
-func (c *Character) HotSkin() (hot int, skin string) {
-	for key := range c.Skins {
-		if c.Skins[key].Score.Explicit > hot {
-			hot = c.Skins[key].Score.Explicit
-			skin = key
-		}
-	}
-	return
-}
-
-// PureSkin ...
-func (c *Character) PureSkin() (pure float64, skin string) {
-	for key := range c.Skins {
-		if c.Skins[key].Score.Pure > pure {
-			pure = c.Skins[key].Score.Pure
-			skin = key
-		}
-	}
-	return
-}
-
-// LewdSkin ...
-func (c *Character) LewdSkin() (lewd float64, skin string) {
-	for key := range c.Skins {
-		if c.Skins[key].Score.Lewd > lewd {
-			lewd = c.Skins[key].Score.Lewd
-			skin = key
-		}
-	}
-	return
 }

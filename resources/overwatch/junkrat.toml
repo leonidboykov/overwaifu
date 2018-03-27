@@ -1,0 +1,65 @@
+name = "Junkrat"
+realName = "Jamison Fawkes"
+age = 25
+role = "defense"
+sex = "male"
+
+tags = [ "junkrat_(overwatch)" ]
+
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.bleached]
+  name = "Bleached"
+  rarity = "rare"
+[skins.drowned]
+  name = "Drowned"
+  rarity = "rare"
+[skins.irradiated]
+  name = "Irradiated"
+  rarity = "rare"
+[skins.rusted]
+  name = "Rusted"
+  rarity = "rare"
+[skins.caution]
+  name = "Caution"
+  rarity = "epic"
+[skins.jailbird]
+  name = "Jailbird"
+  rarity = "epic"
+[skins.toasted]
+  name = "Toasted"
+  rarity = "epic"
+[skins.firework]
+  name = "Firework"
+  rarity = "epic"
+  event = "Year of the Rooster"
+  tags = [ "firework_junkrat_(overwatch)" ]
+[skins.fool]
+  name = "Fool"
+  rarity = "legendary"
+  tags = [ "fool_junkrat_(overwatch)" ]
+[skins.jester]
+  name = "Jester"
+  rarity = "legendary"
+  tags = [ "jester_junkrat_(overwatch)" ]
+[skins.hayseed]
+  name = "Hayseed"
+  rarity = "legendary"
+  tags = [ "hayseed_junkrat_(overwatch)" ]
+[skins.scarecrow]
+  name = "Scarecrow"
+  rarity = "legendary"
+[skins.cricket]
+  name = "Cricket"
+  rarity = "legendary"
+  event = "Summer Games"
+[skins.drjunkenstein]
+  name = "Dr. Junkenstein"
+  rarity = "legendary"
+  event = "Halloween Terror"
+  tags = [ "dr._junkenstein_junkrat_(overwatch)" ]
+[skins.beachrat]
+  name = "Beachrat"
+  rarity = "legendary"
+  event = "Winter Wonderland"

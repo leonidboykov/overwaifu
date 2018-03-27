@@ -4,38 +4,32 @@ import (
 	"crypto/tls"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
-	"log"
 	"net"
+	"os"
 	"time"
 
-	"github.com/caarlos0/env"
 	"github.com/globalsign/mgo"
-	"github.com/joho/godotenv"
+	"github.com/globalsign/mgo/bson"
 	"github.com/leonidboykov/getmoe"
 	"github.com/leonidboykov/getmoe/board/sankaku"
 
 	"github.com/overwaifu/overwaifu"
+	"github.com/overwaifu/overwaifu/conf"
 )
 
 func main() {
-	// .env file is used for the local development
-	if err := godotenv.Load(); err != nil {
-		fmt.Println(err)
-	}
-
-	var mgoConfig overwaifu.MongoDBConfig
-	err := env.Parse(&mgoConfig)
+	config, err := conf.Load("")
 	if err != nil {
-		log.Fatalln(err)
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
 	dialInfo := &mgo.DialInfo{
-		Addrs:          mgoConfig.URI,
-		ReplicaSetName: mgoConfig.ReplicaSetName,
-		Username:       mgoConfig.User,
-		Password:       mgoConfig.Password,
-		Source:         mgoConfig.Source,
+		Addrs:          config.DB.URI,
+		ReplicaSetName: config.DB.ReplicaSetName,
+		Username:       config.DB.Username,
+		Password:       config.DB.Password,
+		Source:         config.DB.Source,
 		DialServer: func(addr *mgo.ServerAddr) (net.Conn, error) {
 			conn, err := tls.Dial("tcp", addr.String(), &tls.Config{})
 			return conn, err
@@ -46,68 +40,41 @@ func main() {
 	session, err := mgo.DialWithInfo(dialInfo)
 	if err != nil {
 		fmt.Println(err)
+		os.Exit(1)
 	}
 	defer session.Close()
 
-	data, err := ioutil.ReadFile("dest/cache/cache.json")
+	postsCollection := session.DB("overwaifu").C("posts")
+	charactersCollection := session.DB("overwaifu").C("characters")
+
+	posts, err := getPosts(config)
 	if err != nil {
-		log.Println(err)
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
-	var posts []getmoe.Post
-	if err = json.Unmarshal(data, &posts); err != nil {
-		log.Println(err)
+	uploadPosts(postsCollection, posts)
+
+	ow, err := overwaifu.New()
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
-	// c := session.DB("overwaifu").C("posts")
-	// for i := range posts {
-	// 	if err := c.Insert(&posts[i]); err != nil {
-	// 		fmt.Println(err)
-	// 	}
-	// }
+	ow.QueryScore(postsCollection, charactersCollection)
+	ow.QueryAchievements(charactersCollection)
 
-	// getCache()
-	// getData()
+	data, err := json.MarshalIndent(ow, "", "  ")
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+	fmt.Println(string(data))
 }
 
-func getData() {
-	data, err := ioutil.ReadFile("dest/cache/cache.json")
-	if err != nil {
-		log.Panicln(err)
-	}
-
-	var posts []getmoe.Post
-	if err = json.Unmarshal(data, &posts); err != nil {
-		log.Panicln(err)
-	}
-
-	ow, err := overwaifu.New(posts)
-	if err != nil {
-		log.Panicln(err)
-	}
-
-	ow.FetchData()
-	ow.Analyse()
-
-	data, err = json.MarshalIndent(ow, "", "  ")
-	if err != nil {
-		log.Panicln(err)
-	}
-
-	if err := ioutil.WriteFile("dest/overwaifu.json", data, 0644); err != nil {
-		log.Panicln(err)
-	}
-}
-
-func getCache() {
-	var cred overwaifu.SankakuCredentials
-	err := env.Parse(&cred)
-	if err != nil {
-		log.Fatalln(err)
-	}
-
+func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
 	board := sankaku.ChanSankakuConfig
-	board.BuildAuth(cred.User, cred.Password)
+	board.BuildAuth(config.SC.Username, config.SC.Password)
 
 	board.Query = getmoe.Query{
 		Tags: []string{"overwatch"},
@@ -115,21 +82,23 @@ func getCache() {
 	}
 
 	start := time.Now()
-	println("searching for overwatch lewd images")
+	fmt.Println("searching for overwatch lewd images")
 	posts, err := board.RequestAll()
 	if err != nil {
-		log.Fatalln(err)
+		return nil, err
 	}
-	println("found", len(posts))
+	fmt.Println("found", len(posts))
 	elapsed := time.Since(start)
-	log.Printf("OverWaifu runtime %s", elapsed)
+	fmt.Printf("OverWaifu runtime %s", elapsed)
 
-	data, err := json.Marshal(posts)
-	if err != nil {
-		log.Fatalln(err)
-	}
+	return posts, nil
+}
 
-	if err := ioutil.WriteFile("dest/cache/cache.json", data, 0644); err != nil {
-		log.Fatalln(err)
+func uploadPosts(collection *mgo.Collection, posts []getmoe.Post) {
+	for i := range posts {
+		fmt.Printf("Pushing %5d of %d\n", i+1, len(posts))
+		if _, err := collection.Upsert(bson.M{"id": posts[i].ID}, &posts[i]); err != nil {
+			fmt.Println(err)
+		}
 	}
 }

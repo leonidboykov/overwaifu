@@ -1,0 +1,69 @@
+name = "Genji"
+realName = "Genji Shimada"
+age = 35
+role = "offense"
+sex = "male"
+
+tags = [ "shimada_genji" ]
+
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.azurite]
+  name = "Azurite"
+  rarity = "rare"
+[skins.cinnabar]
+  name = "Cinnabar"
+  rarity = "rare"
+[skins.malachite]
+  name = "Malachite"
+  rarity = "rare"
+[skins.ochre]
+  name = "Ochre"
+  rarity = "rare"
+[skins.carbon-fiber]
+  name = "Carbon Fiber"
+  rarity = "epic"
+  tags = [ "carbon_fiber_genji" ]
+[skins.chrome]
+  name = "Chrome"
+  rarity = "epic"
+[skins.nihon]
+  name = "Nihon"
+  rarity = "epic"
+  event = "Summer Games"
+[skins.sparrow]
+  name = "Sparrow"
+  rarity = "legendary"
+  tags = [ "sparrow_genji_(overwatch)" ]
+[skins.young-genji]
+  name = "Young Genji"
+  rarity = "legendary"
+  tags = [ "young_genji_(overwatch)" ]
+[skins.bedouin]
+  name = "Bedouin"
+  rarity = "legendary"
+  tags = [ "bedouin_genji_(overwatch)" ]
+[skins.nomad]
+  name = "Nomad"
+  rarity = "legendary"
+  tags = [ "nomad_genji_(overwatch)" ]
+[skins.oni]
+  name = "Oni"
+  rarity = "legendary"
+  event = "Heroes of the Storm"
+  tags = [ "oni_genji_(overwatch)" ]
+[skins.baihu]
+  name = "Baihu"
+  rarity = "legendary"
+  event = "Lunar New Year"
+[skins.blackwatch]
+  name = "Blackwatch"
+  rarity = "legendary"
+  event = "Uprising"
+  tags = [ "blackwatch_genji_(overwatch)" ]
+[skins.sentai]
+  name = "Sentai"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+  tags = [ "sentai_genji_(overwatch)" ]

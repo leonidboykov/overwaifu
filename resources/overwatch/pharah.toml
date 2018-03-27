@@ -1,0 +1,75 @@
+name = "Pharah"
+realName = "Fareeha Amari"
+age = 32
+role = "offense"
+sex = "female"
+
+tags = [ "pharah_(overwatch)" ]
+
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.amethyst]
+  name = "Amethyst"
+  rarity = "rare"
+[skins.copper]
+  name = "Copper"
+  rarity = "rare"
+[skins.emerald]
+  name = "Emerald"
+  rarity = "rare"
+[skins.titanium]
+  name = "Titanium"
+  rarity = "rare"
+[skins.anubis]
+  name = "Anubis"
+  rarity = "epic"
+  tags = [ "anubis_pharah_(overwatch)", "anubis_pharah" ]
+[skins.jackal]
+  name = "Jackal"
+  rarity = "epic"
+  tags = [ "jackal_pharah_(overwatch)", "jackal_pharah" ]
+[skins.possessed]
+  name = "Possessed"
+  rarity = "epic"
+  event = "Halloween Terror"
+  tags = [ "possessed_pharah_(overwatch)", "possessed_pharah" ]
+[skins.frostbite]
+  name = "Frostbite"
+  rarity = "epic"
+  event = "Winter Wonderland"
+  tags = [ "frostbite_pharah_(overwatch)", "frostbite_pharah" ]
+[skins.asp]
+  name = "Asp"
+  rarity = "legendary"
+  tags = [ "asp_pharah" ]
+[skins.mechaqueen]
+  name = "Mechaqueen"
+  rarity = "legendary"
+  tags = [ "mechaqueen_pharah_(overwatch)", "mechaqueen_pharah" ]
+[skins.raptorion]
+  name = "Raptorion"
+  rarity = "legendary"
+  tags = [ "raptorion_pharah_(overwatch)" ]
+[skins.raindancer]
+  name = "Raindancer"
+  rarity = "legendary"
+  tags = [ "raindancer_pharah_(overwatch)" ]
+[skins.thunderbird]
+  name = "Thunderbird"
+  rarity = "legendary"
+  tags = [ "thunderbird_pharah_(overwatch)", "thunderbird_pharah" ]
+[skins.bedouin]
+  name = "Bedouin"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+  tags = [ "bedouin_pharah_(overwatch)", "bedouin_pharah" ]
+[skins.security-chief]
+  name = "Security Chief"
+  rarity = "legendary"
+  event = "Origins Edition"
+  tags = [ "security_chief_pharah_(overwatch)", "security_chief_pharah" ]
+[skins.qinglong]
+  name = "Qinglong"
+  rarity = "legendary"
+  event = "Lunar New Year"

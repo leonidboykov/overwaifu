@@ -1,209 +1,247 @@
 package overwaifu
 
 import (
+	"fmt"
+	"io/ioutil"
+	"path"
+	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/BurntSushi/toml"
+	"github.com/globalsign/mgo"
+	"github.com/globalsign/mgo/bson"
 	"github.com/leonidboykov/getmoe"
 )
 
 var repository []getmoe.Post
 
-// Supported characters, comment to disable
-var characters = []string{
-	"ana",
-	"bastion",
-	"doomfist",
-	"dva",
-	"genji",
-	"hanzo",
-	"junkrat",
-	"lucio",
-	"mccree",
-	"mei",
-	"mercy",
-	"moira",
-	"orisa",
-	"pharah",
-	"reaper",
-	"reinhardt",
-	"roadhog",
-	"soldier76",
-	"sombra",
-	"symmetra",
-	"torbjorn",
-	"tracer",
-	"widowmaker",
-	"winston",
-	"zarya",
-	"zenyatta",
-}
+const (
+	resourceFolder = "resources/overwatch/"
+	resourceExt    = ".toml"
+)
 
-// OverWaifu ...
+const (
+	minScoreForCharacter = 1500
+	minScoreForSkin      = 100
+)
+
+// OverWaifu holds all overwaifu results
 type OverWaifu struct {
-	posts        []getmoe.Post
-	PostsCount   int                   `json:"posts_count"`
-	UpdatedAt    time.Time             `json:"updated_at"`
-	LastPostTime time.Time             `json:"last_post_time"`
-	Waifu        map[string]*Character `json:"waifu"`
-	Husbando     map[string]*Character `json:"husbando"`
-	Achievements `json:"achievements"`
+	UpdatedAt    time.Time
+	PostsCount   int
+	Characters   map[string]*Character   `json:"characters"`
+	Achievements map[string]*Achievement `json:"achievements"`
 }
 
-// Achievements ...
-type Achievements struct {
-	FameWaifu         string          `json:"fame_waifu"`
-	HotWaifu          string          `json:"hot_waifu"`
-	LewdWaifu         string          `json:"lewd_waifu"`
-	PureWaifu         string          `json:"pure_waifu"`
-	FakeWaifu         string          `json:"fake_waifu"`
-	VirginKillerWaifu string          `json:"virgin_killer_waifu"`
-	SelfieWaifu       string          `json:"selfie_waifu"`
-	FameWaifuSkin     SkinAchievement `json:"fame_waifu_skin"`
-	HotWaifuSkin      SkinAchievement `json:"hot_waifu_skin"`
-	LewdWaifuSkin     SkinAchievement `json:"lewd_waifu_skin"`
-	PureWaifuSkin     SkinAchievement `json:"pure_waifu_skin"`
+func getCharactersList() ([]string, error) {
+	files, err := ioutil.ReadDir(resourceFolder)
+	if err != nil {
+		return nil, err
+	}
+
+	var result []string
+
+	for _, f := range files {
+		basename := f.Name()
+		if path.Ext(basename) == resourceExt {
+			basename = strings.TrimSuffix(basename, filepath.Ext(basename))
+			result = append(result, basename)
+		}
+	}
+	return result, nil
 }
 
-// SkinAchievement ...
-type SkinAchievement struct {
-	Owner string `json:"owner"`
-	Skin  string `json:"skin"`
-}
+// New createn new OverWaifu instance
+func New() (*OverWaifu, error) {
+	characters, err := getCharactersList()
+	if err != nil {
+		return nil, err
+	}
 
-// New ...
-func New(posts []getmoe.Post) (*OverWaifu, error) {
 	ow := OverWaifu{
-		posts:        posts,
-		PostsCount:   len(posts),
 		UpdatedAt:    time.Now(),
-		LastPostTime: posts[0].CreatedAt,
-		Waifu:        make(map[string]*Character),
-		Husbando:     make(map[string]*Character),
+		Characters:   make(map[string]*Character),
+		Achievements: make(map[string]*Achievement),
 	}
 	for i := range characters {
 		var c Character
-		_, err := toml.DecodeFile("resources/"+characters[i]+".toml", &c)
+		_, err := toml.DecodeFile(resourceFolder+characters[i]+resourceExt, &c)
 		if err != nil {
 			return nil, err
 		}
-		if c.Sex == "female" {
-			ow.Waifu[characters[i]] = &c
-			ow.Waifu[characters[i]].Key = characters[i]
-			ow.Waifu[characters[i]].UpdateSkinKey()
-		} else {
-			ow.Husbando[characters[i]] = &c
-			ow.Husbando[characters[i]].Key = characters[i]
-			ow.Husbando[characters[i]].UpdateSkinKey()
-		}
+		ow.Characters[characters[i]] = &c
+		ow.Characters[characters[i]].Key = characters[i]
+		ow.Characters[characters[i]].UpdateSkinKey()
 	}
 
 	return &ow, nil
 }
 
-// FetchData ...
-func (ow *OverWaifu) FetchData() {
-	for i := range ow.Waifu {
-		var p []getmoe.Post
-		for j := range ow.posts {
-			if hasTags(ow.posts[j], ow.Waifu[i].Tags) {
-				p = append(p, ow.posts[j])
-			}
-		}
-		ow.Waifu[i].CalcScore(p)
+// QueryScore calculates score
+func (ow *OverWaifu) QueryScore(postsCollection, charactersCollection *mgo.Collection) {
+	// query meta information
+	count, err := postsCollection.Count()
+	if err != nil {
+		fmt.Println(err)
 	}
+	ow.PostsCount = count
 
-	for i := range ow.Husbando {
-		var p []getmoe.Post
-		for j := range ow.posts {
-			if hasTags(ow.posts[j], ow.Husbando[i].Tags) {
-				p = append(p, ow.posts[j])
-			}
+	// query characters score
+	for k := range ow.Characters {
+		ow.Characters[k].QueryScore(postsCollection)
+		ow.Characters[k].QueryScoreSkins(postsCollection)
+	}
+	ow.saveScores(charactersCollection)
+}
+
+func (ow *OverWaifu) saveScores(collection *mgo.Collection) {
+	// if err := collection.DropCollection(); err != nil {
+	// 	fmt.Println(err)
+	// }
+	for k := range ow.Characters {
+		c := ow.Characters[k]
+		// if err := collection.Insert(&c); err != nil {
+		// 	fmt.Println(err)
+		// }
+		if _, err := collection.Upsert(bson.M{"key": c.Key}, &c); err != nil {
+			fmt.Println(err)
 		}
-		ow.Husbando[i].CalcScore(p)
 	}
 }
 
-// Analyse ...
-func (ow *OverWaifu) Analyse() {
-	var fame, hot, virginKiller, selfie int
-	var pure, lewd float64
-	var fameSkin, hotSkin int
-	var pureSkin, lewdSkin float64
-	for i := range ow.Waifu {
-		if ow.Waifu[i].Score.All > fame {
-			ow.Achievements.FameWaifu = i
-			fame = ow.Waifu[i].Score.All
-		}
-
-		if ow.Waifu[i].Score.Explicit > hot {
-			ow.Achievements.HotWaifu = i
-			hot = ow.Waifu[i].Score.Explicit
-		}
-
-		if ow.Waifu[i].Score.Pure > pure {
-			ow.Achievements.PureWaifu = i
-			pure = ow.Waifu[i].Score.Pure
-		}
-
-		if ow.Waifu[i].Score.Lewd > lewd {
-			ow.Achievements.LewdWaifu = i
-			lewd = ow.Waifu[i].Score.Lewd
-		}
-
-		if ow.Waifu[i].Score.VirginKillerSweater > virginKiller {
-			ow.Achievements.VirginKillerWaifu = i
-			virginKiller = ow.Waifu[i].Score.VirginKillerSweater
-		}
-
-		if ow.Waifu[i].Score.Selfie > selfie {
-			ow.Achievements.SelfieWaifu = i
-			selfie = ow.Waifu[i].Score.Selfie
-		}
-
-		// Skins
-		f, fSkin := ow.Waifu[i].FameSkin()
-		if f > fameSkin {
-			ow.Achievements.FameWaifuSkin = SkinAchievement{
-				Owner: i,
-				Skin:  fSkin,
-			}
-			fameSkin = f
-		}
-
-		h, hSkin := ow.Waifu[i].HotSkin()
-		if h > hotSkin {
-			ow.Achievements.HotWaifuSkin = SkinAchievement{
-				Owner: i,
-				Skin:  hSkin,
-			}
-			hotSkin = h
-		}
-
-		p, pSkin := ow.Waifu[i].PureSkin()
-		if p > pureSkin {
-			ow.Achievements.PureWaifuSkin = SkinAchievement{
-				Owner: i,
-				Skin:  pSkin,
-			}
-			pureSkin = p
-		}
-
-		l, lSkin := ow.Waifu[i].LewdSkin()
-		if l > lewdSkin {
-			ow.Achievements.LewdWaifuSkin = SkinAchievement{
-				Owner: i,
-				Skin:  lSkin,
-			}
-			lewdSkin = l
-		}
+// QueryAchievements calculates achievements
+func (ow *OverWaifu) QueryAchievements(collection *mgo.Collection) error {
+	// Build query
+	query := []bson.M{
+		{"$addFields": bson.M{"skins": bson.M{"$objectToArray": "$skins"}}},
+		{"$facet": bson.M{
+			"fameWaifu": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$sort": bson.M{"score.all": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+				}},
+			},
+			"hotWaifu": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$sort": bson.M{"score.explicit": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+				}},
+			},
+			"lewdWaifu": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$match": bson.M{"score.all": bson.M{"$gt": minScoreForCharacter}}},
+				{"$sort": bson.M{"score.lewd": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+				}},
+			},
+			"pureWaifu": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$match": bson.M{"score.all": bson.M{"$gt": minScoreForCharacter}}},
+				{"$sort": bson.M{"score.pure": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+				}},
+			},
+			"fameWaifuSkin": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$unwind": "$skins"},
+				{"$sort": bson.M{"skins.v.score.all": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+					"skin":      "$skins.k",
+				}},
+			},
+			"hotWaifuSkin": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$unwind": "$skins"},
+				{"$sort": bson.M{"skins.v.score.explicit": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+					"skin":      "$skins.k",
+				}},
+			},
+			"lewdWaifuSkin": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$unwind": "$skins"},
+				{"$match": bson.M{"skins.v.score.all": bson.M{"$gt": minScoreForSkin}}},
+				{"$sort": bson.M{"skins.v.score.lewd": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+					"skin":      "$skins.k",
+				}},
+			},
+			"pureWaifuSkin": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$unwind": "$skins"},
+				{"$match": bson.M{"skins.v.score.all": bson.M{"$gt": minScoreForSkin}}},
+				{"$sort": bson.M{"skins.v.score.pure": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+					"skin":      "$skins.k",
+				}},
+			},
+			"fakeWaifu": []bson.M{
+				{"$match": bson.M{"sex": "male"}},
+				{"$sort": bson.M{"score.gender_swaps": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+				}},
+			},
+			"virginKillerWaifu": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$sort": bson.M{"score.virgin_killer_sweater": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+				}},
+			},
+			"selfieWaifu": []bson.M{
+				{"$match": bson.M{"sex": "female"}},
+				{"$sort": bson.M{"score.selfie": -1}},
+				{"$limit": 1},
+				{"$project": bson.M{
+					"_id":       0,
+					"character": "$key",
+				}},
+			},
+		}},
+		{"$project": bson.M{
+			"fame_waifu":          bson.M{"$arrayElemAt": []interface{}{"$fameWaifu", 0}},
+			"hot_waifu":           bson.M{"$arrayElemAt": []interface{}{"$hotWaifu", 0}},
+			"lewd_waifu":          bson.M{"$arrayElemAt": []interface{}{"$lewdWaifu", 0}},
+			"pure_waifu":          bson.M{"$arrayElemAt": []interface{}{"$pureWaifu", 0}},
+			"fame_waifu_skin":     bson.M{"$arrayElemAt": []interface{}{"$fameWaifuSkin", 0}},
+			"hot_waifu_skin":      bson.M{"$arrayElemAt": []interface{}{"$hotWaifuSkin", 0}},
+			"lewd_waifu_skin":     bson.M{"$arrayElemAt": []interface{}{"$lewdWaifuSkin", 0}},
+			"pure_waifu_skin":     bson.M{"$arrayElemAt": []interface{}{"$pureWaifuSkin", 0}},
+			"fake_waifu":          bson.M{"$arrayElemAt": []interface{}{"$fakeWaifu", 0}},
+			"virgin_killer_waifu": bson.M{"$arrayElemAt": []interface{}{"$virginKillerWaifu", 0}},
+			"selfie_waifu":        bson.M{"$arrayElemAt": []interface{}{"$selfieWaifu", 0}},
+		}},
 	}
 
-	var genderSwaps int
-	for i := range ow.Husbando {
-		if ow.Husbando[i].Score.GenderSwaps > genderSwaps {
-			ow.Achievements.FakeWaifu = i
-			genderSwaps = ow.Husbando[i].Score.GenderSwaps
-		}
-	}
+	return collection.Pipe(query).One(&ow.Achievements)
 }

@@ -1,0 +1,62 @@
+name = "Ana"
+realName = "Ana Amari"
+age = 60
+role = "support"
+sex = "female"
+
+tags = [ "ana_amari" ]
+
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.citrine]
+  name = "Citrine"
+  rarity = "rare"
+[skins.garnet]
+  name = "Garnet"
+  rarity = "rare"
+[skins.peridot]
+  name = "Peridot"
+  rarity = "rare"
+[skins.turquoise]
+  name = "Turquoise"
+  rarity = "rare"
+[skins.merciful]
+  name = "Merciful"
+  rarity = "epic"
+[skins.shrike]
+  name = "Shrike"
+  rarity = "epic"
+  tags = [ "shrike_ana" ]
+[skins.tal]
+  name = "Tal"
+  rarity = "epic"
+  event = "Year of the Rooster"
+[skins.ghoul]
+  name = "Ghoul"
+  rarity = "epic"
+  event = "Halloween Terror"
+  tags = [ "ghoul_ana_(overwatch)", "ghoul_ana" ]
+[skins.wadjet]
+  name = "Wadjet"
+  rarity = "legendary"
+[skins.wasteland]
+  name = "Wasteland"
+  rarity = "legendary"
+[skins.captain-amari]
+  name = "Captain Amari"
+  rarity = "legendary"
+  tags = [ "captain_amari_(overwatch)", "captain_amari" ]
+[skins.horus]
+  name = "Horus"
+  rarity = "legendary"
+  tags = [ "horus_ana_(overwatch)" ]
+[skins.corsair]
+  name = "Corsair"
+  rarity = "legendary"
+  event = "Halloween Terror"
+  tags = [ "corsair_ana_(overwatch)", "corsair_ana" ]
+[skins.snow-owl]
+  name = "Snow Owl"
+  rarity = "legendary"
+  event = "Winter Wonderland"

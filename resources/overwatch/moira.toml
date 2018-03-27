@@ -1,0 +1,41 @@
+name = "Moira"
+realName = "Moira O'Deorain"
+age = 48
+role = "support"
+sex = "female"
+
+tags = [ "moira_(overwatch)", "moira_o'deorain" ]
+
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.fiery]
+  name = "Fiery"
+  rarity = "rare"
+[skins.royal]
+  name = "Royal"
+  rarity = "rare"
+[skins.selkie]
+  name = "Selkie"
+  rarity = "rare"
+[skins.whiskey]
+  name = "Whiskey"
+  rarity = "rare"
+[skins.ornate]
+  name = "Ornate"
+  rarity = "epic"
+[skins.pale]
+  name = "Pale"
+  rarity = "epic"
+[skins.glam]
+  name = "Glam"
+  rarity = "legendary"
+[skins.moon]
+  name = "Moon"
+  rarity = "legendary"
+[skins.minister]
+  name = "Minister"
+  rarity = "legendary"
+[skins.oasis]
+  name = "Oasis"
+  rarity = "legendary"

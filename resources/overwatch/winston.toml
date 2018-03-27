@@ -1,0 +1,54 @@
+name = "Winston" # Yep, monkey
+realName = "Winston"
+age = 29
+role = "tank"
+sex = "male"
+
+tags = [ "winston_(overwatch)" ]
+
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.atmosphere]
+  name = "Atmosphere"
+  rarity = "rare"
+[skins.banana]
+  name = "Banana"
+  rarity = "rare"
+[skins.forest]
+  name = "Forest"
+  rarity = "rare"
+[skins.red-planet]
+  name = "Red Planet"
+  rarity = "rare"
+[skins.desert]
+  name = "Desert"
+  rarity = "epic"
+[skins.horizon]
+  name = "Horizon"
+  rarity = "epic"
+[skins.blizzcon-2017]
+  name = "BlizzCon 2017"
+  rarity = "epic"
+  event = "BlizzCon 2017"
+[skins.frogston]
+  name = "Frogston"
+  rarity = "legendary"
+[skins.undersea]
+  name = "Undersea"
+  rarity = "legendary"
+[skins.explorer]
+  name = "Explorer"
+  rarity = "legendary"
+[skins.safari]
+  name = "Safari"
+  rarity = "legendary"
+[skins.wukong]
+  name = "Wukong"
+  rarity = "legendary"
+  event = "Year of the Rooster"
+  tags = [ "wukong_winston_(overwatch)" ]
+[skins.yeti]
+  name = "Yeti"
+  rarity = "legendary"
+  event = "Winter Wonderland"
