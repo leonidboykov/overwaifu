@@ -26,8 +26,8 @@ type Character struct {
 
 // UpdateSkinKey ...
 func (c *Character) UpdateSkinKey() {
-	for i := range c.Skins {
-		c.Skins[i].Key = i
+	for k := range c.Skins {
+		c.Skins[k].Key = k
 	}
 }
 

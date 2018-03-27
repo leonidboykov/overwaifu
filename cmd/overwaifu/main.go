@@ -21,7 +21,7 @@ import (
 func main() {
 	config, err := conf.Load("")
 	if err != nil {
-		log.Fatalln(err)
+		fmt.Println(err)
 		os.Exit(1)
 	}
 
@@ -52,14 +52,17 @@ func testDbVersion(config *conf.Configuration) {
 	}
 	defer session.Close()
 
-	db := session.DB("overwaifu")
-
-	ow, err := overwaifu.New(db)
+	ow, err := overwaifu.New()
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	data, err := json.MarshalIndent(ow.Achievements, "", "  ")
+	postsCollection := session.DB("overwaifu").C("posts")
+	charactersCollection := session.DB("overwaifu").C("characters")
+	ow.QueryScore(postsCollection, charactersCollection)
+	ow.QueryAchievements(charactersCollection)
+
+	data, err := json.MarshalIndent(ow, "", "  ")
 	if err != nil {
 		fmt.Println(err)
 	}

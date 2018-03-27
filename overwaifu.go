@@ -6,6 +6,7 @@ import (
 	"path"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/BurntSushi/toml"
 	"github.com/globalsign/mgo"
@@ -25,44 +26,11 @@ const (
 	minScoreForSkin      = 100
 )
 
-// // OverWaifu ...
-// type OverWaifu struct {
-// 	posts        []getmoe.Post
-// 	PostsCount   int                   `json:"posts_count"`
-// 	UpdatedAt    time.Time             `json:"updated_at"`
-// 	LastPostTime time.Time             `json:"last_post_time"`
-// 	Waifu        map[string]*Character `json:"waifu"`
-// 	Husbando     map[string]*Character `json:"husbando"`
-// 	Achievements `json:"achievements"`
-// }
-
 // OverWaifu holds all overwaifu results
 type OverWaifu struct {
-	Characters   map[string]*Character `json:"characters"`
-	Achievements struct {
-		FameWaifu         Achievement     `json:"fame_waifu" bson:"fame_waifu"`
-		HotWaifu          Achievement     `json:"hot_waifu" bson:"hot_waifu"`
-		LewdWaifu         Achievement     `json:"lewd_waifu" bson:"lewd_waifu"`
-		PureWaifu         Achievement     `json:"pure_waifu" bson:"pure_waifu"`
-		FakeWaifu         Achievement     `json:"fake_waifu" bson:"fake_waifu"`
-		VirginKillerWaifu Achievement     `json:"virgin_killer_waifu" bson:"virgin_killer_waifu"`
-		SelfieWaifu       Achievement     `json:"selfie_waifu" bson:"selfie_waifu"`
-		FameWaifuSkin     SkinAchievement `json:"fame_waifu_skin" bson:"fame_waifu_skin"`
-		HotWaifuSkin      SkinAchievement `json:"hot_waifu_skin" bson:"hot_waifu_skin"`
-		LewdWaifuSkin     SkinAchievement `json:"lewd_waifu_skin" bson:"lewd_waifu_skin"`
-		PureWaifuSkin     SkinAchievement `json:"pure_waifu_skin" bson:"pure_waifu_skin"`
-	} `json:"achievements"`
-}
-
-// Achievement holds the character achievement
-type Achievement struct {
-	Character string `json:"character" bson:"character"`
-}
-
-// SkinAchievement ...
-type SkinAchievement struct {
-	Character string `json:"character" bson:"character"`
-	Skin      string `json:"skin" bson:"skin"`
+	UpdatedAt    time.Time
+	Characters   map[string]*Character   `json:"characters"`
+	Achievements map[string]*Achievement `json:"achievements"`
 }
 
 func getCharactersList() ([]string, error) {
@@ -84,15 +52,16 @@ func getCharactersList() ([]string, error) {
 }
 
 // New createn new OverWaifu instance
-func New(db *mgo.Database) (*OverWaifu, error) {
-	postsCollection := db.C("posts")
+func New() (*OverWaifu, error) {
 	characters, err := getCharactersList()
 	if err != nil {
 		return nil, err
 	}
 
 	ow := OverWaifu{
-		Characters: make(map[string]*Character),
+		UpdatedAt:    time.Now(),
+		Characters:   make(map[string]*Character),
+		Achievements: make(map[string]*Achievement),
 	}
 	for i := range characters {
 		var c Character
@@ -103,29 +72,33 @@ func New(db *mgo.Database) (*OverWaifu, error) {
 		ow.Characters[characters[i]] = &c
 		ow.Characters[characters[i]].Key = characters[i]
 		ow.Characters[characters[i]].UpdateSkinKey()
-		ow.Characters[characters[i]].QueryScore(postsCollection)
-		ow.Characters[characters[i]].QueryScoreSkins(postsCollection)
-	}
-
-	charactersCollection := db.C("characters")
-	// if err := charactersCollection.DropCollection(); err != nil {
-	// 	fmt.Println(err)
-	// }
-	for i := range characters {
-		c := ow.Characters[characters[i]]
-		// if err := charactersCollection.Insert(&c); err != nil {
-		// 	fmt.Println(err)
-		// }
-		if err := charactersCollection.Update(bson.M{"key": c.Key}, &c); err != nil {
-			fmt.Println(err)
-		}
-	}
-
-	if err := ow.QueryAchievements(charactersCollection); err != nil {
-		return nil, err
 	}
 
 	return &ow, nil
+}
+
+// QueryScore calculates score
+func (ow *OverWaifu) QueryScore(postsCollection, charactersCollection *mgo.Collection) {
+	for k := range ow.Characters {
+		ow.Characters[k].QueryScore(postsCollection)
+		ow.Characters[k].QueryScoreSkins(postsCollection)
+	}
+	ow.saveScores(charactersCollection)
+}
+
+func (ow *OverWaifu) saveScores(collection *mgo.Collection) {
+	// if err := collection.DropCollection(); err != nil {
+	// 	fmt.Println(err)
+	// }
+	for k := range ow.Characters {
+		c := ow.Characters[k]
+		// if err := collection.Insert(&c); err != nil {
+		// 	fmt.Println(err)
+		// }
+		if err := collection.Update(bson.M{"key": c.Key}, &c); err != nil {
+			fmt.Println(err)
+		}
+	}
 }
 
 // QueryAchievements calculates achievements
