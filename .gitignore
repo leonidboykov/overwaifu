@@ -29,7 +29,8 @@ jsconfig.json
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
 
-/vendor
+# Golang project vendor packages which should be ignored
+vendor/
 
 ### Linux ###
 *~
