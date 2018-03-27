@@ -29,6 +29,7 @@ const (
 // OverWaifu holds all overwaifu results
 type OverWaifu struct {
 	UpdatedAt    time.Time
+	PostsCount   int
 	Characters   map[string]*Character   `json:"characters"`
 	Achievements map[string]*Achievement `json:"achievements"`
 }
@@ -79,6 +80,14 @@ func New() (*OverWaifu, error) {
 
 // QueryScore calculates score
 func (ow *OverWaifu) QueryScore(postsCollection, charactersCollection *mgo.Collection) {
+	// query meta information
+	count, err := postsCollection.Count()
+	if err != nil {
+		fmt.Println(err)
+	}
+	ow.PostsCount = count
+
+	// query characters score
 	for k := range ow.Characters {
 		ow.Characters[k].QueryScore(postsCollection)
 		ow.Characters[k].QueryScoreSkins(postsCollection)
@@ -95,7 +104,7 @@ func (ow *OverWaifu) saveScores(collection *mgo.Collection) {
 		// if err := collection.Insert(&c); err != nil {
 		// 	fmt.Println(err)
 		// }
-		if err := collection.Update(bson.M{"key": c.Key}, &c); err != nil {
+		if _, err := collection.Upsert(bson.M{"key": c.Key}, &c); err != nil {
 			fmt.Println(err)
 		}
 	}
