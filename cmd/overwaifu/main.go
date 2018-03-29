@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/tls"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"net"
 	"os"
@@ -17,7 +18,14 @@ import (
 	"github.com/overwaifu/overwaifu/conf"
 )
 
+var scratchFlag = false
+
+const timeFormat = "2006-01-02"
+
 func main() {
+	flag.BoolVar(&scratchFlag, "scratch", false, "ignore date and fetch all posts")
+	flag.Parse()
+
 	config, err := conf.Load("")
 	if err != nil {
 		fmt.Println(err)
@@ -76,8 +84,21 @@ func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
 	board := sankaku.ChanSankakuConfig
 	board.BuildAuth(config.SC.Username, config.SC.Password)
 
+	var tags []string
+	if scratchFlag {
+		fmt.Println("Fetching posts from scratch: -scratch flag was used")
+		tags = []string{"overwatch"}
+	} else {
+		date := time.Now().AddDate(0, 0, -7).Format(timeFormat)
+		fmt.Printf("Fetching posts from %s\n", date)
+		tags = []string{
+			"overwatch",
+			fmt.Sprintf("date:>=%s", date),
+		}
+	}
+
 	board.Query = getmoe.Query{
-		Tags: []string{"overwatch"},
+		Tags: tags,
 		Page: 1,
 	}
 
