@@ -20,6 +20,15 @@ type Configuration struct {
 		Source         string   `required:"true"`
 		ReplicaSetName string   `split_words:"true" required:"true"`
 	}
+	Netlify struct {
+		BuildHook string `split_words:"true" required:"true"`
+	}
+	// JSONBin struct {
+	// 	APIKey string `envconfig:"api_key" required:"true"`
+	// }
+	MyJSON struct {
+		BucketID string `split_words:"true" required:"true"`
+	}
 }
 
 func loadEnvironment(filename string) error {

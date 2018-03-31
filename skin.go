@@ -8,9 +8,9 @@ import (
 // Skin contains data about skin
 type Skin struct {
 	Name   string   `json:"name" toml:"name"`
-	Rarity string   `json:"rarity" toml:"rarity"`
-	Event  string   `json:"event" toml:"event"`
-	Tags   []string `json:"tags" toml:"tags"`
+	Rarity string   `json:"rarity,omitempty" toml:"rarity"`
+	Event  string   `json:"event,omitempty" toml:"event"`
+	Tags   []string `json:"tags,omitempty" toml:"tags"`
 	Key    string   `json:"key"`
 	Score  `json:"score"`
 }

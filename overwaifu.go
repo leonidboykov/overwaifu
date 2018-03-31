@@ -28,8 +28,8 @@ const (
 
 // OverWaifu holds all overwaifu results
 type OverWaifu struct {
-	UpdatedAt    time.Time
-	PostsCount   int
+	UpdatedAt    time.Time               `json:"updated_at"`
+	PostsCount   int                     `json:"posts_count"`
 	Characters   map[string]*Character   `json:"characters"`
 	Achievements map[string]*Achievement `json:"achievements"`
 }
@@ -96,14 +96,8 @@ func (ow *OverWaifu) QueryScore(postsCollection, charactersCollection *mgo.Colle
 }
 
 func (ow *OverWaifu) saveScores(collection *mgo.Collection) {
-	// if err := collection.DropCollection(); err != nil {
-	// 	fmt.Println(err)
-	// }
 	for k := range ow.Characters {
 		c := ow.Characters[k]
-		// if err := collection.Insert(&c); err != nil {
-		// 	fmt.Println(err)
-		// }
 		if _, err := collection.Upsert(bson.M{"key": c.Key}, &c); err != nil {
 			fmt.Println(err)
 		}
