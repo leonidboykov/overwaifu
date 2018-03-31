@@ -17,7 +17,7 @@ import (
 var repository []getmoe.Post
 
 const (
-	resourceFolder = "resources/overwatch/"
+	resourceFolder = "assets/overwatch/"
 	resourceExt    = ".toml"
 )
 
