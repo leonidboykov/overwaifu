@@ -1,0 +1,42 @@
+name = "Brigitte"
+realName = "Brigitte Lindholm"
+age = 23
+role = "support"
+sex = "female"
+
+tags = [ "brigitte_lindholm" ]
+
+[skins.classic]
+  name = "Classic"
+  rarity = "common"
+[skins.bla]
+  name = "Blå"
+  rarity = "rare"
+[skins.gron]
+  name = "Grön"
+  rarity = "rare"
+[skins.plommon]
+  name = "Plommon"
+  rarity = "rare"
+[skins.rod]
+  name = "Röd"
+  rarity = "rare"
+[skins.carbon-fiber]
+  name = "Carbon Fiber"
+  rarity = "epic"
+[skins.ironclad]
+  name = "Ironclad"
+  rarity = "epic"
+  tags = [ "ironclad_brigitte_(overwatch)" ]
+[skins.mani]
+  name = "Máni"
+  rarity = "legend"
+[skins.sol]
+  name = "Sól"
+  rarity = "legend"
+[skins.engineer]
+  name = "Engineer"
+  rarity = "legend"
+[skins.mechanic]
+  name = "Mechanic"
+  rarity = "legend"

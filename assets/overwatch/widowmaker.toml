@@ -35,7 +35,7 @@ tags = [ "widowmaker_(overwatch)", "amelie_lacroix" ]
 [skins.nova]
   name = "Nova"
   rarity = "legendary"
-  tags = [ "nova_(starcraft)", "nova_widowmaker" ]
+  tags = [ "nova_(starcraft)", "nova_widowmaker_(overwatch)" ]
 [skins.odette]
   name = "Odette"
   rarity = "legendary"
@@ -72,3 +72,7 @@ tags = [ "widowmaker_(overwatch)", "amelie_lacroix" ]
   rarity = "legendary"
   event = "Pre-order"
   tags = [ "noire_widowmaker_(overwatch)", "noire_widowmaker" ]
+[skins.kerrigan]
+  name = "Kerrigan"
+  rarity = "legendary"
+  event = "StarCraft 20th Anniversary"
