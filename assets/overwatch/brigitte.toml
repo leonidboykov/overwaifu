@@ -37,6 +37,7 @@ tags = [ "brigitte_lindholm" ]
 [skins.engineer]
   name = "Engineer"
   rarity = "legend"
+  tags = [ "engineer_brigitte_(overwatch)" ]
 [skins.mechanic]
   name = "Mechanic"
   rarity = "legend"
