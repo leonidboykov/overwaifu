@@ -30,14 +30,14 @@ tags = [ "brigitte_lindholm" ]
   tags = [ "ironclad_brigitte_(overwatch)" ]
 [skins.mani]
   name = "Máni"
-  rarity = "legend"
+  rarity = "legendary"
 [skins.sol]
   name = "Sól"
-  rarity = "legend"
+  rarity = "legendary"
 [skins.engineer]
   name = "Engineer"
-  rarity = "legend"
+  rarity = "legendary"
   tags = [ "engineer_brigitte_(overwatch)" ]
 [skins.mechanic]
   name = "Mechanic"
-  rarity = "legend"
+  rarity = "legendary"
