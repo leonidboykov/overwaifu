@@ -43,3 +43,4 @@ tags = [ "moira_(overwatch)", "moira_o'deorain" ]
   name = "Blackwatch"
   rarity = "legendary"
   event = "Retribution"
+  tags = [ "blackwatch_moira_(overwatch)" ]
