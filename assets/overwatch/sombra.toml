@@ -59,3 +59,8 @@ tags = [ "sombra_(overwatch)", "olivia_colomar"]
   rarity = "legendary"
   event = "Winter Wonderland"
   tags = [ "rime_sombra_(overwatch)", "rime_sombra" ]
+[skins.talon]
+  name = "Talon"
+  rarity = "legendary"
+  event = "Retribution"
+  tags = [ "talon_sombra_(overwatch)", "talon_sombra" ]

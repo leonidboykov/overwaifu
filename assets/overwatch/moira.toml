@@ -39,3 +39,7 @@ tags = [ "moira_(overwatch)", "moira_o'deorain" ]
 [skins.oasis]
   name = "Oasis"
   rarity = "legendary"
+[skins.blackwatch]
+  name = "Blackwatch"
+  rarity = "legendary"
+  event = "Retribution"

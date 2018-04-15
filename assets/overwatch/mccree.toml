@@ -70,3 +70,7 @@ tags = [ "jesse_mccree" ]
   name = "Magistrate"
   rarity = "legendary"
   event = "Lunar New Year"
+[skins.scion]
+  name = "Scion"
+  rarity = "legendary"
+  event = "Retribution"

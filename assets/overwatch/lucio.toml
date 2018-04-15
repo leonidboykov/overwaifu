@@ -62,3 +62,7 @@ tags = [ "lucio_correia_dos_santos" ]
   name = "Striker"
   rarity = "legendary"
   event = "Summer Games"
+[skins.equalizer]
+  name = "Equalizer"
+  rarity = "legendary"
+  event = "Retribution"

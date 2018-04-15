@@ -71,3 +71,7 @@ tags = [ "mei-ling_zhou" ]
   rarity = "legendary"
   event = "Winter Wonderland"
   tags = [ "mei-rry_mei" ]
+[skins.pajamei]
+  name = "Pajamei"
+  rarity = "legendary"
+  event = "Retribution"

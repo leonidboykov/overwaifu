@@ -42,3 +42,7 @@ tags = [ "doomfist_(overwatch)", "akande ogundimu" ]
 [skins.blackhand]
   name = "Blackhand"
   rarity = "legendary"
+[skins.talon]
+  name = "Talon"
+  rarity = "legendary"
+  event = "Retribution"

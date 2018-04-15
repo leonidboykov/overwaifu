@@ -52,3 +52,7 @@ tags = [ "winston_(overwatch)" ]
   name = "Yeti"
   rarity = "legendary"
   event = "Winter Wonderland"
+[skins.specimen28]
+  name = "Specimen 28"
+  rarity = "legendary"
+  event = "Retribution"

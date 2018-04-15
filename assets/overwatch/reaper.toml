@@ -65,3 +65,7 @@ tags = [ "reaper_(overwatch)", "gabriel_reyes" ]
   rarity = "legendary"
   event = "Origins Edition"
   tags = [ "blackwatch_reyes_(overwatch)" ]
+[skins.soldier24]
+  name = "Soldier: 24"
+  rarity = "legendary"
+  event = "Retribution"
