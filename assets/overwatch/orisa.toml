@@ -33,6 +33,7 @@ tags = [ "orisa_(overwatch)" ]
 [skins.dynastinae]
   name = "Dynastinae"
   rarity = "legendary"
+  tags = [ "dynastinae_orisa" ]
 [skins.megasoma]
   name = "Megasoma"
   rarity = "legendary"
