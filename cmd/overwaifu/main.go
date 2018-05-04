@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"net"
 	"net/http"
 	"net/url"
@@ -15,7 +16,8 @@ import (
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
 	"github.com/leonidboykov/getmoe"
-	"github.com/leonidboykov/getmoe/board/sankaku"
+	"github.com/leonidboykov/getmoe/board"
+	gconf "github.com/leonidboykov/getmoe/conf"
 
 	"github.com/overwaifu/overwaifu"
 	"github.com/overwaifu/overwaifu/conf"
@@ -96,9 +98,6 @@ func main() {
 }
 
 func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
-	board := sankaku.ChanSankakuConfig
-	board.BuildAuth(config.SC.Username, config.SC.Password)
-
 	var tags []string
 	if scratchFlag {
 		fmt.Println("Fetching posts from scratch: -scratch flag was used")
@@ -112,11 +111,14 @@ func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
 		}
 	}
 
-	board.Query = getmoe.Query{
+	board := board.AvailableBoards["chan.sankakucomplex.com"]
+	board.Provider.Auth(gconf.AuthConfiguration{
+		Login:    config.SC.Username,
+		Password: config.SC.Password,
+	})
+	board.Provider.BuildRequest(gconf.RequestConfiguration{
 		Tags: tags,
-		Page: 1,
-	}
-
+	})
 	posts, err := board.RequestAll()
 	if err != nil {
 		return nil, err
@@ -185,11 +187,11 @@ func notifyNetlify(config *conf.Configuration) error {
 	}
 	defer resp.Body.Close()
 
-	// body, err := ioutil.ReadAll(resp.Body)
-	// if err != nil {
-	// 	return err
-	// }
-	// fmt.Println(string(body))
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return err
+	}
+	fmt.Println(string(body))
 
 	return nil
 }

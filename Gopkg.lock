@@ -17,7 +17,13 @@
     "internal/sasl",
     "internal/scram"
   ]
-  revision = "baa28fcb8e7d5dfab92026c0920cb6c9ae72faa2"
+  revision = "efe0945164a7e582241f37ae8983c075f8f2e870"
+
+[[projects]]
+  name = "github.com/imdario/mergo"
+  packages = ["."]
+  revision = "9d5f1277e9a8ed20c3684bda8fde67c05628518c"
+  version = "v0.3.4"
 
 [[projects]]
   name = "github.com/joho/godotenv"
@@ -35,15 +41,29 @@
   name = "github.com/leonidboykov/getmoe"
   packages = [
     ".",
-    "board/sankaku",
+    "board",
+    "conf",
+    "internal/hash",
+    "internal/query",
+    "provider",
+    "provider/danbooru",
+    "provider/gelbooru",
+    "provider/moebooru",
+    "provider/sankaku",
     "utils"
   ]
-  revision = "bb62da8418b0ecc072834b403dbdc54fe4158296"
-  version = "v0.1.3"
+  revision = "a9e6aa56dacf299857be39242484d27cb865635a"
+  version = "v0.2.0"
+
+[[projects]]
+  name = "gopkg.in/yaml.v2"
+  packages = ["."]
+  revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
+  version = "v2.2.1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "0dceb4aab2d72124fc7d78b919f492c97b8b3157583f8bd548085b17bf074d84"
+  inputs-digest = "c860b811ee77eb7d18924a1f536fd10a1eae8e0cd635bcdfc9d28858df64ddcb"
   solver-name = "gps-cdcl"
   solver-version = 1
