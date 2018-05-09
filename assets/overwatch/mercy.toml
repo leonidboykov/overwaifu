@@ -74,3 +74,8 @@ tags = [ "mercy_(overwatch)", "angela_ziegler" ]
   rarity = "legendary"
   event = "Lunar New Year"
   tags = [ "zhuque_mercy" ]
+[skins.pink]
+  name = "Pink"
+  rarity = "legendary"
+  event = "BCRF Charity Event 2018"
+  tags = [ "pink_mercy" ]
