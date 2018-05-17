@@ -101,7 +101,7 @@ func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
 	var tags []string
 	if scratchFlag {
 		fmt.Println("Fetching posts from scratch: -scratch flag was used")
-		tags = []string{"overwatch"}
+		tags = []string{"~overwatch", "~blizzard_entertainment"}
 	} else {
 		date := time.Now().AddDate(0, 0, -7).Format(timeFormat)
 		fmt.Printf("Fetching posts from %s\n", date)
