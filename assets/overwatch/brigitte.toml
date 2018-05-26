@@ -41,3 +41,7 @@ tags = [ "brigitte_lindholm" ]
 [skins.mechanic]
   name = "Mechanic"
   rarity = "legendary"
+[skins.shieldmaiden]
+  name = "Shieldmaiden"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"

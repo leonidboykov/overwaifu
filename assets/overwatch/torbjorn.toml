@@ -65,3 +65,7 @@ tags = [ "torbjorn_(overwatch)" ]
   rarity = "legendary"
   event = "Winter Wonderland"
   tags = [ "santaclad_torbjorn_(overwatch)" ]
+[skins.cybjorn]
+  name = "Cybjörn"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"

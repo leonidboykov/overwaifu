@@ -55,15 +55,19 @@ tags = [ "bastion_(overwatch)", "sst_laboratories_siege_automaton_e54" ]
 [skins.steambot]
   name = "Steambot"
   rarity = "legendary"
-[skins.dune-buggy]
-  name = "Dune Buggy"
-  rarity = "legendary"
-  event = "Overwatch Anniversary"
-[skins.overgrown]
-  name = "Overgrown"
-  rarity = "legendary"
-  event = "Origins Edition"
 [skins.avalanche]
   name = "Avalanche"
   rarity = "legendary"
   event = "Winter Wonderland"
+[skins.overgrown]
+  name = "Overgrown"
+  rarity = "legendary"
+  event = "Origins Edition"
+[skins.dune-buggy]
+  name = "Dune Buggy"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+[skins.stealth]
+  name = "Stealth"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"

@@ -59,6 +59,11 @@ tags = [ "symmetra_(overwatch)", "satya_vaswani" ]
   rarity = "legendary"
   event = "Overwatch Anniversary"
   tags = [ "oasis_symmetra_(overwatch)", "oasis_symmetra" ]
+[skins.magician]
+  name = "Magician"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
+  tags = [ "magician_symmetra" ]
 [skins.dragon]
   name = "Dragon"
   rarity = "legendary"

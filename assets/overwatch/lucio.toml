@@ -31,6 +31,10 @@ tags = [ "lucio_correia_dos_santos" ]
   name = "Andes"
   rarity = "epic"
   event = "Winter Wonderland"
+[skins.bitrate]
+  name = "Bitrate"
+  rarity = "epic"
+  event = "Overwatch Anniversary"
 [skins.capoeira]
   name = "Capoeira"
   rarity = "legendary"

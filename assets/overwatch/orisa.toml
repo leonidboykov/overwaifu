@@ -48,3 +48,7 @@ tags = [ "orisa_(overwatch)" ]
   name = "Null Sector"
   rarity = "legendary"
   event = "Uprising"
+[skins.forest-spirit]
+  name = "Forest Spirit"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"

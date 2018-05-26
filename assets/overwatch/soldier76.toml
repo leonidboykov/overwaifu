@@ -32,6 +32,10 @@ tags = [ "soldier:_76_(overwatch)" ]
   rarity = "epic"
   event = "Halloween Terror"
   tags = [ "immortal_soldier:_76_(overwatch)" ]
+[skins.venom]
+  name = "Venom"
+  rarity = "epic"
+  event = "Overwatch Anniversary"
 [skins.commando76]
   name = "Commando: 76"
   rarity = "legendary"

@@ -63,3 +63,7 @@ tags = [ "junkrat_(overwatch)" ]
   name = "Beachrat"
   rarity = "legendary"
   event = "Winter Wonderland"
+[skins.buccaneer]
+  name = "Buccaneer"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"

@@ -46,3 +46,7 @@ tags = [ "doomfist_(overwatch)", "akande ogundimu" ]
   name = "Talon"
   rarity = "legendary"
   event = "Retribution"
+[skins.formal]
+  name = "Formal"
+  rarity = "legendary"
+  event = "Overwatch Anniversary"
