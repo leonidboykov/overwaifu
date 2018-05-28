@@ -35,6 +35,7 @@ tags = [ "tracer_(overwatch)", "lena_oxton" ]
   name = "Lightning"
   rarity = "epic"
   event = "Overwatch Anniversary"
+  tags = [ "lightning_tracer_(overwatch)" ]
 [skins.punk]
   name = "Punk"
   rarity = "legendary"
