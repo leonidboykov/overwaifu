@@ -31,6 +31,7 @@ tags = [ "tracer_(overwatch)", "lena_oxton" ]
   name = "Rose"
   rarity = "epic"
   event = "Year of the Rooster"
+  tags = [ "rose_tracer" ]
 [skins.lightning]
   name = "Lightning"
   rarity = "epic"
