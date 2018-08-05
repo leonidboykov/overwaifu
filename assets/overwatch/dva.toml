@@ -52,7 +52,7 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   name = "Black Cat"
   rarity = "legendary"
   tags = [ "black_cat_d.va" ]
-[skins.waverider_dva]
+[skins.waverider]
   name = "Waverider"
   rarity = "legendary"
   event = "Summer Games"
