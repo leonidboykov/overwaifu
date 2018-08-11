@@ -52,11 +52,6 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   name = "Black Cat"
   rarity = "legendary"
   tags = [ "black_cat_d.va" ]
-[skins.waverider]
-  name = "Waverider"
-  rarity = "legendary"
-  event = "Summer Games"
-  tags = [ "waverider d.va" ]
 [skins.palanquin]
   name = "Palanquin"
   rarity = "legendary"
@@ -72,6 +67,11 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   rarity = "legendary"
   event = "Heroes of the Storm"
   tags = [ "officer_d.va", "police_officer_d.va" ]
+[skins.waveracer]
+  name = "Waveracer"
+  rarity = "legendary"
+  event = "Summer Games"
+  tags = [ "waveracer_d.va" ]
 
 # Heroes of the Storm skins
 # [skins.the-destroyer]

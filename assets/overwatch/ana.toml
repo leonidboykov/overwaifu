@@ -60,3 +60,7 @@ tags = [ "ana_amari" ]
   name = "Snow Owl"
   rarity = "legendary"
   event = "Winter Wonderland"
+[skins.cabana]
+  name = "Cabana"
+  rarity = "legendary"
+  event = "Summer Games"
