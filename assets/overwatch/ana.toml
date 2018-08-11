@@ -64,3 +64,4 @@ tags = [ "ana_amari" ]
   name = "Cabana"
   rarity = "legendary"
   event = "Summer Games"
+  tags = [ "cabana_ana" ]
