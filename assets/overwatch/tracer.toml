@@ -27,6 +27,7 @@ tags = [ "tracer_(overwatch)", "lena_oxton" ]
 [skins.sporty]
   name = "Sporty"
   rarity = "epic"
+  tags = [ "sporty_tracer" ]
 [skins.rose]
   name = "Rose"
   rarity = "epic"

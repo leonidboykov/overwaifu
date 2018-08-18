@@ -37,7 +37,7 @@ tags = [ "mercy_(overwatch)", "angela_ziegler" ]
   name = "Eidgenossin"
   rarity = "epic"
   event = "Summer Games"
-  tags = [ "eidgenossin_mercy_(overwatch)" ]
+  tags = [ "eidgenossin_mercy_(overwatch)", "eidgenossin_mercy" ]
 [skins.sigrun]
   name = "Sigrún"
   rarity = "legendary"
