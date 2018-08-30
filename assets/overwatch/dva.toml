@@ -72,6 +72,14 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   rarity = "legendary"
   event = "Summer Games"
   tags = [ "waveracer_d.va" ]
+[skins.nano_cola]
+  name = "Nano Cola"
+  rarity = "legendary"
+  tags = [ "nano_cola_d.va" ]
+# [skins.shooting_star]
+#   name = "Shooting Star"
+#   rarity = "common" # ???
+#   tags = [ "shooting_star_d.va" ]
 
 # Heroes of the Storm skins
 # [skins.the-destroyer]
