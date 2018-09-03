@@ -2,42 +2,53 @@
 
 
 [[projects]]
+  digest = "1:b16fbfbcc20645cb419f78325bb2e85ec729b338e996a228124d68931a6f2a37"
   name = "github.com/BurntSushi/toml"
   packages = ["."]
+  pruneopts = "UT"
   revision = "b26d9c308763d68093482582cea63d69be07a0f0"
   version = "v0.3.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:4b08116de0de75c041bb341686f0b139930f26cb84dfdf7641d435548114181d"
   name = "github.com/globalsign/mgo"
   packages = [
     ".",
     "bson",
     "internal/json",
     "internal/sasl",
-    "internal/scram"
+    "internal/scram",
   ]
-  revision = "efe0945164a7e582241f37ae8983c075f8f2e870"
+  pruneopts = "UT"
+  revision = "6f9f54af1356a8f1a83e6daf0b351ba6ed6e42c6"
 
 [[projects]]
+  digest = "1:8eb1de8112c9924d59bf1d3e5c26f5eaa2bfc2a5fcbb92dc1c2e4546d695f277"
   name = "github.com/imdario/mergo"
   packages = ["."]
-  revision = "9d5f1277e9a8ed20c3684bda8fde67c05628518c"
-  version = "v0.3.4"
+  pruneopts = "UT"
+  revision = "9f23e2d6bd2a77f959b2bf6acdbefd708a83a4a4"
+  version = "v0.3.6"
 
 [[projects]]
+  digest = "1:70e697d67ccaec45e16bac3a32380ebcd9e7e071079c60d0171d42cf1cf9748a"
   name = "github.com/joho/godotenv"
   packages = ["."]
+  pruneopts = "UT"
   revision = "a79fa1e548e2c689c241d10173efd51e5d689d5b"
   version = "v1.2.0"
 
 [[projects]]
+  digest = "1:edbef42561faa44c19129b68d1e109fbc1647f63239250391eadc8d0e7c9f669"
   name = "github.com/kelseyhightower/envconfig"
   packages = ["."]
+  pruneopts = "UT"
   revision = "f611eb38b3875cc3bd991ca91c51d06446afa14c"
   version = "v1.3.0"
 
 [[projects]]
+  digest = "1:2bcdbe3464ca12ba1745ecced3c7731c2f732fc853eb3a7b3594c1f16303bf7f"
   name = "github.com/leonidboykov/getmoe"
   packages = [
     ".",
@@ -50,20 +61,32 @@
     "provider/gelbooru",
     "provider/moebooru",
     "provider/sankaku",
-    "utils"
+    "utils",
   ]
+  pruneopts = "UT"
   revision = "a9e6aa56dacf299857be39242484d27cb865635a"
   version = "v0.2.0"
 
 [[projects]]
+  digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
+  pruneopts = "UT"
   revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
   version = "v2.2.1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "c860b811ee77eb7d18924a1f536fd10a1eae8e0cd635bcdfc9d28858df64ddcb"
+  input-imports = [
+    "github.com/BurntSushi/toml",
+    "github.com/globalsign/mgo",
+    "github.com/globalsign/mgo/bson",
+    "github.com/joho/godotenv",
+    "github.com/kelseyhightower/envconfig",
+    "github.com/leonidboykov/getmoe",
+    "github.com/leonidboykov/getmoe/board",
+    "github.com/leonidboykov/getmoe/conf",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

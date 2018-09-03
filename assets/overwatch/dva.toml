@@ -32,6 +32,7 @@ tags = [ "d.va_(overwatch)" ]
   name = "Taegeukgi"
   rarity = "epic"
   event = "Summer Games"
+  # Taegukgi also spelled as Taegeukgi
   tags = [ "taegeukgi_d.va", "taegukgi_d.va" ]
 [skins.junker]
   name = "Junker"
