@@ -38,10 +38,11 @@ tags = [ "reinhardt_(overwatch)" ]
 [skins.crusader]
   name = "Crusader"
   rarity = "legendary"
+  tags = [ "crusader_reinhardt" ]
 [skins.blackhardt]
   name = "Blackhardt"
   rarity = "legendary"
-  tags = [ "blackhardt_reinhardt_(overwatch)" ]
+  tags = [ "blackhardt_reinhardt" ]
 [skins.bloodhardt]
   name = "Bloodhardt"
   rarity = "legendary"
@@ -51,11 +52,11 @@ tags = [ "reinhardt_(overwatch)" ]
 [skins.stonehardt]
   name = "Stonehardt"
   rarity = "legendary"
-  tags = [ "stonehardt" ]
+  tags = [ "stonehardt_reinhardt" ]
 [skins.balderich]
   name = "Balderich"
   rarity = "legendary"
-  tags = [ "balderich_(overwatch)" ]
+  tags = [ "balderich_reinhardt" ]
 [skins.greifhardt]
   name = "Greifhardt"
   rarity = "legendary"
@@ -63,4 +64,4 @@ tags = [ "reinhardt_(overwatch)" ]
   name = "Wujing"
   rarity = "legendary"
   event = "Year of the Rooster"
-  tags = [ "wujing_reinhardt_(overwatch)" ]
+  tags = [ "wujing_reinhardt" ]

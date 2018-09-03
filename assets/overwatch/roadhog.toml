@@ -51,11 +51,12 @@ tags = [ "roadhog_(overwatch)" ]
   name = "Bajie"
   rarity = "legendary"
   event = "Year of the Rooster"
+  tags = [ "bajie_roadhog" ]
 [skins.junkensteins-monster]
   name = "Junkenstein's Monster"
   rarity = "legendary"
   event = "Halloween Terror"
-  tags = [ "junkenstein's_monster_roadhog_(overwatch)" ]
+  tags = [ "junkenstein's_monster_roadhog" ]
 [skins.ice-fisherman]
   name = "Ice Fisherman"
   rarity = "legendary"

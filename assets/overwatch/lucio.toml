@@ -4,7 +4,7 @@ age = 26
 role = "support"
 sex = "male"
 
-tags = [ "lucio_correia_dos_santos" ]
+tags = [ "lucio_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -56,12 +56,12 @@ tags = [ "lucio_correia_dos_santos" ]
   name = "Jazzy"
   rarity = "legendary"
   event = "Overwatch Anniversary"
-  tags = [ "jazzy_lucio_(overwatch)" ]
+  tags = [ "jazzy_lucio" ]
 [skins.selecao]
   name = "Seleção"
   rarity = "legendary"
   event = "Summer Games"
-  tags = [ "selecao_lucio_(overwatch)" ]
+  tags = [ "selecao_lucio" ]
 [skins.striker]
   name = "Striker"
   rarity = "legendary"

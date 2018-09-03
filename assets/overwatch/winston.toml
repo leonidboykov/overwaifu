@@ -47,7 +47,7 @@ tags = [ "winston_(overwatch)" ]
   name = "Wukong"
   rarity = "legendary"
   event = "Year of the Rooster"
-  tags = [ "wukong_winston_(overwatch)" ]
+  tags = [ "wukong_winston" ]
 [skins.yeti]
   name = "Yeti"
   rarity = "legendary"

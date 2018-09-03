@@ -4,7 +4,7 @@ age = 38
 role = "defense"
 sex = "male"
 
-tags = [ "shimada_hanzo" ]
+tags = [ "hanzo_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -31,18 +31,18 @@ tags = [ "shimada_hanzo" ]
   name = "Demon"
   rarity = "epic"
   event = "Halloween Terror"
-  tags = [ "demon_hanzo_(overwatch)" ]
+  tags = [ "demon_hanzo" ]
 [skins.kabuki]
   name = "Kabuki"
   rarity = "legendary"
 [skins.young-hanzo]
   name = "Young Hanzo"
   rarity = "legendary"
-  tags = [ "young_hanzo_(overwatch)" ]
+  tags = [ "young_hanzo" ]
 [skins.young-master]
   name = "Young Master"
   rarity = "legendary"
-  tags = [ "young_master_hanzo_(overwatch)" ]
+  tags = [ "young_master_hanzo" ]
 [skins.lone-wolf]
   name = "Lone Wolf"
   rarity = "legendary"
@@ -50,11 +50,12 @@ tags = [ "shimada_hanzo" ]
 [skins.okami]
   name = "Okami"
   rarity = "legendary"
-  tags = [ "okami_hanzo_(overwatch)" ]
+  tags = [ "okami_hanzo" ]
 [skins.cyberninja]
   name = "Cyberninja"
   rarity = "legendary"
   event = "Overwatch Anniversary"
+  tags = [ "cyberninja_hanzo" ]
 [skins.casual]
   name = "Casual"
   rarity = "legendary"

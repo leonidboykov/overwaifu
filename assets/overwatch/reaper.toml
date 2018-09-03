@@ -4,7 +4,7 @@ age = 0 # unknown
 role = "offense"
 sex = "male"
 
-tags = [ "reaper_(overwatch)", "gabriel_reyes" ]
+tags = [ "reaper_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -37,7 +37,7 @@ tags = [ "reaper_(overwatch)", "gabriel_reyes" ]
 [skins.nevermore]
   name = "Nevermore"
   rarity = "legendary"
-  tags = [ "nevermore_reaper_(overwatch)" ]
+  tags = [ "nevermore_reaper" ]
 [skins.plague-doctor]
   name = "Plague Doctor"
   rarity = "legendary"
@@ -55,16 +55,17 @@ tags = [ "reaper_(overwatch)", "gabriel_reyes" ]
   name = "Pumpkin"
   rarity = "legendary"
   event = "Halloween Terror"
-  tags = [ "pumpkin_reaper_(overwatch)" ]
+  tags = [ "pumpkin_reaper" ]
 [skins.dracula]
   name = "Dracula"
   rarity = "legendary"
   event = "Halloween Terror"
+  tags = [ "dracula_reaper" ]
 [skins.blackwatch-reyes]
   name = "Blackwatch Reyes"
   rarity = "legendary"
   event = "Origins Edition"
-  tags = [ "blackwatch_reyes_(overwatch)" ]
+  tags = [ "blackwatch_reyes" ]
 [skins.soldier24]
   name = "Soldier: 24"
   rarity = "legendary"

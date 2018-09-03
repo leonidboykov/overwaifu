@@ -30,6 +30,7 @@ tags = [ "orisa_(overwatch)" ]
 [skins.immortal]
   name = "Immortal"
   rarity = "legendary"
+  tags = [ "immortal" ]
 [skins.dynastinae]
   name = "Dynastinae"
   rarity = "legendary"

@@ -34,19 +34,19 @@ tags = [ "junkrat_(overwatch)" ]
   name = "Firework"
   rarity = "epic"
   event = "Year of the Rooster"
-  tags = [ "firework_junkrat_(overwatch)" ]
+  tags = [ "firework_junkrat" ]
 [skins.fool]
   name = "Fool"
   rarity = "legendary"
-  tags = [ "fool_junkrat_(overwatch)" ]
+  tags = [ "fool_junkrat" ]
 [skins.jester]
   name = "Jester"
   rarity = "legendary"
-  tags = [ "jester_junkrat_(overwatch)" ]
+  tags = [ "jester_junkrat" ]
 [skins.hayseed]
   name = "Hayseed"
   rarity = "legendary"
-  tags = [ "hayseed_junkrat_(overwatch)" ]
+  tags = [ "hayseed_junkrat" ]
 [skins.scarecrow]
   name = "Scarecrow"
   rarity = "legendary"
@@ -58,7 +58,7 @@ tags = [ "junkrat_(overwatch)" ]
   name = "Dr. Junkenstein"
   rarity = "legendary"
   event = "Halloween Terror"
-  tags = [ "dr._junkenstein_junkrat_(overwatch)" ]
+  tags = [ "dr._junkenstein_junkrat" ]
 [skins.beachrat]
   name = "Beachrat"
   rarity = "legendary"

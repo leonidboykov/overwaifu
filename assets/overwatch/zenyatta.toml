@@ -34,18 +34,18 @@ tags = [ "zenyatta_(overwatch)" ]
   name = "Skullyatta"
   rarity = "epic"
   event = "Halloween Terror"
-  tags = [ "skullyatta_(overwatch)" ]
+  tags = [ "skullyatta" ]
 [skins.djinnyatta]
   name = "Djinnyatta"
   rarity = "legendary"
-  tags = [ "djinnyatta_(overwatch)" ]
+  tags = [ "djinnyatta" ]
 [skins.ifrit]
   name = "Ifrit"
   rarity = "legendary"
 [skins.ra]
   name = "Ra"
   rarity = "legendary"
-  tags = [ "ra_zenyatta_(overwatch)" ]
+  tags = [ "ra_zenyatta" ]
 [skins.sunyatta]
   name = "Sunyatta"
   rarity = "legendary"
@@ -54,14 +54,14 @@ tags = [ "zenyatta_(overwatch)" ]
   name = "Sanzang"
   rarity = "legendary"
   event = "Year of the Rooster"
-  tags = [ "sanzang_zenyatta_(overwatch)" ]
+  tags = [ "sanzang_zenyatta" ]
 [skins.nutcracker]
   name = "Nutcracker"
   rarity = "legendary"
   event = "Winter Wonderland"
-  tags = [ "nutcracker_zenyatta_(overwatch)" ]
+  tags = [ "nutcracker_zenyatta" ]
 [skins.cultist]
   name = "Cultist"
   rarity = "legendary"
   event = "Halloween Terror"
-  tags = [ "cultist_zenyatta_(overwatch)" ]
+  tags = [ "cultist_zenyatta" ]

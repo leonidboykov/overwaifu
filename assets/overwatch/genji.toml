@@ -4,7 +4,7 @@ age = 35
 role = "offense"
 sex = "male"
 
-tags = [ "shimada_genji" ]
+tags = [ "genji_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -35,24 +35,24 @@ tags = [ "shimada_genji" ]
 [skins.sparrow]
   name = "Sparrow"
   rarity = "legendary"
-  tags = [ "sparrow_genji_(overwatch)" ]
+  tags = [ "sparrow_genji" ]
 [skins.young-genji]
   name = "Young Genji"
   rarity = "legendary"
-  tags = [ "young_genji_(overwatch)" ]
+  tags = [ "young_genji" ]
 [skins.bedouin]
   name = "Bedouin"
   rarity = "legendary"
-  tags = [ "bedouin_genji_(overwatch)" ]
+  tags = [ "bedouin_genji" ]
 [skins.nomad]
   name = "Nomad"
   rarity = "legendary"
-  tags = [ "nomad_genji_(overwatch)" ]
+  tags = [ "nomad_genji" ]
 [skins.oni]
   name = "Oni"
   rarity = "legendary"
   event = "Heroes of the Storm"
-  tags = [ "oni_genji_(overwatch)" ]
+  tags = [ "oni_genji" ]
 [skins.baihu]
   name = "Baihu"
   rarity = "legendary"
@@ -61,9 +61,9 @@ tags = [ "shimada_genji" ]
   name = "Blackwatch"
   rarity = "legendary"
   event = "Uprising"
-  tags = [ "blackwatch_genji_(overwatch)" ]
+  tags = [ "blackwatch_genji" ]
 [skins.sentai]
   name = "Sentai"
   rarity = "legendary"
   event = "Overwatch Anniversary"
-  tags = [ "sentai_genji_(overwatch)" ]
+  tags = [ "sentai_genji" ]

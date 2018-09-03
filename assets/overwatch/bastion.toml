@@ -4,7 +4,7 @@ age = 30
 role = "defense"
 sex = "male" # According to his "penetration" role
 
-tags = [ "bastion_(overwatch)", "sst_laboratories_siege_automaton_e54" ]
+tags = [ "bastion_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"

@@ -4,7 +4,7 @@ age = 37
 role = "support"
 sex = "female"
 
-tags = [ "mercy_(overwatch)", "angela_ziegler" ]
+tags = [ "mercy_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -27,29 +27,29 @@ tags = [ "mercy_(overwatch)", "angela_ziegler" ]
 [skins.cobalt]
   name = "Cobalt"
   rarity = "epic"
-  tags = [ "cobalt_mercy_(overwatch)", "cobalt_mercy" ]
+  tags = [ "cobalt_mercy" ]
 [skins.fortune]
   name = "Fortune"
   rarity = "epic"
   event = "Year of the Rooster"
-  tags = [ "fortune_mercy_(overwatch)", "fortune_mercy" ]
+  tags = [ "fortune_mercy" ]
 [skins.eidgenossin]
   name = "Eidgenossin"
   rarity = "epic"
   event = "Summer Games"
-  tags = [ "eidgenossin_mercy_(overwatch)", "eidgenossin_mercy" ]
+  tags = [ "eidgenossin_mercy" ]
 [skins.sigrun]
   name = "Sigrún"
   rarity = "legendary"
-  tags = [ "sigrun_mercy_(overwatch)", "sigrun_mercy" ]
+  tags = [ "sigrun_mercy" ]
 [skins.valkyrie]
   name = "Valkyrie"
   rarity = "legendary"
-  tags = [ "valkyrie_mercy_(overwatch)", "valkyrie_mercy" ]
+  tags = [ "valkyrie_mercy" ]
 [skins.devil]
   name = "Devil"
   rarity = "legendary"
-  tags = [ "devil_mercy_(overwatch)", "devil_mercy" ]
+  tags = [ "devil_mercy" ]
 [skins.imp]
   name = "Imp"
   rarity = "legendary"
@@ -58,17 +58,17 @@ tags = [ "mercy_(overwatch)", "angela_ziegler" ]
   name = "Combat Medic Ziegler"
   rarity = "legendary"
   event = "Uprising"
-  tags = [ "combat_medic_ziegler_(overwatch)", "combat_medic_ziegler" ]
+  tags = [ "combat_medic_ziegler" ]
 [skins.winged-victory]
   name = "Winged Victory"
   rarity = "legendary"
   event = "Summer Games"
-  tags = [ "winged_victory_mercy_(overwatch)", "winged_victory_mercy" ]
+  tags = [ "winged_victory_mercy" ]
 [skins.witch]
   name = "Witch"
   rarity = "legendary"
   event = "Helloween Terror"
-  tags = [ "witch_mercy_(overwatch)", "witch_mercy" ]
+  tags = [ "witch_mercy" ]
 [skins.zhuque]
   name = "Zhuque"
   rarity = "legendary"

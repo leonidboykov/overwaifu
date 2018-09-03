@@ -31,7 +31,7 @@ tags = [ "soldier:_76_(overwatch)" ]
   name = "Immortal"
   rarity = "epic"
   event = "Halloween Terror"
-  tags = [ "immortal_soldier:_76_(overwatch)" ]
+  tags = [ "immortal_soldier:_76" ]
 [skins.venom]
   name = "Venom"
   rarity = "epic"
@@ -46,7 +46,7 @@ tags = [ "soldier:_76_(overwatch)" ]
 [skins.daredevil76]
   name = "Daredevil: 76"
   rarity = "legendary"
-  tags = [ "daredevil:_76_(overwatch)" ]
+  tags = [ "daredevil:_76" ]
 [skins.stunt-rider76]
   name = "Stunt Rider: 76"
   rarity = "legendary"
@@ -58,7 +58,7 @@ tags = [ "soldier:_76_(overwatch)" ]
   name = "Grillmaster: 76"
   rarity = "legendary"
   event = "Summer Games"
-  tags = [ "grillmaster:_76_(overwatch)" ]
+  tags = [ "grillmaster:_76" ]
 [skins.alpine76]
   name = "Alpine: 76"
   rarity = "legendary"
@@ -67,4 +67,4 @@ tags = [ "soldier:_76_(overwatch)" ]
   name = "Strike Commander Morrison"
   rarity = "legendary"
   event = "Origins Edition"
-  tags = [ "strike_commander_morrison_(overwatch)" ]
+  tags = [ "strike_commander_morrison" ]

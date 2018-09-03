@@ -4,7 +4,7 @@ age = 31
 role = "defense"
 sex = "female"
 
-tags = [ "mei-ling_zhou" ]
+tags = [ "mei_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -30,10 +30,11 @@ tags = [ "mei-ling_zhou" ]
 [skins.ecopoint-antarctica]
   name = "Ecopoint: Antarctica"
   rarity = "legendary"
-  tags = [ "ecopoint_mei", "ecopoint_mei_(overwatch)" ]
+  tags = [ "ecopoint_mei" ]
 [skins.firefighter]
   name = "Firefighter"
   rarity = "legendary"
+  tags = [ "firefighter_mei" ]
 [skins.rescue-mei]
   name = "Rescue Mei"
   rarity = "legendary"
@@ -41,31 +42,31 @@ tags = [ "mei-ling_zhou" ]
 [skins.abominable]
   name = "Abominable"
   rarity = "legendary"
-  tags = [ "abominable_mei_(overwatch)", "abominable_mei" ]
+  tags = [ "abominable_mei" ]
 [skins.yeti-hunter]
   name = "Yeti Hunter"
   rarity = "legendary"
-  tags = [ "yeti_hunter_mei_(overwatch)", "yeti_hunter_mei" ]
+  tags = [ "yeti_hunter_mei" ]
 [skins.change]
   name = "Chang'e"
   rarity = "legendary"
   event = "Year of the Rooster"
-  tags = [ "chang'e_mei_(overwatch)", "chang'e_mei" ]
+  tags = [ "chang'e_mei" ]
 [skins.luna]
   name = "Luna"
   rarity = "legendary"
   event = "Year of the Rooster"
-  tags = [ "luna_mei_(overwatch)", "luna_mei" ]
+  tags = [ "luna_mei" ]
 [skins.beekeeper]
   name = "Beekeeper"
   rarity = "legendary"
   event = "Overwatch Anniversary"
-  tags = [ "beekeeper_mei_(overwatch)", "beekeeper_mei" ]
+  tags = [ "beekeeper_mei" ]
 [skins.jiangshi]
   name = "Jiangshi"
   rarity = "legendary"
   event = "Halloween Terror"
-  tags = [ "jiangshi_mei_(overwatch)", "jiangshi_mei" ]
+  tags = [ "jiangshi_mei" ]
 [skins.mei-rry]
   name = "Mei-rry"
   rarity = "legendary"
@@ -75,3 +76,4 @@ tags = [ "mei-ling_zhou" ]
   name = "Pajamei"
   rarity = "legendary"
   event = "Retribution"
+  tags = [ "pajamei" ]

@@ -4,7 +4,7 @@ age = 33
 role = "defense"
 sex = "female"
 
-tags = [ "widowmaker_(overwatch)", "amelie_lacroix" ]
+tags = [ "widowmaker_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -24,6 +24,7 @@ tags = [ "widowmaker_(overwatch)", "amelie_lacroix" ]
 [skins.patina]
   name = "Patina"
   rarity = "epic"
+  tags = [ "patina_widowmaker" ]
 [skins.winter]
   name = "Winter"
   rarity = "epic"
@@ -31,32 +32,32 @@ tags = [ "widowmaker_(overwatch)", "amelie_lacroix" ]
   name = "Tricolore"
   rarity = "epic"
   event = "Summer Games"
-  tags = [ "tricolore_widowmaker_(overwatch)", "tricolore_widowmaker" ]
+  tags = [ "tricolore_widowmaker" ]
 [skins.nova]
   name = "Nova"
   rarity = "legendary"
-  tags = [ "nova_(starcraft)", "nova_widowmaker_(overwatch)" ]
+  tags = [ "nova_widowmaker", "nova_(starcraft)" ]
 [skins.odette]
   name = "Odette"
   rarity = "legendary"
-  tags = [ "odette_widowmaker_(overwatch)", "odette_widowmaker" ]
+  tags = [ "odette_widowmaker" ]
 [skins.odile]
   name = "Odile"
   rarity = "legendary"
-  tags = [ "odile_widowmaker_(overwatch)", "odile_widowmaker" ]
+  tags = [ "odile_widowmaker" ]
 [skins.comtesse]
   name = "Comtesse"
   rarity = "legendary"
-  tags = [ "comtesse_widowmaker_(overwatch)", "comtesse_widowmaker" ]
+  tags = [ "comtesse_widowmaker" ]
 [skins.huntress]
   name = "Huntress"
   rarity = "legendary"
-  tags = [ "huntress_widowmaker_(overwatch)" ]
+  tags = [ "huntress_widowmaker" ]
 [skins.talon]
   name = "Talon"
   rarity = "legendary"
   event = "Uprising"
-  tags = [ "talon_widowmaker_(overwatch)", "talon_widowmaker" ]
+  tags = [ "talon_widowmaker" ]
 [skins.cote-dazur]
   name = "Côte d'Azur"
   rarity = "legendary"
@@ -76,3 +77,4 @@ tags = [ "widowmaker_(overwatch)", "amelie_lacroix" ]
   name = "Kerrigan"
   rarity = "legendary"
   event = "StarCraft 20th Anniversary"
+  tags = [ "kerrigan_widowmaker" ]

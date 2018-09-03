@@ -4,7 +4,7 @@ age = 23
 role = "support"
 sex = "female"
 
-tags = [ "brigitte_lindholm" ]
+tags = [ "brigitte_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -27,7 +27,7 @@ tags = [ "brigitte_lindholm" ]
 [skins.ironclad]
   name = "Ironclad"
   rarity = "epic"
-  tags = [ "ironclad_brigitte_(overwatch)" ]
+  tags = [ "ironclad_brigitte" ]
 [skins.mani]
   name = "Máni"
   rarity = "legendary"
@@ -37,10 +37,11 @@ tags = [ "brigitte_lindholm" ]
 [skins.engineer]
   name = "Engineer"
   rarity = "legendary"
-  tags = [ "engineer_brigitte_(overwatch)" ]
+  tags = [ "engineer_brigitte" ]
 [skins.mechanic]
   name = "Mechanic"
   rarity = "legendary"
+  tags = [ "mechanic_brigitte" ]
 [skins.shieldmaiden]
   name = "Shieldmaiden"
   rarity = "legendary"

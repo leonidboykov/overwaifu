@@ -4,7 +4,7 @@ age = 19
 role = "tank"
 sex = "female"
 
-tags = [ "d.va_(overwatch)", "hana_song" ]
+tags = [ "d.va_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -27,27 +27,28 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
 [skins.white-rabbit]
   name = "White Rabbit"
   rarity = "epic"
+  tags = [ "white_rabbit_d.va" ]
 [skins.taegeukgi]
   name = "Taegeukgi"
   rarity = "epic"
   event = "Summer Games"
-  tags = [ "taegeukgi_d.va_(overwatch)", "taegukgi_d.va" ]
+  tags = [ "taegeukgi_d.va", "taegukgi_d.va" ]
 [skins.junker]
   name = "Junker"
   rarity = "legendary"
-  tags = [ "junker_d.va_(overwatch)", "junker_d.va" ]
+  tags = [ "junker_d.va" ]
 [skins.scavenger]
   name = "Scavenger"
   rarity = "legendary"
-  tags = [ "scavenger_d.va_(overwatch)", "scavenger_d.va" ]
+  tags = [ "scavenger_d.va" ]
 [skins.bva]
   name = "B.Va"
   rarity = "legendary"
-  tags = [ "b.va_(overwatch)", "b.va" ]
+  tags = [ "b.va_(overwatch)" ]
 [skins.junebug]
   name = "Junebug"
   rarity = "legendary"
-  tags = [ "junebug_d.va_(overwatch)", "junebug_d.va" ]
+  tags = [ "junebug_d.va" ]
 [skins.black-cat]
   name = "Black Cat"
   rarity = "legendary"
@@ -66,7 +67,7 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   name = "Police Officer"
   rarity = "legendary"
   event = "Heroes of the Storm"
-  tags = [ "officer_d.va", "police_officer_d.va" ]
+  tags = [ "officer_d.va" ]
 [skins.waveracer]
   name = "Waveracer"
   rarity = "legendary"
@@ -76,6 +77,7 @@ tags = [ "d.va_(overwatch)", "hana_song" ]
   name = "Nano Cola"
   rarity = "legendary"
   tags = [ "nano_cola_d.va" ]
+
 # [skins.shooting_star]
 #   name = "Shooting Star"
 #   rarity = "common" # ???

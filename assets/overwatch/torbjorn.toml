@@ -50,21 +50,22 @@ tags = [ "torbjorn_(overwatch)" ]
   name = "Chief Engineer Lindholm"
   rarity = "legendary"
   event = "Uprising"
-  tags = [ "chief_engineer_lindholm_(overwatch)" ]
+  tags = [ "chief_engineer_lindholm" ]
 [skins.ironclad]
   name = "Ironclad"
   rarity = "legendary"
   event = "Uprising"
-  tags = [ "ironclad_torbjorn_(overwatch)" ]
+  tags = [ "ironclad_torbjorn" ]
 [skins.viking]
   name = "Viking"
   rarity = "legendary"
   event = "Halloween Terror"
+  tags = [ "viking_torbjorn" ]
 [skins.santaclad]
   name = "Santaclad"
   rarity = "legendary"
   event = "Winter Wonderland"
-  tags = [ "santaclad_torbjorn_(overwatch)" ]
+  tags = [ "santaclad_torbjorn" ]
 [skins.cybjorn]
   name = "Cybjörn"
   rarity = "legendary"

@@ -4,7 +4,7 @@ age = 28
 role = "support"
 sex = "female"
 
-tags = [ "symmetra_(overwatch)", "satya_vaswani" ]
+tags = [ "symmetra_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -24,32 +24,35 @@ tags = [ "symmetra_(overwatch)", "satya_vaswani" ]
 [skins.peacock]
   name = "Peacock"
   rarity = "epic"
+  tags = [ "peacock_symmetra" ]
 [skins.regal]
   name = "Regal"
   rarity = "epic"
 [skins.utopaea]
   name = "Utopaea"
   rarity = "epic"
+  tags = [ "utopaea_symmetra" ]
 [skins.qipao]
   name = "Qipao"
   rarity = "epic"
   event = "Year of the Rooster"
+  tags = [ "qipao_symmetra" ]
 [skins.vampire]
   name = "Vampire"
   rarity = "epic"
   event = "Halloween Terror"
-  tags = [ "vampire_symmetra_(overwatch)", "vampire_symmetra" ]
+  tags = [ "vampire_symmetra" ]
 [skins.architech]
   name = "Architech"
   rarity = "legendary"
 [skins.vishkar]
   name = "Vishkar"
   rarity = "legendary"
-  tags = [ "vishkar_symmetra_(overwatch)", "vishkar_symmetra" ]
+  tags = [ "vishkar_symmetra" ]
 [skins.devi]
   name = "Devi"
   rarity = "legendary"
-  tags = [ "devi_symmetra_(overwatch)", "devi_symmetra" ]
+  tags = [ "devi_symmetra" ]
 [skins.goddess]
   name = "Goddess"
   rarity = "legendary"
@@ -58,7 +61,7 @@ tags = [ "symmetra_(overwatch)", "satya_vaswani" ]
   name = "Oasis"
   rarity = "legendary"
   event = "Overwatch Anniversary"
-  tags = [ "oasis_symmetra_(overwatch)", "oasis_symmetra" ]
+  tags = [ "oasis_symmetra" ]
 [skins.magician]
   name = "Magician"
   rarity = "legendary"
@@ -68,4 +71,4 @@ tags = [ "symmetra_(overwatch)", "satya_vaswani" ]
   name = "Dragon"
   rarity = "legendary"
   event = "Halloween Terror"
-  tags = [ "dragon_symmetra_(overwatch)", "dragon_symmetra" ]
+  tags = [ "dragon_symmetra" ]

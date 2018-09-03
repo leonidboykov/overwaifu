@@ -4,7 +4,7 @@ age = 26
 role = "offense"
 sex = "female"
 
-tags = [ "tracer_(overwatch)", "lena_oxton" ]
+tags = [ "tracer_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -24,6 +24,7 @@ tags = [ "tracer_(overwatch)", "lena_oxton" ]
 [skins.posh]
   name = "Posh"
   rarity = "epic"
+  tags = [ "posh_tracer" ]
 [skins.sporty]
   name = "Sporty"
   rarity = "epic"
@@ -37,50 +38,50 @@ tags = [ "tracer_(overwatch)", "lena_oxton" ]
   name = "Lightning"
   rarity = "epic"
   event = "Overwatch Anniversary"
-  tags = [ "lightning_tracer_(overwatch)" ]
+  tags = [ "lightning_tracer" ]
 [skins.punk]
   name = "Punk"
   rarity = "legendary"
-  tags = [ "punk_tracer_(overwatch)" ]
+  tags = [ "punk_tracer" ]
 [skins.ultraviolet]
   name = "Ultraviolet"
   rarity = "legendary"
-  tags = [ "ultraviolet_tracer_(overwatch)", "ultraviolet_tracer" ]
+  tags = [ "ultraviolet_tracer" ]
 [skins.mach-t]
   name = "Mach T"
   rarity = "legendary"
-  tags = [ "mach_t_(overwatch)" ]
+  tags = [ "mach_t_tracer" ]
 [skins.tracer]
   name = "T.Racer"
   rarity = "legendary"
-  tags = [ "t.racer_(overwatch)" ]
+  tags = [ "t.racer" ]
 [skins.cadet-oxton]
   name = "Cadet Oxton"
   rarity = "legendary"
   event = "Uprising"
-  tags = [ "cadet_oxton_(overwatch)", "cadet_oxton" ]
+  tags = [ "cadet_oxton" ]
 [skins.graffiti]
   name = "Graffiti"
   rarity = "legendary"
   event = "Overwatch Anniversary"
-  tags = [ "graffiti_tracer_(overwatch)", "graffiti_tracer" ]
+  tags = [ "graffiti_tracer" ]
 [skins.sprinter]
   name = "Sprinter"
   rarity = "legendary"
   event = "Summer Games"
-  tags = [ "sprinter_tracer_(overwatch)" ]
+  tags = [ "sprinter_tracer" ]
 [skins.track-and-field]
   name = "Track and Field"
   rarity = "legendary"
   event = "Summer Games"
-  tags = [ "track_and_field_tracer_(overwatch)" ]
+  tags = [ "track_and_field_tracer" ]
 [skins.jingle]
   name = "Jingle"
   rarity = "legendary"
   event = "Winter Wonderland"
-  tags = [ "jingle_tracer_(overwatch)" ]
+  tags = [ "jingle_tracer" ]
 [skins.slipstream]
   name = "Slipstream"
   rarity = "legendary"
   event = "Origins Edition"
-  tags = [ "slipstream_tracer_(overwatch)" ]
+  tags = [ "slipstream_tracer" ]

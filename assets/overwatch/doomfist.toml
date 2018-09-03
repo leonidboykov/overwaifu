@@ -4,7 +4,7 @@ age = 45
 role = "offense"
 sex = "male"
 
-tags = [ "doomfist_(overwatch)", "akande ogundimu" ]
+tags = [ "doomfist_(overwatch)" ]
 
 [skins.classic]
   name = "Classic"
@@ -50,3 +50,4 @@ tags = [ "doomfist_(overwatch)", "akande ogundimu" ]
   name = "Formal"
   rarity = "legendary"
   event = "Overwatch Anniversary"
+  tags = [ "formal_doomfist" ]
