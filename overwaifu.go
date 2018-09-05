@@ -52,7 +52,7 @@ func getCharactersList() ([]string, error) {
 	return result, nil
 }
 
-// New createn new OverWaifu instance
+// New creates a new OverWaifu instance
 func New() (*OverWaifu, error) {
 	characters, err := getCharactersList()
 	if err != nil {
