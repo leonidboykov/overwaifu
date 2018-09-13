@@ -74,7 +74,7 @@ tags = [ "d.va_(overwatch)" ]
   rarity = "legendary"
   event = "Summer Games"
   tags = [ "waveracer_d.va" ]
-[skins.nano_cola]
+[skins.nano-cola]
   name = "Nano Cola"
   rarity = "legendary"
   tags = [ "nano_cola_d.va" ]
