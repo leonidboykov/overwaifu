@@ -11,7 +11,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:4b08116de0de75c041bb341686f0b139930f26cb84dfdf7641d435548114181d"
+  digest = "1:e0361634f0b5e1fd3227eaec90a86bc8595cb2526e71e41bcd72b6e474e198ca"
   name = "github.com/globalsign/mgo"
   packages = [
     ".",
@@ -21,7 +21,7 @@
     "internal/scram",
   ]
   pruneopts = "UT"
-  revision = "6f9f54af1356a8f1a83e6daf0b351ba6ed6e42c6"
+  revision = "1ca0a4f7cbcbe61c005d1bd43fdd8bb8b71df6bc"
 
 [[projects]]
   digest = "1:8eb1de8112c9924d59bf1d3e5c26f5eaa2bfc2a5fcbb92dc1c2e4546d695f277"
