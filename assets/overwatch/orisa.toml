@@ -4,7 +4,7 @@ age = 1 # Month
 role = "tank"
 sex = "female"
 
-tags = [ "orisa_(overwatch)" ]
+tags = [ "orisa_(overwatch)", "orisa" ]
 
 [skins.classic]
   name = "Classic"
