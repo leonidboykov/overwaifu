@@ -64,3 +64,8 @@ tags = [ "sombra_(overwatch)"]
   rarity = "legendary"
   event = "Retribution"
   tags = [ "talon_sombra" ]
+[skins.demon-hunter]
+  name = "Demon Hunter"
+  rarity = "legendary"
+  event = "BlizzCon 2018"
+  tags = [ "demon_hunter_sombra" ]
