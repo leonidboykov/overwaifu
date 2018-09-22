@@ -48,7 +48,7 @@
   version = "v1.3.0"
 
 [[projects]]
-  digest = "1:2bcdbe3464ca12ba1745ecced3c7731c2f732fc853eb3a7b3594c1f16303bf7f"
+  digest = "1:1d87bee9a08ced4f873f4f969b543997cb3cdb9938ab4145d1b739b412b3ba8d"
   name = "github.com/leonidboykov/getmoe"
   packages = [
     ".",
@@ -64,8 +64,8 @@
     "utils",
   ]
   pruneopts = "UT"
-  revision = "a9e6aa56dacf299857be39242484d27cb865635a"
-  version = "v0.2.0"
+  revision = "835ac77bc49b0a1b3101de6418b38f139e0fc1a4"
+  version = "v0.2.2"
 
 [[projects]]
   digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
