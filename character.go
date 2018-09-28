@@ -59,7 +59,7 @@ func (c *Character) QueryScore(collection *mgo.Collection) error {
 				{"$count": "count"},
 			},
 			"countSelfie": []bson.M{
-				{"$match": bson.M{"tags": bson.M{"$in": []string{"selfie"}}}},
+				{"$match": bson.M{"tags": bson.M{"$in": []string{"selfie", "snapchat"}}}},
 				{"$count": "count"},
 			},
 		}},

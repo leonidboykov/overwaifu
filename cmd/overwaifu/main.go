@@ -106,7 +106,8 @@ func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
 		date := time.Now().AddDate(0, 0, -7).Format(timeFormat)
 		fmt.Printf("Fetching posts from %s\n", date)
 		tags = []string{
-			"overwatch",
+			"~overwatch",
+			"~blizzard_entertainment",
 			fmt.Sprintf("date:>=%s", date),
 		}
 	}
