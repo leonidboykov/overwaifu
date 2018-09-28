@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/overwaifu/overwaifu.svg?branch=master)](https://travis-ci.org/overwaifu/overwaifu)
 [![Go Report Card](https://goreportcard.com/badge/github.com/overwaifu/overwaifu)](https://goreportcard.com/report/github.com/overwaifu/overwaifu)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=overwaifu/overwaifu)](https://dependabot.com)
 
 Everybody can visit https://overbuff.com/heroes and check the most popular
 character according to pick rate, win rate etc. However, OW represents 26
