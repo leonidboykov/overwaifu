@@ -30,7 +30,7 @@ const (
 type OverWaifu struct {
 	UpdatedAt    time.Time               `json:"updated_at"`
 	PostsCount   int                     `json:"posts_count"`
-	Characters   map[string]*Character   `json:"characters"`
+	Characters   Characters              `json:"characters"`
 	Achievements map[string]*Achievement `json:"achievements"`
 }
 

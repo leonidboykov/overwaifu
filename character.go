@@ -1,6 +1,8 @@
 package overwaifu
 
 import (
+	"encoding/json"
+
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
 )
@@ -13,15 +15,27 @@ const (
 
 // Character contains all main data about character
 type Character struct {
-	Name     string           `json:"name" toml:"name"`
-	RealName string           `json:"real_name" toml:"realName"`
-	Age      int              `json:"age" toml:"age"`
-	Role     string           `json:"role" toml:"role"`
-	Sex      string           `json:"sex" toml:"sex"`
-	Skins    map[string]*Skin `json:"skins" toml:"skins"`
-	Tags     []string         `json:"tags" toml:"tags"` // sankaku tag
-	Key      string           `json:"key"`
+	Name     string   `json:"name" toml:"name"`
+	RealName string   `json:"real_name" toml:"realName"`
+	Age      int      `json:"age" toml:"age"`
+	Role     string   `json:"role" toml:"role"`
+	Sex      string   `json:"sex" toml:"sex"`
+	Skins    Skins    `json:"skins" toml:"skins"`
+	Tags     []string `json:"tags" toml:"tags"` // sankaku tag
+	Key      string   `json:"key"`
 	Score    `json:"score"`
+}
+
+// Characters provides custom marhaller for JSON
+type Characters map[string]*Character
+
+// MarshalJSON ...
+func (c Characters) MarshalJSON() ([]byte, error) {
+	var characters []*Character
+	for _, v := range c {
+		characters = append(characters, v)
+	}
+	return json.Marshal(characters)
 }
 
 // UpdateSkinKey ...

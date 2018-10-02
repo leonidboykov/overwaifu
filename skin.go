@@ -1,6 +1,8 @@
 package overwaifu
 
 import (
+	"encoding/json"
+
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
 )
@@ -13,6 +15,18 @@ type Skin struct {
 	Tags   []string `json:"tags,omitempty" toml:"tags"`
 	Key    string   `json:"key"`
 	Score  `json:"score"`
+}
+
+// Skins provides custom marhaller for JSON
+type Skins map[string]*Skin
+
+// MarshalJSON ...
+func (s Skins) MarshalJSON() ([]byte, error) {
+	var skins []*Skin
+	for _, v := range s {
+		skins = append(skins, v)
+	}
+	return json.Marshal(skins)
 }
 
 // QueryScore ...

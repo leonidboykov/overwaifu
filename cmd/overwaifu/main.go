@@ -80,7 +80,7 @@ func main() {
 	fmt.Println("Calculating achievements")
 	ow.QueryAchievements(charactersCollection)
 
-	data, err := json.MarshalIndent(ow, "", "  ")
+	data, err := json.Marshal(ow)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
