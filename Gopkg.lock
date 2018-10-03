@@ -48,24 +48,22 @@
   version = "v1.3.0"
 
 [[projects]]
-  digest = "1:1d87bee9a08ced4f873f4f969b543997cb3cdb9938ab4145d1b739b412b3ba8d"
+  digest = "1:db67bfab223ed4bb4537a3bd638dffb7195577919da9369d659c220f708a8ca7"
   name = "github.com/leonidboykov/getmoe"
   packages = [
     ".",
-    "board",
-    "conf",
     "internal/hash",
+    "internal/helper",
     "internal/query",
     "provider",
     "provider/danbooru",
     "provider/gelbooru",
     "provider/moebooru",
     "provider/sankaku",
-    "utils",
   ]
   pruneopts = "UT"
-  revision = "835ac77bc49b0a1b3101de6418b38f139e0fc1a4"
-  version = "v0.2.2"
+  revision = "677590813408dab81d740835ed675dbcf3afa29f"
+  version = "v0.3.1"
 
 [[projects]]
   digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
@@ -85,8 +83,7 @@
     "github.com/joho/godotenv",
     "github.com/kelseyhightower/envconfig",
     "github.com/leonidboykov/getmoe",
-    "github.com/leonidboykov/getmoe/board",
-    "github.com/leonidboykov/getmoe/conf",
+    "github.com/leonidboykov/getmoe/provider",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

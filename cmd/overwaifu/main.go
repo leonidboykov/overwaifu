@@ -16,8 +16,7 @@ import (
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
 	"github.com/leonidboykov/getmoe"
-	"github.com/leonidboykov/getmoe/board"
-	gconf "github.com/leonidboykov/getmoe/conf"
+	"github.com/leonidboykov/getmoe/provider"
 
 	"github.com/overwaifu/overwaifu"
 	"github.com/overwaifu/overwaifu/conf"
@@ -98,27 +97,22 @@ func main() {
 }
 
 func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
-	var tags []string
+	tags := getmoe.NewTags().Or("overwatch", "blizzard_entertainment")
 	if scratchFlag {
 		fmt.Println("Fetching posts from scratch: -scratch flag was used")
-		tags = []string{"~overwatch", "~blizzard_entertainment"}
 	} else {
-		date := time.Now().AddDate(0, 0, -7).Format(timeFormat)
+		date := time.Now().AddDate(0, 0, -7)
 		fmt.Printf("Fetching posts from %s\n", date)
-		tags = []string{
-			"~overwatch",
-			"~blizzard_entertainment",
-			fmt.Sprintf("date:>=%s", date),
-		}
+		tags.AfterDate(date)
 	}
 
-	board := board.AvailableBoards["chan.sankakucomplex.com"]
-	board.Provider.Auth(gconf.AuthConfiguration{
+	board := provider.AvailableBoards["chan.sankakucomplex.com"]
+	board.Provider.Auth(getmoe.AuthConfiguration{
 		Login:    config.SC.Username,
 		Password: config.SC.Password,
 	})
-	board.Provider.BuildRequest(gconf.RequestConfiguration{
-		Tags: tags,
+	board.Provider.BuildRequest(getmoe.RequestConfiguration{
+		Tags: *tags,
 	})
 	posts, err := board.RequestAll()
 	if err != nil {
