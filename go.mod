@@ -1,4 +1,3 @@
-// +heroku goVersion go1.11.1
 // +heroku install ./cmd/...
 module github.com/overwaifu/overwaifu
 
