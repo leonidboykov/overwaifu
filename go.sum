@@ -12,6 +12,8 @@ github.com/leonidboykov/getmoe v0.3.1 h1:7dixcYFSSKnG+xJ+2oxoxJQYYy50cJfvq+BRPdl
 github.com/leonidboykov/getmoe v0.3.1/go.mod h1:6r8At6gMkrH0qoa7KwLw7IrAM6NLc2wu36QuFiMCwvs=
 github.com/leonidboykov/getmoe v0.3.3 h1:2L6HgV/0Aooa7+s0hg1okT/irlhejm3xPm/f4Z/zibA=
 github.com/leonidboykov/getmoe v0.3.3/go.mod h1:Htf3mtAQwn5qu2nmleZFQsbXRemmNP3S2TR3xzn95JM=
+github.com/leonidboykov/getmoe v0.3.4 h1:ytO6uKBN+e9IgFiFOD3DaQCH2622DvDNOD3S1KxYcro=
+github.com/leonidboykov/getmoe v0.3.4/go.mod h1:Htf3mtAQwn5qu2nmleZFQsbXRemmNP3S2TR3xzn95JM=
 github.com/urfave/cli v1.20.0/go.mod h1:70zkFmudgCuE/ngEzBv17Jvp/497gISqfk5gWijbERA=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=

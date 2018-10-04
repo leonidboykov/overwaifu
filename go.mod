@@ -6,5 +6,5 @@ require (
 	github.com/globalsign/mgo v0.0.0-20180905125535-1ca0a4f7cbcb
 	github.com/joho/godotenv v1.3.0
 	github.com/kelseyhightower/envconfig v1.3.0
-	github.com/leonidboykov/getmoe v0.3.3
+	github.com/leonidboykov/getmoe v0.3.4
 )
