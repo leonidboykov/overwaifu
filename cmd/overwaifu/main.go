@@ -97,7 +97,7 @@ func main() {
 }
 
 func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
-	tags := getmoe.NewTags().Or("overwatch", "blizzard_entertainment")
+	tags := getmoe.NewTags("overwatch")
 	if scratchFlag {
 		fmt.Println("Fetching posts from scratch: -scratch flag was used")
 	} else {
