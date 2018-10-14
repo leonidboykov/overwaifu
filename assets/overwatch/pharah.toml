@@ -75,3 +75,7 @@ tags = [ "pharah_(overwatch)" ]
   rarity = "legendary"
   event = "Lunar New Year"
   tags = [ "qinglong_pharah" ]
+[skins.enchanted-armor]
+  name = "Encganted Armor"
+  rarity = "legendary"
+  event = "Halloween Terror"

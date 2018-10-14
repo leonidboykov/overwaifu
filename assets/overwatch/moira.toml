@@ -44,3 +44,7 @@ tags = [ "moira_(overwatch)" ]
   rarity = "legendary"
   event = "Retribution"
   tags = [ "blackwatch_moira" ]
+[skins.banshee]
+  name = "Banshee"
+  rarity = "legendary"
+  event = "Halloween Terror"

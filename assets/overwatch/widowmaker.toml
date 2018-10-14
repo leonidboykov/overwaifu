@@ -28,6 +28,10 @@ tags = [ "widowmaker_(overwatch)" ]
 [skins.winter]
   name = "Winter"
   rarity = "epic"
+[skins.spider]
+  name = "Spider"
+  rarity = "epic"
+  event = "Halloween Terror"
 [skins.tricolore]
   name = "Tricolore"
   rarity = "epic"

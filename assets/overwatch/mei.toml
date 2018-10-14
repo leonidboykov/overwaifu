@@ -27,6 +27,10 @@ tags = [ "mei_(overwatch)" ]
 [skins.snow-plum]
   name = "Snow Plum"
   rarity = "epic"
+[skins.pumpkin]
+  name = "Pumpkin"
+  rarity = "epic"
+  event = "Halloween Terror"
 [skins.ecopoint-antarctica]
   name = "Ecopoint: Antarctica"
   rarity = "legendary"

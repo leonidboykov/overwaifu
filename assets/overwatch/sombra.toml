@@ -69,3 +69,8 @@ tags = [ "sombra_(overwatch)"]
   rarity = "legendary"
   event = "BlizzCon 2018"
   tags = [ "demon_hunter_sombra" ]
+[skins.bride]
+  name = "Bride"
+  rarity = "legendary"
+  event = "Halloween Terror"
+  tags = [ "bride_sombra" ]
