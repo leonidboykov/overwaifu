@@ -12,18 +12,23 @@ tags = [ "d.va_(overwatch)" ]
 [skins.blueberry]
   name = "Blueberry"
   rarity = "rare"
+  tags = [ "blueberry_d.va" ]
 [skins.lemon-lime]
   name = "Lemon-Lime"
   rarity = "rare"
+  tags = [ "lemon-lime_d.va" ]
 [skins.tangerine]
   name = "Tangerine"
   rarity = "rare"
+  tags = [ "tangerine_d.va" ]
 [skins.watermelon]
   name = "Watermelon"
   rarity = "rare"
+  tags = [ "watermelon_d.va" ]
 [skins.carbon-fiber]
   name = "Carbon Fiber"
   rarity = "epic"
+  tags = [ "carbon_fiber_d.va" ]
 [skins.white-rabbit]
   name = "White Rabbit"
   rarity = "epic"

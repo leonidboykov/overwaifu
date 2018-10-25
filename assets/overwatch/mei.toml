@@ -27,6 +27,7 @@ tags = [ "mei_(overwatch)" ]
 [skins.snow-plum]
   name = "Snow Plum"
   rarity = "epic"
+  tags = [ "snow_plum_mei" ]
 [skins.pumpkin]
   name = "Pumpkin"
   rarity = "epic"

@@ -12,18 +12,21 @@ tags = [ "mercy_(overwatch)" ]
 [skins.celestial]
   name = "Celestial"
   rarity = "rare"
+  tags = [ "celestial_mercy" ]
 [skins.mist]
   name = "Mist"
   rarity = "rare"
 [skins.orchid]
   name = "Orchid"
   rarity = "rare"
+  tags = [ "orchid_mercy" ]
 [skins.verdant]
   name = "Verdant"
   rarity = "rare"
 [skins.amber]
   name = "Amber"
   rarity = "epic"
+  tags = [ "amber_mercy" ]
 [skins.cobalt]
   name = "Cobalt"
   rarity = "epic"

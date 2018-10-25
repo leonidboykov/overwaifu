@@ -15,6 +15,7 @@ tags = [ "pharah_(overwatch)" ]
 [skins.copper]
   name = "Copper"
   rarity = "rare"
+  tags = [ "copper_pharah" ]
 [skins.emerald]
   name = "Emerald"
   rarity = "rare"

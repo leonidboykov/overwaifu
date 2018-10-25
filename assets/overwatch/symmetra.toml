@@ -21,6 +21,7 @@ tags = [ "symmetra_(overwatch)" ]
 [skins.technomancer]
   name = "Technomancer"
   rarity = "rare"
+  tags = [ "technomancer_symmetra" ]
 [skins.peacock]
   name = "Peacock"
   rarity = "epic"
@@ -28,6 +29,7 @@ tags = [ "symmetra_(overwatch)" ]
 [skins.regal]
   name = "Regal"
   rarity = "epic"
+  tags = [ "regal_symmetra" ]
 [skins.utopaea]
   name = "Utopaea"
   rarity = "epic"

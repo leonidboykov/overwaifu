@@ -18,12 +18,14 @@ tags = [ "sombra_(overwatch)"]
 [skins.mar]
   name = "Mar"
   rarity = "rare"
+  tags = [ "mar_sombra" ]
 [skins.noche]
   name = "Noche"
   rarity = "rare"
 [skins.glitch]
   name = "Glitch"
   rarity = "epic"
+  tags = [ "glitch_sombra" ]
 [skins.virus]
   name = "Virus"
   rarity = "epic"

@@ -24,6 +24,7 @@ tags = [ "ana_(overwatch)" ]
 [skins.merciful]
   name = "Merciful"
   rarity = "epic"
+  tags = [ "merciful_ana" ]
 [skins.shrike]
   name = "Shrike"
   rarity = "epic"
@@ -43,6 +44,7 @@ tags = [ "ana_(overwatch)" ]
 [skins.wasteland]
   name = "Wasteland"
   rarity = "legendary"
+  tags = [ "wasteland_ana" ]
 [skins.captain-amari]
   name = "Captain Amari"
   rarity = "legendary"
