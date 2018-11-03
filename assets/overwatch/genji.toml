@@ -1,7 +1,7 @@
 name = "Genji"
 realName = "Genji Shimada"
 age = 35
-role = "offense"
+role = "damage"
 sex = "male"
 
 tags = [ "genji_(overwatch)" ]

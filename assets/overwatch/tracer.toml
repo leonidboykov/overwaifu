@@ -1,7 +1,7 @@
 name = "Tracer"
 realName = "Lena Oxton"
 age = 26
-role = "offense"
+role = "damage"
 sex = "female"
 
 tags = [ "tracer_(overwatch)" ]

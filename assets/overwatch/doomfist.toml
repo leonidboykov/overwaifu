@@ -1,7 +1,7 @@
 name = "Doomfist"
 realName = "Akande Ogundimu"
 age = 45
-role = "offense"
+role = "damage"
 sex = "male"
 
 tags = [ "doomfist_(overwatch)" ]

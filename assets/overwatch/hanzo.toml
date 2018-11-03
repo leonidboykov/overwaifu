@@ -1,7 +1,7 @@
 name = "Hanzo"
 realName = "Hanzo Shimada"
 age = 38
-role = "defense"
+role = "damage"
 sex = "male"
 
 tags = [ "hanzo_(overwatch)" ]

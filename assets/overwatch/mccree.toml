@@ -1,7 +1,7 @@
 name = "McCree"
 realName = "Jesse McCree"
 age = 37
-role = "offense"
+role = "damage"
 sex = "male"
 
 tags = [ "mccree_(overwatch)" ]

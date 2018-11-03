@@ -1,7 +1,7 @@
 name = "Sombra"
 realName = "Olivia Colomar"
 age = 30
-role = "offense"
+role = "damage"
 sex = "female"
 
 tags = [ "sombra_(overwatch)"]

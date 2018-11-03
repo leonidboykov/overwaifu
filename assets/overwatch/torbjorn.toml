@@ -1,7 +1,7 @@
 name = "Torbjörn"
 realName = "Torbjörn Lindholm"
 age = 57
-role = "defense"
+role = "damage"
 sex = "male"
 
 tags = [ "torbjorn_(overwatch)" ]

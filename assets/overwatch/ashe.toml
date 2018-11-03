@@ -1,0 +1,11 @@
+name = "Ashe"
+realName = "Elizabeth Caledonia \"Calamity\" Ashe"
+age = 39
+role = "damage"
+sex = "female"
+
+tags = [ "ashe_(overwatch)" ]
+
+[skins.classic]
+  name = "Classic"
+  rarity = "common"

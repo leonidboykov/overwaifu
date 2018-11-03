@@ -1,7 +1,7 @@
 name = "Bastion"
 realName = "SST Laboratories Siege Automaton E54"
 age = 30
-role = "defense"
+role = "damage"
 sex = "male" # According to his "penetration" role
 
 tags = [ "bastion_(overwatch)" ]

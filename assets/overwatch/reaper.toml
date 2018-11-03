@@ -1,7 +1,7 @@
 name = "Reaper"
 realName = "Gabriel Reyes"
 age = 0 # unknown
-role = "offense"
+role = "damage"
 sex = "male"
 
 tags = [ "reaper_(overwatch)" ]

@@ -1,7 +1,7 @@
 name = "Widowmaker"
 realName = "Amélie Lacroix"
 age = 33
-role = "defense"
+role = "damage"
 sex = "female"
 
 tags = [ "widowmaker_(overwatch)" ]

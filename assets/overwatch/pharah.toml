@@ -1,7 +1,7 @@
 name = "Pharah"
 realName = "Fareeha Amari"
 age = 32
-role = "offense"
+role = "damage"
 sex = "female"
 
 tags = [ "pharah_(overwatch)" ]

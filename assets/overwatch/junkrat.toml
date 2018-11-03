@@ -1,7 +1,7 @@
 name = "Junkrat"
 realName = "Jamison Fawkes"
 age = 25
-role = "defense"
+role = "damage"
 sex = "male"
 
 tags = [ "junkrat_(overwatch)" ]

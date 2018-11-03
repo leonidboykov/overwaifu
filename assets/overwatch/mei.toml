@@ -1,7 +1,7 @@
 name = "Mei"
 realName = "Mei-Ling Zhou"
 age = 31
-role = "defense"
+role = "damage"
 sex = "female"
 
 tags = [ "mei_(overwatch)" ]

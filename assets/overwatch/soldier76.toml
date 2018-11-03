@@ -1,7 +1,7 @@
 name = "Soldier: 76"
 realName = "Jack Morrison"
 age = 0 # unknown
-role = "offense"
+role = "damage"
 sex = "male"
 
 tags = [ "soldier:_76_(overwatch)" ]
