@@ -9,3 +9,33 @@ tags = [ "ashe_(overwatch)" ]
 [skins.classic]
   name = "Classic"
   rarity = "common"
+[skins.paintbrush]
+  name = "Paintbrush"
+  rarity = "rare"
+[skins.sunflower]
+  name = "Sunflower"
+  rarity = "rare"
+[skins.tansy]
+  name = "Tansy"
+  rarity = "rare"
+[skins.yucca]
+  name = "Yucca"
+  rarity = "rare"
+[skins.posh]
+  name = "Posh"
+  rarity = "epic"
+[skins.thorn]
+  name = "Thorn"
+  rarity = "epic"
+[skins.gangster]
+  name = "Gangster"
+  rarity = "legendary"
+[skins.mobster]
+  name = "Mobster"
+  rarity = "legendary"
+[skins.jungle]
+  name = "Jungle"
+  rarity = "legendary"
+[skins.safari]
+  name = "Safari"
+  rarity = "legendary"
