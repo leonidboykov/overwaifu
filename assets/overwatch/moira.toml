@@ -27,6 +27,7 @@ tags = [ "moira_(overwatch)" ]
 [skins.pale]
   name = "Pale"
   rarity = "epic"
+  tags = [ "pale_moira" ]
 [skins.glam]
   name = "Glam"
   rarity = "legendary"
