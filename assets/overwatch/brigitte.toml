@@ -46,3 +46,4 @@ tags = [ "brigitte_(overwatch)" ]
   name = "Shieldmaiden"
   rarity = "legendary"
   event = "Overwatch Anniversary"
+  tags = [ "shieldmaiden_brigitte" ]
