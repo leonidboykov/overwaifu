@@ -72,6 +72,11 @@ tags = [ "mercy_(overwatch)" ]
   rarity = "legendary"
   event = "Helloween Terror"
   tags = [ "witch_mercy" ]
+[skins.sugar-plum-fairy]
+  name = "Sugar Plum Fairy"
+  rarity = "legendary"
+  event = "Winter Wonderland"
+  tags = [ "sugar_plum_fairy_mercy" ]
 [skins.zhuque]
   name = "Zhuque"
   rarity = "legendary"
