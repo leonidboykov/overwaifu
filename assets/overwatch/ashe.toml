@@ -27,6 +27,10 @@ tags = [ "ashe_(overwatch)" ]
 [skins.thorn]
   name = "Thorn"
   rarity = "epic"
+[skins.winter]
+  name = "Winter"
+  rarity = "epic"
+  event = "Winter Wonderland"
 [skins.gangster]
   name = "Gangster"
   rarity = "legendary"

@@ -72,6 +72,10 @@ tags = [ "widowmaker_(overwatch)" ]
   rarity = "legendary"
   event = "Summer Games"
   tags = [ "cote_d'azur_widowmaker" ]
+[skins.biathlon]
+  name = "Biathlon"
+  rarity = "legendary"
+  event = "Winter Wonderland"
 [skins.black-lily]
   name = "Black Lily"
   rarity = "legendary"

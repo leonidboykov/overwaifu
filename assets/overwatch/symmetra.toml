@@ -74,3 +74,8 @@ tags = [ "symmetra_(overwatch)" ]
   rarity = "legendary"
   event = "Halloween Terror"
   tags = [ "dragon_symmetra" ]
+[skins.figure-skater]
+  name = "Figure Skater"
+  rarity = "legendary"
+  event = "Winter Wonderland"
+  tags = [ "figure_skater_symmetra" ]
