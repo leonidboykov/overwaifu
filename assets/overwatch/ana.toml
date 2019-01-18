@@ -38,6 +38,11 @@ tags = [ "ana_(overwatch)" ]
   rarity = "epic"
   event = "Halloween Terror"
   tags = [ "ghoul_ana" ]
+[skins.bastet]
+  name = "Bastet"
+  rarity = "epic"
+  event = "Ana's Bastet Challenge"
+  tags = [ "bastet_ana" ]
 [skins.wadjet]
   name = "Wadjet"
   rarity = "legendary"

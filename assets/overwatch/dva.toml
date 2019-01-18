@@ -82,6 +82,7 @@ tags = [ "d.va_(overwatch)" ]
 [skins.nano-cola]
   name = "Nano Cola"
   rarity = "legendary"
+  event = "D.Va's Nano Cola Challenge"
   tags = [ "nano_cola_d.va" ]
 
 # [skins.shooting_star]
