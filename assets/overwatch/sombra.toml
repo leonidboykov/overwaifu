@@ -12,6 +12,7 @@ tags = [ "sombra_(overwatch)"]
 [skins.cidro]
   name = "Cidro"
   rarity = "rare"
+  tags = [ "cidro_sombra" ]
 [skins.incendio]
   name = "Incendio"
   rarity = "rare"

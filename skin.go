@@ -2,6 +2,7 @@ package overwaifu
 
 import (
 	"encoding/json"
+	"strings"
 
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
@@ -27,6 +28,14 @@ func (s Skins) MarshalJSON() ([]byte, error) {
 		skins = append(skins, v)
 	}
 	return json.Marshal(skins)
+}
+
+// DefaultTags allows to assigs tags as `key_character`
+func (s *Skin) DefaultTags(owner string) {
+	if len(s.Tags) == 0 {
+		key := strings.Replace(s.Key, "-", "_", -1)
+		s.Tags = append(s.Tags, key+"_"+owner)
+	}
 }
 
 // QueryScore ...

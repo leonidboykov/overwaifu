@@ -85,3 +85,8 @@ tags = [ "tracer_(overwatch)" ]
   rarity = "legendary"
   event = "Origins Edition"
   tags = [ "slipstream_tracer" ]
+[skins.hong-gildong]
+  name = "Hong Gildong"
+  rarity = "legendary"
+  event = "Lunar New Year"
+  tags = [ "hong_gildong_tracer" ]

@@ -72,7 +72,7 @@ func New() (*OverWaifu, error) {
 		}
 		ow.Characters[characters[i]] = &c
 		ow.Characters[characters[i]].Key = characters[i]
-		ow.Characters[characters[i]].UpdateSkinKey()
+		ow.Characters[characters[i]].UpdateSkinDefaults()
 	}
 
 	return &ow, nil

@@ -13,6 +13,8 @@ const (
 	selfieTag              = "selfie"
 )
 
+const tagTemplate = "%s_(overwatch)"
+
 // Character contains all main data about character
 type Character struct {
 	Name     string   `json:"name" toml:"name"`
@@ -38,10 +40,11 @@ func (c Characters) MarshalJSON() ([]byte, error) {
 	return json.Marshal(characters)
 }
 
-// UpdateSkinKey ...
-func (c *Character) UpdateSkinKey() {
+// UpdateSkinDefaults ...
+func (c *Character) UpdateSkinDefaults() {
 	for k := range c.Skins {
 		c.Skins[k].Key = k
+		c.Skins[k].DefaultTags(c.Key)
 	}
 }
 
