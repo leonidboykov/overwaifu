@@ -14,11 +14,11 @@ type Configuration struct {
 		Password string `required:"true"`
 	}
 	DB struct {
-		Username       string   `required:"true"`
-		Password       string   `required:"true"`
-		URI            []string `required:"true"`
-		Source         string   `required:"true"`
-		ReplicaSetName string   `split_words:"true" required:"true"`
+		Username       string `required:"true"`
+		Password       string `required:"true"`
+		URI            string `required:"true"`
+		Source         string `required:"true"`
+		ReplicaSetName string `split_words:"true" required:"true"`
 	}
 	Netlify struct {
 		BuildHook string `split_words:"true" required:"true"`

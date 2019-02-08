@@ -1,10 +1,11 @@
 package overwaifu
 
 import (
+	"context"
 	"encoding/json"
 
-	"github.com/globalsign/mgo"
-	"github.com/globalsign/mgo/bson"
+	"github.com/mongodb/mongo-go-driver/bson"
+	"github.com/mongodb/mongo-go-driver/mongo"
 )
 
 const (
@@ -49,58 +50,66 @@ func (c *Character) UpdateSkinDefaults() {
 }
 
 // QueryScore ...
-func (c *Character) QueryScore(collection *mgo.Collection) error {
-	// Build query
-	query := []bson.M{
-		{"$match": bson.M{"tags": bson.M{"$in": c.Tags}}},
-		{"$facet": bson.M{
-			"countAll": []bson.M{{"$count": "count"}},
-			"countSafe": []bson.M{
-				{"$match": bson.M{"rating": "s"}},
-				{"$count": "count"},
+func (c *Character) QueryScore(collection *mongo.Collection) error {
+	ctx := context.TODO()
+	pipeline := bson.A{
+		bson.M{"$match": bson.M{"tags": bson.M{"$in": c.Tags}}},
+		bson.M{"$facet": bson.M{
+			"countAll": bson.A{bson.M{"$count": "count"}},
+			"countSafe": bson.A{
+				bson.M{"$match": bson.M{"rating": "s"}},
+				bson.M{"$count": "count"},
 			},
-			"countQuestionable": []bson.M{
-				{"$match": bson.M{"rating": "q"}},
-				{"$count": "count"},
+			"countQuestionable": bson.A{
+				bson.M{"$match": bson.M{"rating": "q"}},
+				bson.M{"$count": "count"},
 			},
-			"countExplicit": []bson.M{
-				{"$match": bson.M{"rating": "e"}},
-				{"$count": "count"},
+			"countExplicit": bson.A{
+				bson.M{"$match": bson.M{"rating": "e"}},
+				bson.M{"$count": "count"},
 			},
-			"countGenderSwaps": []bson.M{
-				{"$match": bson.M{"tags": bson.M{"$in": []string{"genderswap"}}}},
-				{"$count": "count"},
+			"countGenderSwaps": bson.A{
+				bson.M{"$match": bson.M{"tags": bson.M{"$in": []string{"genderswap"}}}},
+				bson.M{"$count": "count"},
 			},
-			"countVirginKillerSweater": []bson.M{
-				{"$match": bson.M{"tags": bson.M{"$in": []string{"virgin_killer_sweater"}}}},
-				{"$count": "count"},
+			"countVirginKillerSweater": bson.A{
+				bson.M{"$match": bson.M{"tags": bson.M{"$in": []string{"virgin_killer_sweater"}}}},
+				bson.M{"$count": "count"},
 			},
-			"countSelfie": []bson.M{
-				{"$match": bson.M{"tags": bson.M{"$in": []string{"selfie", "snapchat"}}}},
-				{"$count": "count"},
+			"countSelfie": bson.A{
+				bson.M{"$match": bson.M{"tags": bson.M{"$in": []string{"selfie", "snapchat"}}}},
+				bson.M{"$count": "count"},
 			},
 		}},
-		{"$project": bson.M{
-			"all":                   bson.M{"$arrayElemAt": []interface{}{"$countAll.count", 0}},
-			"safe":                  bson.M{"$arrayElemAt": []interface{}{"$countSafe.count", 0}},
-			"questionable":          bson.M{"$arrayElemAt": []interface{}{"$countQuestionable.count", 0}},
-			"explicit":              bson.M{"$arrayElemAt": []interface{}{"$countExplicit.count", 0}},
-			"gender_swaps":          bson.M{"$arrayElemAt": []interface{}{"$countGenderSwaps.count", 0}},
-			"virgin_killer_sweater": bson.M{"$arrayElemAt": []interface{}{"$countVirginKillerSweater.count", 0}},
-			"selfie":                bson.M{"$arrayElemAt": []interface{}{"$countSelfie.count", 0}},
+		bson.M{"$project": bson.M{
+			"all":                   bson.M{"$arrayElemAt": bson.A{"$countAll.count", 0}},
+			"safe":                  bson.M{"$arrayElemAt": bson.A{"$countSafe.count", 0}},
+			"questionable":          bson.M{"$arrayElemAt": bson.A{"$countQuestionable.count", 0}},
+			"explicit":              bson.M{"$arrayElemAt": bson.A{"$countExplicit.count", 0}},
+			"gender_swaps":          bson.M{"$arrayElemAt": bson.A{"$countGenderSwaps.count", 0}},
+			"virgin_killer_sweater": bson.M{"$arrayElemAt": bson.A{"$countVirginKillerSweater.count", 0}},
+			"selfie":                bson.M{"$arrayElemAt": bson.A{"$countSelfie.count", 0}},
 		}},
-		{"$addFields": bson.M{
+		bson.M{"$addFields": bson.M{
 			"pure": bson.M{"$divide": []string{"$safe", "$all"}},
 			"lewd": bson.M{"$divide": []string{"$explicit", "$all"}},
 		}},
 	}
 
-	return collection.Pipe(query).One(&c.Score)
+	cur, err := collection.Aggregate(ctx, pipeline)
+	if err != nil {
+		return err
+	}
+	defer cur.Close(ctx)
+
+	cur.Next(ctx) // Go to the first element
+	return cur.Decode(&c.Score)
 }
 
 // QueryScoreSkins ...
-func (c *Character) QueryScoreSkins(collection *mgo.Collection) {
+func (c *Character) QueryScoreSkins(collection *mongo.Collection) {
 	for i := range c.Skins {
+		// Skip error handing for skins
 		c.Skins[i].QueryScore(c, collection)
 	}
 }
