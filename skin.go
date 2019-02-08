@@ -1,11 +1,12 @@
 package overwaifu
 
 import (
+	"context"
 	"encoding/json"
 	"strings"
 
-	"github.com/globalsign/mgo"
-	"github.com/globalsign/mgo/bson"
+	"github.com/mongodb/mongo-go-driver/bson"
+	"github.com/mongodb/mongo-go-driver/mongo"
 )
 
 // Skin contains data about skin
@@ -39,38 +40,47 @@ func (s *Skin) DefaultTags(owner string) {
 }
 
 // QueryScore ...
-func (s *Skin) QueryScore(owner *Character, collection *mgo.Collection) error {
-	query := []bson.M{
-		{"$match": bson.M{"$and": []bson.M{
-			{"tags": bson.M{"$in": owner.Tags}},
-			{"tags": bson.M{"$in": s.Tags}},
+func (s *Skin) QueryScore(owner *Character, collection *mongo.Collection) error {
+	ctx := context.TODO()
+
+	pipeline := bson.A{
+		bson.M{"$match": bson.M{"$and": bson.A{
+			bson.M{"tags": bson.M{"$in": owner.Tags}},
+			bson.M{"tags": bson.M{"$in": s.Tags}},
 		}}},
-		{"$facet": bson.M{
-			"countAll": []bson.M{{"$count": "count"}},
-			"countSafe": []bson.M{
-				{"$match": bson.M{"rating": "s"}},
-				{"$count": "count"},
+		bson.M{"$facet": bson.M{
+			"countAll": bson.A{bson.M{"$count": "count"}},
+			"countSafe": bson.A{
+				bson.M{"$match": bson.M{"rating": "s"}},
+				bson.M{"$count": "count"},
 			},
-			"countQuestionable": []bson.M{
-				{"$match": bson.M{"rating": "q"}},
-				{"$count": "count"},
+			"countQuestionable": bson.A{
+				bson.M{"$match": bson.M{"rating": "q"}},
+				bson.M{"$count": "count"},
 			},
-			"countExplicit": []bson.M{
-				{"$match": bson.M{"rating": "e"}},
-				{"$count": "count"},
+			"countExplicit": bson.A{
+				bson.M{"$match": bson.M{"rating": "e"}},
+				bson.M{"$count": "count"},
 			},
 		}},
-		{"$project": bson.M{
-			"all":          bson.M{"$arrayElemAt": []interface{}{"$countAll.count", 0}},
-			"safe":         bson.M{"$arrayElemAt": []interface{}{"$countSafe.count", 0}},
-			"questionable": bson.M{"$arrayElemAt": []interface{}{"$countQuestionable.count", 0}},
-			"explicit":     bson.M{"$arrayElemAt": []interface{}{"$countExplicit.count", 0}},
+		bson.M{"$project": bson.M{
+			"all":          bson.M{"$arrayElemAt": bson.A{"$countAll.count", 0}},
+			"safe":         bson.M{"$arrayElemAt": bson.A{"$countSafe.count", 0}},
+			"questionable": bson.M{"$arrayElemAt": bson.A{"$countQuestionable.count", 0}},
+			"explicit":     bson.M{"$arrayElemAt": bson.A{"$countExplicit.count", 0}},
 		}},
-		{"$addFields": bson.M{
+		bson.M{"$addFields": bson.M{
 			"pure": bson.M{"$divide": []string{"$safe", "$all"}},
 			"lewd": bson.M{"$divide": []string{"$explicit", "$all"}},
 		}},
 	}
 
-	return collection.Pipe(query).One(&s.Score)
+	cur, err := collection.Aggregate(ctx, pipeline)
+	if err != nil {
+		return err
+	}
+	defer cur.Close(ctx)
+
+	cur.Next(ctx) // Go to the first element
+	return cur.Decode(&s.Score)
 }

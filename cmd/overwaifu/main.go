@@ -2,21 +2,21 @@ package main
 
 import (
 	"bytes"
-	"crypto/tls"
+	"context"
 	"encoding/json"
 	"flag"
 	"fmt"
 	"io/ioutil"
-	"net"
+	"log"
 	"net/http"
 	"net/url"
-	"os"
 	"time"
 
-	"github.com/globalsign/mgo"
-	"github.com/globalsign/mgo/bson"
 	"github.com/leonidboykov/getmoe"
 	"github.com/leonidboykov/getmoe/provider"
+	"github.com/mongodb/mongo-go-driver/bson"
+	"github.com/mongodb/mongo-go-driver/mongo"
+	"github.com/mongodb/mongo-go-driver/mongo/options"
 
 	"github.com/overwaifu/overwaifu"
 	"github.com/overwaifu/overwaifu/conf"
@@ -24,45 +24,31 @@ import (
 
 var scratchFlag = false
 
-const timeFormat = "2006-01-02"
-
 func main() {
 	flag.BoolVar(&scratchFlag, "scratch", false, "ignore date and fetch all posts")
 	flag.Parse()
 
 	config, err := conf.Load("")
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
 
-	dialInfo := &mgo.DialInfo{
-		Addrs:          config.DB.URI,
-		ReplicaSetName: config.DB.ReplicaSetName,
-		Username:       config.DB.Username,
-		Password:       config.DB.Password,
-		Source:         config.DB.Source,
-		DialServer: func(addr *mgo.ServerAddr) (net.Conn, error) {
-			conn, err := tls.Dial("tcp", addr.String(), &tls.Config{})
-			return conn, err
-		},
-		Timeout: time.Second * 10,
-	}
-
-	session, err := mgo.DialWithInfo(dialInfo)
+	connString := fmt.Sprintf("mongodb+srv://%s:%s@%s",
+		config.DB.Username,
+		config.DB.Password,
+		config.DB.URI,
+	)
+	client, err := mongo.Connect(context.TODO(), connString)
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
-	defer session.Close()
 
-	postsCollection := session.DB("overwaifu").C("posts")
-	charactersCollection := session.DB("overwaifu").C("characters")
+	postsCollection := client.Database("overwaifu").Collection("posts")
+	charactersCollection := client.Database("overwaifu").Collection("posts")
 
 	posts, err := getPosts(config)
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
 
 	fmt.Println("Pushing to MongoDB")
@@ -70,8 +56,7 @@ func main() {
 
 	ow, err := overwaifu.New()
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
 
 	fmt.Println("Calculating characters scores")
@@ -79,31 +64,34 @@ func main() {
 	fmt.Println("Calculating achievements")
 	ow.QueryAchievements(charactersCollection)
 
+	// Disconnect from MongoDB
+	if err := client.Disconnect(context.TODO()); err != nil {
+		log.Fatalln(err)
+	}
+
 	data, err := json.Marshal(ow)
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
 
 	if err := uploadResults(config, data); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
 
 	if err := notifyNetlify(config); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
 }
 
 func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
 	tags := getmoe.NewTags("overwatch")
 	if scratchFlag {
-		fmt.Println("Fetching posts from scratch: -scratch flag was used")
+		log.Println("Fetching posts from scratch: -scratch flag was used")
 	} else {
 		date := time.Now().AddDate(0, 0, -7)
-		fmt.Printf("Fetching posts from %s\n", date)
-		tags.AfterDate(date)
+		log.Printf("Fetching posts from %s\n", date)
+		// tags.AfterDate(date)
+		tags.And("date:>=" + date.Format("02.01.2006"))
 	}
 
 	board := provider.AvailableBoards["chan.sankakucomplex.com"]
@@ -118,15 +106,22 @@ func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
 	if err != nil {
 		return nil, err
 	}
-	fmt.Printf("Found %d posts\n", len(posts))
+	log.Printf("Found %d posts\n", len(posts))
 
 	return posts, nil
 }
 
-func uploadPosts(collection *mgo.Collection, posts []getmoe.Post) {
+func uploadPosts(collection *mongo.Collection, posts []getmoe.Post) {
+	ctx := context.TODO()
+	upsertOption := options.Update().SetUpsert(true)
 	for i := range posts {
-		if _, err := collection.Upsert(bson.M{"id": posts[i].ID}, &posts[i]); err != nil {
-			fmt.Println(err)
+		if _, err := collection.UpdateOne(
+			ctx,
+			bson.M{"id": posts[i].ID},
+			bson.M{"$set": &posts[i]},
+			upsertOption,
+		); err != nil {
+			log.Println(err)
 		}
 	}
 }
@@ -137,7 +132,7 @@ func uploadResults(config *conf.Configuration, data []byte) error {
 		Host:   "api.myjson.com",
 		Path:   "bins/" + config.MyJSON.BucketID,
 	}
-	fmt.Printf("Uploading to %s\n", u.String())
+	log.Printf("Uploading to %s\n", u.String())
 
 	client := http.Client{}
 	req, err := http.NewRequest("PUT", u.String(), bytes.NewBuffer(data))
@@ -152,12 +147,6 @@ func uploadResults(config *conf.Configuration, data []byte) error {
 		return err
 	}
 	defer resp.Body.Close()
-
-	// body, err := ioutil.ReadAll(resp.Body)
-	// if err != nil {
-	// 	return err
-	// }
-	// fmt.Println(string(body))
 
 	return nil
 }
