@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"net/url"
@@ -51,7 +50,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	fmt.Println("Pushing to MongoDB")
+	log.Println("Pushing to MongoDB")
 	uploadPosts(postsCollection, posts)
 
 	ow, err := overwaifu.New()
@@ -59,9 +58,9 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	fmt.Println("Calculating characters scores")
+	log.Println("Calculating characters scores")
 	ow.QueryScore(postsCollection, charactersCollection)
-	fmt.Println("Calculating achievements")
+	log.Println("Calculating achievements")
 	ow.QueryAchievements(charactersCollection)
 
 	// Disconnect from MongoDB
@@ -157,7 +156,7 @@ func notifyNetlify(config *conf.Configuration) error {
 		Host:   "api.netlify.com",
 		Path:   "build_hooks/" + config.Netlify.BuildHook,
 	}
-	fmt.Printf("Webhook to %s\n", u.String())
+	log.Printf("Webhook to %s\n", u.String())
 
 	client := http.Client{}
 	req, err := http.NewRequest("POST", u.String(), nil)
@@ -170,12 +169,6 @@ func notifyNetlify(config *conf.Configuration) error {
 		return err
 	}
 	defer resp.Body.Close()
-
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		return err
-	}
-	fmt.Println(string(body))
 
 	return nil
 }
