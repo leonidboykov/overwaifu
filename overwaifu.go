@@ -13,7 +13,6 @@ import (
 	"github.com/leonidboykov/getmoe"
 	"github.com/mongodb/mongo-go-driver/bson"
 	"github.com/mongodb/mongo-go-driver/mongo"
-	"github.com/mongodb/mongo-go-driver/mongo/options"
 )
 
 var repository []getmoe.Post
@@ -100,154 +99,23 @@ func (ow *OverWaifu) QueryScore(postsCollection, charactersCollection *mongo.Col
 }
 
 func (ow *OverWaifu) saveScores(collection *mongo.Collection) {
-	ctx := context.TODO()
-	upsertOption := options.Update().SetUpsert(true)
+	var models []mongo.WriteModel
 	for _, c := range ow.Characters {
-		if _, err := collection.UpdateOne(
-			ctx,
-			bson.M{"key": c.Key},
-			bson.M{"$set": &c},
-			upsertOption,
-		); err != nil {
-			log.Println(err)
-		}
+		model := mongo.NewUpdateOneModel().
+			SetFilter(bson.M{"key": c.Key}).
+			SetUpdate(bson.M{"$set": &c}).
+			SetUpsert(true)
+		models = append(models, model)
+	}
+	_, err := collection.BulkWrite(context.TODO(), models)
+	if err != nil {
+		log.Fatalln(err)
 	}
 }
 
 // QueryAchievements calculates achievements
 func (ow *OverWaifu) QueryAchievements(collection *mongo.Collection) error {
 	ctx := context.TODO()
-	// Build query
-	// query := []bson.M{
-	// 	{"$addFields": bson.M{"skins": bson.M{"$objectToArray": "$skins"}}},
-	// 	{"$facet": bson.M{
-	// 		"fameWaifu": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$sort": bson.M{"score.all": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 			}},
-	// 		},
-	// 		"hotWaifu": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$sort": bson.M{"score.explicit": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 			}},
-	// 		},
-	// 		"lewdWaifu": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$match": bson.M{"score.all": bson.M{"$gt": minScoreForCharacter}}},
-	// 			{"$sort": bson.M{"score.lewd": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 			}},
-	// 		},
-	// 		"pureWaifu": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$match": bson.M{"score.all": bson.M{"$gt": minScoreForCharacter}}},
-	// 			{"$sort": bson.M{"score.pure": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 			}},
-	// 		},
-	// 		"fameWaifuSkin": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$unwind": "$skins"},
-	// 			{"$sort": bson.M{"skins.v.score.all": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 				"skin":      "$skins.k",
-	// 			}},
-	// 		},
-	// 		"hotWaifuSkin": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$unwind": "$skins"},
-	// 			{"$sort": bson.M{"skins.v.score.explicit": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 				"skin":      "$skins.k",
-	// 			}},
-	// 		},
-	// 		"lewdWaifuSkin": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$unwind": "$skins"},
-	// 			{"$match": bson.M{"skins.v.score.all": bson.M{"$gt": minScoreForSkin}}},
-	// 			{"$sort": bson.M{"skins.v.score.lewd": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 				"skin":      "$skins.k",
-	// 			}},
-	// 		},
-	// 		"pureWaifuSkin": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$unwind": "$skins"},
-	// 			{"$match": bson.M{"skins.v.score.all": bson.M{"$gt": minScoreForSkin}}},
-	// 			{"$sort": bson.M{"skins.v.score.pure": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 				"skin":      "$skins.k",
-	// 			}},
-	// 		},
-	// 		"fakeWaifu": []bson.M{
-	// 			{"$match": bson.M{"sex": "male"}},
-	// 			{"$sort": bson.M{"score.gender_swaps": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 			}},
-	// 		},
-	// 		"virginKillerWaifu": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$sort": bson.M{"score.virgin_killer_sweater": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 			}},
-	// 		},
-	// 		"selfieWaifu": []bson.M{
-	// 			{"$match": bson.M{"sex": "female"}},
-	// 			{"$sort": bson.M{"score.selfie": -1}},
-	// 			{"$limit": 1},
-	// 			{"$project": bson.M{
-	// 				"_id":       0,
-	// 				"character": "$key",
-	// 			}},
-	// 		},
-	// 	}},
-	// 	{"$project": bson.M{
-	// 		"fame_waifu":          bson.M{"$arrayElemAt": []interface{}{"$fameWaifu", 0}},
-	// 		"hot_waifu":           bson.M{"$arrayElemAt": []interface{}{"$hotWaifu", 0}},
-	// 		"lewd_waifu":          bson.M{"$arrayElemAt": []interface{}{"$lewdWaifu", 0}},
-	// 		"pure_waifu":          bson.M{"$arrayElemAt": []interface{}{"$pureWaifu", 0}},
-	// 		"fame_waifu_skin":     bson.M{"$arrayElemAt": []interface{}{"$fameWaifuSkin", 0}},
-	// 		"hot_waifu_skin":      bson.M{"$arrayElemAt": []interface{}{"$hotWaifuSkin", 0}},
-	// 		"lewd_waifu_skin":     bson.M{"$arrayElemAt": []interface{}{"$lewdWaifuSkin", 0}},
-	// 		"pure_waifu_skin":     bson.M{"$arrayElemAt": []interface{}{"$pureWaifuSkin", 0}},
-	// 		"fake_waifu":          bson.M{"$arrayElemAt": []interface{}{"$fakeWaifu", 0}},
-	// 		"virgin_killer_waifu": bson.M{"$arrayElemAt": []interface{}{"$virginKillerWaifu", 0}},
-	// 		"selfie_waifu":        bson.M{"$arrayElemAt": []interface{}{"$selfieWaifu", 0}},
-	// 	}},
-	// }
-
 	pipeline := bson.A{
 		bson.M{"$addFields": bson.M{"skins": bson.M{"$objectToArray": "$skins"}}},
 		bson.M{"$facet": bson.M{

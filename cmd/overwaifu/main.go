@@ -15,7 +15,6 @@ import (
 	"github.com/leonidboykov/getmoe/provider"
 	"github.com/mongodb/mongo-go-driver/bson"
 	"github.com/mongodb/mongo-go-driver/mongo"
-	"github.com/mongodb/mongo-go-driver/mongo/options"
 
 	"github.com/overwaifu/overwaifu"
 	"github.com/overwaifu/overwaifu/conf"
@@ -111,17 +110,17 @@ func getPosts(config *conf.Configuration) ([]getmoe.Post, error) {
 }
 
 func uploadPosts(collection *mongo.Collection, posts []getmoe.Post) {
-	ctx := context.TODO()
-	upsertOption := options.Update().SetUpsert(true)
+	var models []mongo.WriteModel
 	for i := range posts {
-		if _, err := collection.UpdateOne(
-			ctx,
-			bson.M{"id": posts[i].ID},
-			bson.M{"$set": &posts[i]},
-			upsertOption,
-		); err != nil {
-			log.Println(err)
-		}
+		model := mongo.NewUpdateOneModel().
+			SetFilter(bson.M{"id": posts[i].ID}).
+			SetUpdate(bson.M{"$set": &posts[i]}).
+			SetUpsert(true)
+		models = append(models, model)
+	}
+	_, err := collection.BulkWrite(context.TODO(), models)
+	if err != nil {
+		log.Fatalln(err)
 	}
 }
 
