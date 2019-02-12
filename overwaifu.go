@@ -9,6 +9,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/mongodb/mongo-go-driver/mongo/options"
+
 	"github.com/BurntSushi/toml"
 	"github.com/leonidboykov/getmoe"
 	"github.com/mongodb/mongo-go-driver/bson"
@@ -99,18 +101,21 @@ func (ow *OverWaifu) QueryScore(postsCollection, charactersCollection *mongo.Col
 }
 
 func (ow *OverWaifu) saveScores(collection *mongo.Collection) {
-	var models []mongo.WriteModel
+	// var models []mongo.WriteModel
 	for _, c := range ow.Characters {
-		model := mongo.NewUpdateOneModel().
-			SetFilter(bson.M{"key": c.Key}).
-			SetUpdate(bson.M{"$set": &c}).
-			SetUpsert(true)
-		models = append(models, model)
+		if _, err := collection.UpdateOne(context.TODO(), bson.M{"key": c.Key}, bson.M{"$set": &c}, options.Update().SetUpsert(true)); err != nil {
+			log.Fatalln(err)
+		}
+		// model := mongo.NewUpdateOneModel().
+		// 	SetFilter(bson.M{"key": c.Key}).
+		// 	SetUpdate(bson.M{"$set": &c}).
+		// 	SetUpsert(true)
+		// models = append(models, model)
 	}
-	_, err := collection.BulkWrite(context.TODO(), models)
-	if err != nil {
-		log.Fatalln(err)
-	}
+	// _, err := collection.BulkWrite(context.TODO(), models)
+	// if err != nil {
+	// 	log.Fatalln(err)
+	// }
 }
 
 // QueryAchievements calculates achievements

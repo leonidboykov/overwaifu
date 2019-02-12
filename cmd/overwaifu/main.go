@@ -42,7 +42,7 @@ func main() {
 	}
 
 	postsCollection := client.Database("overwaifu").Collection("posts")
-	charactersCollection := client.Database("overwaifu").Collection("posts")
+	charactersCollection := client.Database("overwaifu").Collection("characters")
 
 	posts, err := getPosts(config)
 	if err != nil {
