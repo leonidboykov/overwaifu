@@ -13,8 +13,9 @@ import (
 
 	"github.com/leonidboykov/getmoe"
 	"github.com/leonidboykov/getmoe/provider"
-	"github.com/mongodb/mongo-go-driver/bson"
-	"github.com/mongodb/mongo-go-driver/mongo"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 
 	"github.com/overwaifu/overwaifu"
 	"github.com/overwaifu/overwaifu/conf"
@@ -36,7 +37,7 @@ func main() {
 		config.DB.Password,
 		config.DB.URI,
 	)
-	client, err := mongo.Connect(context.TODO(), connString)
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(connString))
 	if err != nil {
 		log.Fatalln(err)
 	}

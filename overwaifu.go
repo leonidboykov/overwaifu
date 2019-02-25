@@ -9,12 +9,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mongodb/mongo-go-driver/mongo/options"
-
 	"github.com/BurntSushi/toml"
 	"github.com/leonidboykov/getmoe"
-	"github.com/mongodb/mongo-go-driver/bson"
-	"github.com/mongodb/mongo-go-driver/mongo"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 var repository []getmoe.Post
@@ -84,7 +83,7 @@ func New() (*OverWaifu, error) {
 // QueryScore calculates score
 func (ow *OverWaifu) QueryScore(postsCollection, charactersCollection *mongo.Collection) {
 	// Query meta information
-	count, err := postsCollection.Count(context.TODO(), bson.M{})
+	count, err := postsCollection.CountDocuments(context.TODO(), bson.M{})
 	if err != nil {
 		log.Println(err)
 	}
@@ -102,8 +101,9 @@ func (ow *OverWaifu) QueryScore(postsCollection, charactersCollection *mongo.Col
 
 func (ow *OverWaifu) saveScores(collection *mongo.Collection) {
 	// var models []mongo.WriteModel
+	upsertOpts := options.Update().SetUpsert(true)
 	for _, c := range ow.Characters {
-		if _, err := collection.UpdateOne(context.TODO(), bson.M{"key": c.Key}, bson.M{"$set": &c}, options.Update().SetUpsert(true)); err != nil {
+		if _, err := collection.UpdateOne(context.TODO(), bson.M{"key": c.Key}, bson.M{"$set": &c}, upsertOpts); err != nil {
 			log.Fatalln(err)
 		}
 		// model := mongo.NewUpdateOneModel().
