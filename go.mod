@@ -9,7 +9,7 @@ require (
 	github.com/google/go-cmp v0.2.0 // indirect
 	github.com/joho/godotenv v1.3.0
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/leonidboykov/getmoe v0.4.0
+	github.com/leonidboykov/getmoe v0.5.0
 	github.com/stretchr/testify v1.3.0 // indirect
 	github.com/tidwall/pretty v0.0.0-20180105212114-65a9db5fad51 // indirect
 	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect
